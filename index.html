@@ -1,0 +1,2675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYNOCTA  Modern Websites. Real Results. | Premium Web Development Agency</title>
+    
+    <!-- Meta SEO Tags -->
+    <meta name="description" content="ZYNOCTA is an elite international web development agency crafting modern, lightning-fast, and premium high-converting web applications for startups, SaaS, and enterprise brands.">
+    <meta name="keywords" content="web development, premium agency, custom software, saas website, luxury design, enterprise development, SEO optimization, high-performance website, Next.js, React, premium digital agency">
+    <meta name="author" content="ZYNOCTA">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zynocta.com/">
+    <link rel="icon" type="png" href="zynocta blue and black.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zynocta.com/">
+    <meta property="og:title" content="ZYNOCTA — Modern Websites. Real Results.">
+    <meta property="og:description" content="We engineer digital masterpieces. From high-converting SaaS platforms to enterprise web systems, ZYNOCTA delivers unparalleled performance, luxurious UI/UX, and elite-level business results.">
+    <meta property="og:image" content="https://zynocta.com/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zynocta.com/">
+    <meta property="twitter:title" content="ZYNOCTA — Modern Websites. Real Results.">
+    <meta property="twitter:description" content="We engineer digital masterpieces. From high-converting SaaS platforms to enterprise web systems, ZYNOCTA delivers unparalleled performance, luxurious UI/UX, and elite-level business results.">
+    <meta property="twitter:image" content="https://zynocta.com/assets/og-image.jpg">
+
+    <!-- Google Fonts: Manrope & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ZYNOCTA",
+      "image": "https://zynocta.com/assets/og-image.jpg",
+      "url": "https://zynocta.com",
+      "telephone": "+13025550190",
+      "email": "contact.zynocta@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1209 North Orange St",
+        "addressLocality": "Wilmington",
+        "addressRegion": "DE",
+        "postalCode": "19801",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/zynocta",
+        "https://twitter.com/zynocta",
+        "https://dribbble.com/zynocta"
+      ]
+    }
+    </script>
+
+    <style>
+        
+        :root {
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #171717;
+            --bg-card: #1C1C1C;
+            --accent-primary: #3B5BFF;
+            --accent-secondary: #4E6FFF;
+            --accent-glow: rgba(59, 91, 255, 0.15);
+            --white: #FFFFFF;
+            --text-secondary: #9CA3AF;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(59, 91, 255, 0.4);
+            --font-display: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: initial;
+            overflow-x: hidden;
+            background-color: var(--bg-primary);
+            color: var(--white);
+            font-family: var(--font-body);
+        }
+
+        body {
+            overflow-x: hidden;
+            position: relative;
+            background-color: var(--bg-primary);
+        }
+
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-primary);
+        }
+
+        
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .glow-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            filter: blur(120px);
+            opacity: 0.6;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+
+        .glow-1 {
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            left: -100px;
+            animation: pulse-slow 15s infinite alternate;
+        }
+
+        .glow-2 {
+            width: 800px;
+            height: 800px;
+            bottom: -300px;
+            right: -200px;
+            animation: pulse-slow 20s infinite alternate-reverse;
+        }
+
+        @keyframes pulse-slow {
+            0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+            100% { transform: translate(50px, 50px) scale(1.1); opacity: 0.7; }
+        }
+
+        .grid-texture {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 3;
+        }
+
+       
+        .loader-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-primary);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease, visibility 0.8s;
+        }
+
+        .loader-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.2rem;
+            letter-spacing: -1px;
+            color: var(--white);
+            margin-bottom: 30px;
+        }
+
+        .loader-logo-icon {
+            width: 45px;
+            height: 45px;
+            position: relative;
+        }
+
+        .loader-logo-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: var(--accent-primary);
+            stroke-width: 4;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: draw-logo 2.5s ease forwards;
+        }
+
+        @keyframes draw-logo {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .loader-progress-bar-wrapper {
+            width: 240px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-progress-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transition: width 0.1s linear;
+        }
+
+        .loader-number {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-top: 12px;
+            font-weight: 700;
+        }
+
+        /* -------------------------------------------------------------
+           STICKY GLASSMORPHISM NAVBAR
+           ------------------------------------------------------------- */
+        .header-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 20px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .header-navbar.scrolled {
+            padding: 12px 0;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: var(--white);
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .brand-logo svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .brand-logo-text span {
+            color: var(--accent-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background-color: var(--accent-primary);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-item a:hover, .nav-item.active a {
+            color: var(--white);
+        }
+
+        .nav-item a:hover::after, .nav-item.active a::after {
+            width: 100%;
+        }
+
+       
+        .btn-premium {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            z-index: 10;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(59, 91, 255, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 91, 255, 0.45);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--white);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-premium:hover .btn-arrow {
+            transform: translateX(4px);
+        }
+
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--white);
+            margin: 6px 0;
+            transition: var(--transition-smooth);
+        }
+
+        /* Mobile Menu Active Hamburger State */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        
+        #spa-container {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            padding-top: 80px;
+        }
+
+        .spa-page {
+            display: none;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .spa-page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Helper Classes for Sections */
+        section {
+            padding: 100px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(59, 91, 255, 0.08);
+            border: 1px solid rgba(59, 91, 255, 0.2);
+            color: var(--accent-secondary);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Premium Luxury Cards */
+        .luxury-card {
+            background: rgba(28, 28, 28, 0.4);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 32px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-hover);
+            box-shadow: 0 12px 30px rgba(59, 91, 255, 0.05);
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 1: HOME PAGE SECTIONS
+           ------------------------------------------------------------- */
+        .hero-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 5rem;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            color: var(--white);
+            max-width: 1000px;
+            margin: 0 auto 24px auto;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #FFFFFF 30%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            line-height: 1.6;
+            margin: 0 auto 40px auto;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        /* Trusted By Sub-section */
+        .trusted-by {
+            width: 100%;
+            max-width: 1100px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 40px;
+        }
+
+        .trusted-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .trusted-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            opacity: 0.65;
+        }
+
+        .client-logo-placeholder {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            filter: grayscale(1);
+            transition: var(--transition-smooth);
+        }
+
+        .client-logo-placeholder:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* -------------------------------------------------------------
+           BENEFITS / WHY CHOOSE US
+           ------------------------------------------------------------- */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(59, 91, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-secondary);
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+        }
+
+        .benefit-card-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* -------------------------------------------------------------
+           STATISTICS
+           ------------------------------------------------------------- */
+        .stats-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(28,28,28,0.3) 50%, transparent 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 2: SERVICES PAGE
+           ------------------------------------------------------------- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 380px;
+        }
+
+        .service-features-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .service-features-list li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-features-list li i {
+            color: var(--accent-primary);
+            font-size: 0.8rem;
+        }
+
+        .service-cta-text {
+            color: var(--accent-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+            transition: var(--transition-smooth);
+        }
+
+        .service-cta-text:hover {
+            color: var(--accent-secondary);
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 3: PORTFOLIO PAGE & FILTER GRID
+           ------------------------------------------------------------- */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-primary);
+            color: var(--white);
+            border-color: var(--accent-primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .portfolio-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            background: var(--bg-card);
+        }
+
+        .portfolio-img-container {
+            width: 100%;
+            height: 380px;
+            background: linear-gradient(135deg, #1e1e24 0%, #111 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .portfolio-img-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(59,91,255,0.05) 0%, transparent 80%);
+            pointer-events: none;
+        }
+
+        .portfolio-card-mockup {
+            width: 80%;
+            height: 80%;
+            background: rgba(10, 10, 10, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px 12px 0 0;
+            transform: translateY(40px);
+            transition: var(--transition-smooth);
+            padding: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        .mockup-header {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .mockup-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .mockup-content {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 6px;
+            height: calc(100% - 24px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255,255,255,0.1);
+            font-size: 2rem;
+        }
+
+        .portfolio-card:hover .portfolio-card-mockup {
+            transform: translateY(15px) scale(1.03);
+        }
+
+        .portfolio-details {
+            padding: 24px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .portfolio-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-tag {
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
+        .portfolio-card-title {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .portfolio-card-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-action-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 4: CASE STUDIES
+           ------------------------------------------------------------- */
+        .case-studies-container {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .case-study-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .cs-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 32px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .cs-stat-num {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .cs-stat-lbl {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 5: ABOUT PAGE
+           ------------------------------------------------------------- */
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .about-img-placeholder {
+            width: 100%;
+            height: 450px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            background: linear-gradient(135deg, rgba(59,91,255,0.1) 0%, rgba(28,28,28,0.6) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-secondary);
+            font-size: 4rem;
+        }
+
+        .tech-stack-section {
+            background: rgba(28,28,28,0.2);
+            border-radius: 24px;
+            padding: 64px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .tech-box {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .tech-box:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+
+        .tech-box i {
+            font-size: 2rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .tech-box:hover i {
+            color: var(--accent-primary);
+        }
+
+        .tech-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 7: PRICING PAGE (UPDATED WITH NEW PLANS & EXTRA SERVICES)
+           ------------------------------------------------------------- */
+        .pricing-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            align-items: stretch;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 1200px) {
+            .pricing-grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid-4 {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin: 0 auto 60px auto;
+            }
+        }
+
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .pricing-card.premium-tier {
+            border-color: var(--accent-primary);
+            box-shadow: 0 10px 30px rgba(59, 91, 255, 0.1);
+        }
+
+        .tier-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-primary);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 100px;
+            text-transform: uppercase;
+        }
+
+        .tier-name {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tier-desc {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .tier-price-box {
+            margin-bottom: 24px;
+        }
+
+        .tier-price {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .tier-price-period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .tier-features-title {
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-features-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .tier-features-list li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tier-features-list li i {
+            color: var(--accent-primary);
+            font-size: 0.85rem;
+        }
+
+        /* Extra Services Styling */
+        .extra-services-section {
+            margin: 80px 0;
+        }
+
+        .extra-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .extra-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .extra-services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .extra-service-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .extra-service-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+
+        .extra-service-info h4 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .extra-service-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .extra-service-price {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent-secondary);
+            white-space: nowrap;
+        }
+
+        /* Comparison Table Styling */
+        .comparison-section {
+            margin-top: 80px;
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .comparison-table td {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .comparison-table tr:hover td {
+            background: rgba(255,255,255,0.01);
+        }
+
+        .check-icon {
+            color: var(--accent-primary);
+        }
+
+        .cross-icon {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 9: FAQ (ACCORDION STYLE)
+           ------------------------------------------------------------- */
+        .faq-accordion-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(28, 28, 28, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-hover);
+        }
+
+        .faq-trigger {
+            width: 100%;
+            padding: 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-icon {
+            font-size: 1.1rem;
+            color: var(--accent-secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 24px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-content {
+            padding: 0 24px 24px 24px;
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 10: CONTACT PAGE (UPDATED BOOKING FORM & NO BUDGET OPTION)
+           ------------------------------------------------------------- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 15px rgba(59, 91, 255, 0.1);
+        }
+
+        .form-row-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-details-list {
+            list-style: none;
+            margin: 32px 0;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-detail-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent-secondary);
+        }
+
+        .contact-detail-text h4 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .contact-detail-text p {
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, rgba(28,28,28,0.5) 0%, rgba(59,91,255,0.05) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            gap: 12px;
+        }
+
+        /* -------------------------------------------------------------
+           CALL TO ACTION (CTA) SECTION
+           ------------------------------------------------------------- */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(59,91,255,0.1) 0%, rgba(28,28,28,0.8) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 80px 40px;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+        }
+
+        .cta-desc {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 11/12: LEGAL / PRIVACY PAGES
+           ------------------------------------------------------------- */
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            margin: 40px 0 20px 0;
+            color: var(--white);
+        }
+
+        .legal-content p, .legal-content li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .legal-content ul {
+            margin-left: 20px;
+            margin-bottom: 24px;
+        }
+
+        /* -------------------------------------------------------------
+           PAGE 13: 404 NOT FOUND PAGE
+           ------------------------------------------------------------- */
+        .notfound-section {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .notfound-code {
+            font-family: var(--font-display);
+            font-size: 8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        /* -------------------------------------------------------------
+           PREMIUM FOOTER
+           ------------------------------------------------------------- */
+        .footer-brand {
+            border-top: 1px solid var(--border-color);
+            background-color: #050505;
+            padding: 80px 24px 40px 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo-desc {
+            max-width: 280px;
+        }
+
+        .footer-logo-desc p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 16px;
+        }
+
+        .footer-col-title {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-newsletter p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: var(--white);
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-copyright {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .social-icon:hover {
+            background: var(--accent-primary);
+            color: var(--white);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        /* -------------------------------------------------------------
+           RESPONSIVE DESIGN (MEDIA QUERIES)
+           ------------------------------------------------------------- */
+        @media (max-width: 1024px) {
+            .hero-title { font-size: 4rem; }
+            .benefits-grid, .services-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
+            .tech-grid { grid-template-columns: repeat(4, 1fr); }
+            .footer-container { grid-template-columns: 1fr repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                transition: var(--transition-smooth);
+                z-index: 1000;
+                border-top: 1px solid var(--border-color);
+            }
+            .nav-links.active { left: 0; }
+            .nav-item a { font-size: 1.2rem; }
+            .navbar-cta { display: none; }
+            .hero-title { font-size: 3rem; }
+            .hero-desc { font-size: 1.1rem; }
+            .hero-ctas { flex-direction: column; width: 100%; max-width: 300px; }
+            .section-title { font-size: 2.2rem; }
+            .benefits-grid, .services-grid, .blog-grid, .portfolio-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .about-story-grid, .contact-grid { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2.5rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
+            .form-row-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Background Layers -->
+    <div class="ambient-glow">
+        <div class="glow-circle glow-1"></div>
+        <div class="glow-circle glow-2"></div>
+    </div>
+    <div class="grid-texture"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- 2. Loading Screen -->
+    <div class="loader-screen" id="loader">
+        <div class="loader-logo">
+            <div class="loader-logo-icon">
+                <svg viewBox="0 0 100 100">
+                    <path d="M20,20 L80,20 L20,80 L80,80" />
+                </svg>
+            </div>
+            <span>ZYNOCTA</span>
+        </div>
+        <div class="loader-progress-bar-wrapper">
+            <div class="loader-progress-bar" id="loader-bar"></div>
+        </div>
+        <div class="loader-number" id="loader-percent">0%</div>
+    </div>
+
+    <!-- 3. Sticky Glassmorphism Header -->
+    <header class="header-navbar" id="navbar">
+        <div class="navbar-container">
+            <a class="brand-logo" onclick="navigateTo('home')">
+                <svg viewBox="0 0 100 100">
+                    <path d="M20,20 L80,20 L20,80 L80,80" fill="none" stroke="#3B5BFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="brand-logo-text">ZYNOCTA<span>.</span></div>
+            </a>
+            <ul class="nav-links" id="nav-menu">
+                <li class="nav-item active" data-page="home"><a onclick="navigateTo('home')">Home</a></li>
+                <li class="nav-item" data-page="services"><a onclick="navigateTo('services')">Services</a></li>
+                <li class="nav-item" data-page="portfolio"><a onclick="navigateTo('portfolio')">Work</a></li>
+                <li class="nav-item" data-page="case-studies"><a onclick="navigateTo('case-studies')">Case Studies</a></li>
+                <li class="nav-item" data-page="about"><a onclick="navigateTo('about')">About</a></li>
+                <li class="nav-item" data-page="pricing"><a onclick="navigateTo('pricing')">Pricing</a></li>
+                <li class="nav-item" data-page="faq"><a onclick="navigateTo('faq')">FAQ</a></li>
+                <li class="nav-item" data-page="contact"><a onclick="navigateTo('contact')">Contact</a></li>
+            </ul>
+            <div class="navbar-cta">
+                <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Book a Call <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
+            </div>
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 4. SPA Main Content Container -->
+    <div id="spa-container">
+
+        <!-- ==================== HOME PAGE ==================== -->
+        <main id="page-home" class="spa-page active">
+            <!-- Hero -->
+            <section class="hero-section">
+                <div class="section-badge">Next-Generation Engineering</div>
+                <h1 class="hero-title">Modern Websites.<br><span>Real Results.</span></h1>
+                <p class="hero-desc">We merge elite backend engineering with mesmerizing, luxury digital design. Your business deserves more than a standard template.</p>
+                <div class="hero-ctas">
+                    <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Book a Free Consultation <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
+                    <a onclick="navigateTo('portfolio')" class="btn-premium btn-secondary">View Portfolio</a>
+                </div>
+
+                <!-- Trusted By -->
+                <div class="trusted-by">
+                    <p class="trusted-title">Trusted by engineering-first brands worldwide</p>
+                    <div class="trusted-logos">
+                        <div class="client-logo-placeholder"><i class="fa-brands fa-stripe"></i> STRIPE</div>
+                        <div class="client-logo-placeholder"><i class="fa-brands fa-aws"></i> AWS</div>
+                        <div class="client-logo-placeholder"><i class="fa-brands fa-figma"></i> FIGMA</div>
+                        <div class="client-logo-placeholder"><i class="fa-brands fa-github"></i> GITHUB</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits / Why Choose Us -->
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Why Zynocta</div>
+                    <h2 class="section-title">Designed for Performance. Built for Growth.</h2>
+                    <p class="section-subtitle">We build premium, reliable digital structures that turn attention into conversion.</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="luxury-card">
+                        <div class="benefit-card-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h3 class="benefit-card-title">Ultimate Speed</h3>
+                        <p class="benefit-card-text">Every millisecond counts. We optimize all structures for 99+ Lighthouse scores, boosting search performance and customer engagement.</p>
+                    </div>
+                    <div class="luxury-card">
+                        <div class="benefit-card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <h3 class="benefit-card-title">Bespoke Design</h3>
+                        <p class="benefit-card-text">Zero basic templates. Every component is meticulously tailored to align perfectly with your brand identity and requirements.</p>
+                    </div>
+                    <div class="luxury-card">
+                        <div class="benefit-card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h3 class="benefit-card-title">Advanced SEO</h3>
+                        <p class="benefit-card-text">We integrate technical SEO best practices from day one to ensure your project ranks effectively on major search networks.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Grid -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div>
+                        <div class="stat-number">120+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Retention</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">14+</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">95+</div>
+                        <div class="stat-label">Avg. Lighthouse Score</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Banner -->
+            <section>
+                <div class="cta-banner">
+                    <h2 class="cta-title">Let's Build Something Exceptional</h2>
+                    <p class="cta-desc">Work with an elite team of designers, engineers, and growth specialists to scale your digital presence.</p>
+                    <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Start Your Project <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== SERVICES PAGE ==================== -->
+        <main id="page-services" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Our Services</div>
+                    <h1 class="section-title">What We Deliver</h1>
+                    <p class="section-subtitle">We design, build, and optimize high-end websites, tailored precisely to meet your business needs.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="luxury-card service-card">
+                        <div>
+                            <div class="benefit-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3 class="benefit-card-title">Business Websites</h3>
+                            <p class="benefit-card-text">Modern, premium websites built to drive authority and capture high-value enterprise clients.</p>
+                            <ul class="service-features-list">
+                                <li><i class="fa-solid fa-check"></i> High-conversion copy structures</li>
+                                <li><i class="fa-solid fa-check"></i> Interactive pricing components</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="luxury-card service-card">
+                        <div>
+                            <div class="benefit-card-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <h3 class="benefit-card-title">High-Converting Landing Pages</h3>
+                            <p class="benefit-card-text">Focused single-page flows structured to maximize paid acquisition ROI.</p>
+                            <ul class="service-features-list">
+                                <li><i class="fa-solid fa-check"></i> Seamless interactive sections</li>
+                                <li><i class="fa-solid fa-check"></i> Tailored database capture forms</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="luxury-card service-card">
+                        <div>
+                            <div class="benefit-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3 class="benefit-card-title">Premium SEO Strategy</h3>
+                            <p class="benefit-card-text">Targeted optimization to organically scale traffic and bring customers directly to you.</p>
+                            <ul class="service-features-list">
+                                <li><i class="fa-solid fa-check"></i> Advanced technical schema audit</li>
+                                <li><i class="fa-solid fa-check"></i> Clean layout-content maps</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== PORTFOLIO PAGE ==================== -->
+        <main id="page-portfolio" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Case Files</div>
+                    <h1 class="section-title">Selected Works</h1>
+                    <p class="section-subtitle">Explore a handpicked selection of custom web applications designed and developed to drive business results.</p>
+                </div>
+
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="saas">SaaS / Web Apps</button>
+                    <button class="filter-btn" data-filter="ecomm">E-Commerce</button>
+                    <button class="filter-btn" data-filter="corp">Corporate</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-card" data-category="saas">
+                        <div class="portfolio-img-container">
+                            <div class="portfolio-card-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                </div>
+                                <div class="mockup-content">APEX PLATFORM</div>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Next.js</span>
+                                <span class="portfolio-tag">Tailwind</span>
+                                <span class="portfolio-tag">Framer Motion</span>
+                            </div>
+                            <h3 class="portfolio-card-title">Apex SaaS Dashboard</h3>
+                            <p class="portfolio-card-desc">An interactive metrics management interface designed to visualize high-frequency trading analytics.</p>
+                            <div class="portfolio-action-links">
+                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="portfolio-card" data-category="ecomm">
+                        <div class="portfolio-img-container">
+                            <div class="portfolio-card-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                </div>
+                                <div class="mockup-content">LUMINA BRAND</div>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Three.js</span>
+                                <span class="portfolio-tag">E-Commerce</span>
+                                <span class="portfolio-tag">GSAP</span>
+                            </div>
+                            <h3 class="portfolio-card-title">Lumina Premium Optics</h3>
+                            <p class="portfolio-card-desc">An immersive e-commerce shopping experience for high-end luxury eyewear brands.</p>
+                            <div class="portfolio-action-links">
+                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== CASE STUDIES ==================== -->
+        <main id="page-case-studies" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Deep Dives</div>
+                    <h1 class="section-title">Case Studies</h1>
+                    <p class="section-subtitle">Real metrics. Unfiltered challenges. Explore how we execute and deliver exceptional digital architecture.</p>
+                </div>
+
+                <div class="case-studies-container">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-hero luxury-card">
+                        <div>
+                            <div class="section-badge">SaaS Optimization</div>
+                            <h2 class="section-title" style="font-size: 2.2rem; margin-top: 10px;">Apex Analytics Platform</h2>
+                            <p class="section-subtitle" style="font-size: 1rem;">Apex needed a dashboard to resolve customer onboarding friction, simplify complex visual trends, and reduce client churn.</p>
+                            
+                            <div class="cs-stats">
+                                <div>
+                                    <div class="cs-stat-num">+320%</div>
+                                    <div class="cs-stat-lbl">Onboarding Conversions</div>
+                                </div>
+                                <div>
+                                    <div class="cs-stat-num">-42%</div>
+                                    <div class="cs-stat-lbl">Customer Churn Rate</div>
+                                </div>
+                                <div>
+                                    <div class="cs-stat-num">&lt;2.1s</div>
+                                    <div class="cs-stat-lbl">Loading Time</div>
+                                </div>
+                            </div>
+
+                            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+                                <strong>Our Strategy:</strong> We restructured their information layout, building a tailored Next.js portal integrated with dynamic visualizations. This setup enables clients to access and manage real-time metrics with zero lag.
+                            </p>
+                        </div>
+                        <div class="about-img-placeholder" style="height: 380px; font-size: 2rem;">APEX ANALYTICS</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== ABOUT PAGE ==================== -->
+        <main id="page-about" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Our Story</div>
+                    <h1 class="section-title">Architects of the Modern Web</h1>
+                    <p class="section-subtitle">We are an elite, international collective of designers, senior engineers, and growth strategists.</p>
+                </div>
+
+                <div class="about-story-grid">
+                    <div class="about-img-placeholder">ZYNOCTA</div>
+                    <div>
+                        <h2 class="section-title" style="font-size: 2.2rem; text-align: left;">We refuse to compromise.</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                            ZYNOCTA was founded with a singular focus: to build custom web applications that combine luxurious design aesthetic with reliable engineering.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                            We recognize that high-performing companies require robust digital infrastructure. Our solutions are custom-developed from the ground up to ensure high security, smooth interactivity, and reliable organic reach.
+                        </p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-shield-halved"></i> Security-first development methodologies</li>
+                            <li><i class="fa-solid fa-code"></i> Tailored structural frameworks (Zero Bloat)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="tech-stack-section">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <h3 class="section-title" style="font-size: 1.8rem;">Our Technology Stack</h3>
+                        <p class="section-subtitle">We utilize cutting-edge web development standards to ensure optimal reliability and performance.</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-box"><i class="fa-brands fa-react"></i><div class="tech-name">React</div></div>
+                        <div class="tech-box"><i class="fa-brands fa-node-js"></i><div class="tech-name">Next.js</div></div>
+                        <div class="tech-box"><i class="fa-brands fa-js"></i><div class="tech-name">ES6+ JS</div></div>
+                        <div class="tech-box"><i class="fa-brands fa-sass"></i><div class="tech-name">SCSS</div></div>
+                        <div class="tech-box"><i class="fa-brands fa-git-alt"></i><div class="tech-name">Git</div></div>
+                        <div class="tech-box"><i class="fa-brands fa-figma"></i><div class="tech-name">Figma</div></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== PRICING PAGE (REPLACED WITH NEW PRICING) ==================== -->
+        <main id="page-pricing" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Investment Plans</div>
+                    <h1 class="section-title">Transparent Project Pricing</h1>
+                    <p class="section-subtitle">Select the ideal tier for your growth. All plans include standard high-end luxury engineering quality.</p>
+                </div>
+
+                <div class="pricing-grid-4">
+                    <!-- Starter -->
+                    <div class="luxury-card pricing-card">
+                        <div>
+                            <h3 class="tier-name">🟢 Starter</h3>
+                            <p class="tier-desc">Perfect for startups and local businesses looking to establish design authority.</p>
+                            <div class="tier-price-box">
+                                <span class="tier-price">$149</span>
+                            </div>
+                            <div class="tier-features-title">Includes:</div>
+                            <ul class="tier-features-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Up to 3 Pages</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Premium Design</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Mobile Responsive</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Contact Form</li>
+                                <li><i class="fa-solid fa-circle-check"></i> WhatsApp Integration</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Basic SEO</li>
+                                <li><i class="fa-solid fa-circle-check"></i> 7 Days Support</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="btn-premium btn-secondary" style="width:100%; text-align:center; justify-content:center;">Book Onboarding</a>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="luxury-card pricing-card premium-tier">
+                        <span class="tier-badge">⭐ Most Popular</span>
+                        <div>
+                            <h3 class="tier-name">🔵 Business</h3>
+                            <p class="tier-desc">Tailored for fast-growing companies demanding highly custom structural designs.</p>
+                            <div class="tier-price-box">
+                                <span class="tier-price">$299</span>
+                            </div>
+                            <div class="tier-features-title">Includes:</div>
+                            <ul class="tier-features-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Up to 7 Pages</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Custom Design</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Premium Animations</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Google Maps</li>
+                                <li><i class="fa-solid fa-circle-check"></i> WhatsApp & Contact Forms</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Basic SEO</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Speed Optimization</li>
+                                <li><i class="fa-solid fa-circle-check"></i> 30 Days Support</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="btn-premium btn-primary" style="width:100%; text-align:center; justify-content:center;">Book Onboarding</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="luxury-card pricing-card">
+                        <div>
+                            <h3 class="tier-name">🟣 Premium</h3>
+                            <p class="tier-desc">Advanced systems and integrations for complex transactional businesses.</p>
+                            <div class="tier-price-box">
+                                <span class="tier-price">$599</span>
+                            </div>
+                            <div class="tier-features-title">Includes:</div>
+                            <ul class="tier-features-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Up to 15 Pages</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Advanced Animations</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Integrated CMS & Blog</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Booking System</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Full SEO Strategy</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Advanced Analytics</li>
+                                <li><i class="fa-solid fa-circle-check"></i> 60 Days Support</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="btn-premium btn-secondary" style="width:100%; text-align:center; justify-content:center;">Book Onboarding</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="luxury-card pricing-card">
+                        <div>
+                            <h3 class="tier-name">⚫ Enterprise</h3>
+                            <p class="tier-desc">Custom blueprints, advanced architectures, and full priority scaling support.</p>
+                            <div class="tier-price-box">
+                                <span class="tier-price">Custom</span>
+                            </div>
+                            <div class="tier-features-title">Includes:</div>
+                            <ul class="tier-features-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Unlimited Pages</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Custom Dashboard</li>
+                                <li><i class="fa-solid fa-circle-check"></i> API & CRM Integration</li>
+                                <li><i class="fa-solid fa-circle-check"></i> AI Built-In Features</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Priority SLA Support</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Dedicated Manager</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="btn-premium btn-secondary" style="width:100%; text-align:center; justify-content:center;">Contact Enterprise</a>
+                    </div>
+                </div>
+
+                <!-- Extra Services -->
+                <div class="extra-services-section">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <h3 class="section-title" style="font-size: 2rem;">Extra Services & Add-ons</h3>
+                        <p class="section-subtitle">Scale your chosen tier instantly with our modular premium upgrades.</p>
+                    </div>
+                    <div class="extra-services-grid">
+                        <div class="extra-service-card">
+                            <div class="extra-service-info">
+                                <h4>Extra Page</h4>
+                                <p>Additional optimized design page</p>
+                            </div>
+                            <div class="extra-service-price">$30</div>
+                        </div>
+                        <div class="extra-service-card">
+                            <div class="extra-service-info">
+                                <h4>Booking System</h4>
+                                <p>Calendly or custom visual setup</p>
+                            </div>
+                            <div class="extra-service-price">$80</div>
+                        </div>
+                        <div class="extra-service-card">
+                            <div class="extra-service-info">
+                                <h4>Blog Integration</h4>
+                                <p>CMS configuration & dynamic feeds</p>
+                            </div>
+                            <div class="extra-service-price">$80</div>
+                        </div>
+                        <div class="extra-service-card">
+                            <div class="extra-service-info">
+                                <h4>Speed Optimization</h4>
+                                <p>Load optimization for 95+ score</p>
+                            </div>
+                            <div class="extra-service-price">$80</div>
+                        </div>
+                        <div class="extra-service-card">
+                            <div class="extra-service-info">
+                                <h4>SEO Optimization</h4>
+                                <p>Advanced keyword & technical map</p>
+                            </div>
+                            <div class="extra-service-price">$100</div>
+                        </div>
+                        <div class="extra-service-card">
+                            <div class="extra-service-info">
+                                <h4>Website Redesign</h4>
+                                <p>Convert outdated layouts to luxury standards</p>
+                            </div>
+                            <div class="extra-service-price">From $199</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="comparison-section">
+                    <div class="section-header">
+                        <h3 class="section-title" style="font-size: 2rem;">Feature Breakdown</h3>
+                    </div>
+                    <div class="comparison-table-wrapper">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Starter</th>
+                                    <th>Business</th>
+                                    <th>Premium</th>
+                                    <th>Enterprise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pages</td>
+                                    <td>3</td>
+                                    <td>7</td>
+                                    <td>15</td>
+                                    <td>Unlimited</td>
+                                </tr>
+                                <tr>
+                                    <td>Responsive</td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>WhatsApp</td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Contact Forms</td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Google Maps</td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Animations</td>
+                                    <td>Basic</td>
+                                    <td>Premium</td>
+                                    <td>Advanced</td>
+                                    <td>Custom</td>
+                                </tr>
+                                <tr>
+                                    <td>CMS</td>
+                                    <td><i class="fa-solid fa-xmark cross-icon"></i></td>
+                                    <td>Optional</td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>SEO</td>
+                                    <td>Basic</td>
+                                    <td>Standard</td>
+                                    <td>Advanced</td>
+                                    <td>Complete</td>
+                                </tr>
+                                <tr>
+                                    <td>Blog</td>
+                                    <td><i class="fa-solid fa-xmark cross-icon"></i></td>
+                                    <td>Optional</td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                    <td><i class="fa-solid fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Support</td>
+                                    <td>7 Days</td>
+                                    <td>30 Days</td>
+                                    <td>60 Days</td>
+                                    <td>Priority</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== FAQ PAGE ==================== -->
+        <main id="page-faq" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Support Desk</div>
+                    <h1 class="section-title">Frequently Asked Questions</h1>
+                    <p class="section-subtitle">Find answers to key technical, logistical, and design workflow queries.</p>
+                </div>
+
+                <div class="faq-accordion-container">
+                    <div class="faq-item">
+                        <button class="faq-trigger">What is your typical project timeline? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <div class="faq-content">
+                            <p>For custom landing pages and startup suites, the timeline averages 3 to 4 weeks. Larger SaaS applications and complex enterprise platforms typically require 8 to 12 weeks of continuous strategic planning, design, and engineering.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">Do you build using templates or themes? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <div class="faq-content">
+                            <p>We do not use cookie-cutter themes or generic Bootstrap templates. Every component we construct is engineered in-house to secure maximum security, flexibility, and performance metrics.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">Which framework technologies do you utilize? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <div class="faq-content">
+                            <p>We primarily utilize modern production frameworks like React, Next.js, and static site generation techniques combined with Tailwind CSS and advanced custom GSAP animations for motion design.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">Will my website be easily editable? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <div class="faq-content">
+                            <p>Yes. We integrate customizable CMS models (such as Sanity, Contentful, or custom WordPress configurations) so your marketing team can manage layout components, post blogs, and update copy without touching any raw code.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== CONTACT PAGE (REMOVED BUDGET OPTIONS, CONNECTED TO MAIL) ==================== -->
+        <main id="page-contact" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <div class="section-badge">Collaboration</div>
+                    <h1 class="section-title">Kickstart Your Digital Upgrade</h1>
+                    <p class="section-subtitle">Ready to establish absolute design authority in your niche? Fill out the brief below to connect with us directly.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div>
+                        <form class="contact-form" id="main-contact-form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-row-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Your Name *</label>
+                                    <input type="text" id="contact-name" class="form-control" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" id="contact-email" class="form-control" required placeholder="john@company.com">
+                                </div>
+                            </div>
+                            <div class="form-row-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Company Name</label>
+                                    <input type="text" id="contact-company" class="form-control" placeholder="Company Inc.">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (555) 000-0000">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Project Type *</label>
+                                <input type="text" id="contact-project-type" class="form-control" required placeholder="e.g. Premium Business Redesign, E-Commerce, Custom Dashboard">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Describe Your Vision *</label>
+                                <textarea id="contact-message" class="form-control" rows="5" required placeholder="Outline key challenges, must-have features, and target metrics you're aiming for..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-premium btn-primary" style="justify-content: center;">Send Email Brief <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-column">
+                        <div class="luxury-card">
+                            <h3 class="benefit-card-title" style="margin-bottom: 8px;">Direct Touchpoints</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px;">Connect with our managing consultants directly for rapid response.</p>
+                            
+                            <ul class="contact-details-list">
+                                <li class="contact-detail-item">
+                                    <div class="contact-detail-icon"><i class="fa-regular fa-envelope"></i></div>
+                                    <div class="contact-detail-text">
+                                        <h4>Email Support</h4>
+                                        <p>contact.zynocta@gmail.com</p>
+                                    </div>
+                                </li>
+                                <li class="contact-detail-item">
+                                    <div class="contact-detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                    <div class="contact-detail-text">
+                                        <h4>WhatsApp Chat</h4>
+                                        <p>+1 (302) 555-0190</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="map-placeholder">
+                            <i class="fa-solid fa-map-pin" style="font-size: 2rem; color: var(--accent-primary);"></i>
+                            <p style="font-weight: 600; color: var(--white);">Delaware, United States</p>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Serving Elite Global Enterprise Partners</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== LEGAL PAGES (PRIVACY / TERMS) ==================== -->
+        <main id="page-privacy" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <h1 class="section-title">Privacy Policy</h1>
+                    <p class="section-subtitle">Last updated: October 24, 2024</p>
+                </div>
+                <div class="legal-container luxury-card">
+                    <div class="legal-content">
+                        <p>At ZYNOCTA, we hold your digital privacy in the highest regard. This document details how we collect, process, and protect your information when you engage with our agency and digital platforms.</p>
+                        <h2>1. Information We Collect</h2>
+                        <p>We process the details you voluntarily submit through our contact structures, including names, organization names, email addresses, and specific project briefs.</p>
+                        <h2>2. Data Usage</h2>
+                        <p>We utilize the collected information strictly to coordinate technical consultations, refine agency services, and process specific design inquiries.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <main id="page-terms" class="spa-page">
+            <section>
+                <div class="section-header">
+                    <h1 class="section-title">Terms & Conditions</h1>
+                    <p class="section-subtitle">Last updated: October 24, 2024</p>
+                </div>
+                <div class="legal-container luxury-card">
+                    <div class="legal-content">
+                        <p>Welcome to ZYNOCTA. By interacting with this platform and procuring our digital services, you agree to comply with the legal conditions listed below.</p>
+                        <h2>1. Engagement & Terms</h2>
+                        <p>All specific agency agreements, project timelines, deliverables, and payment structures will be explicitly stated within your primary Statement of Work (SOW).</p>
+                        <h2>2. Proprietary Intellectual Property</h2>
+                        <p>Following final budget settlement, the intellectual rights and custom web layouts created for your specific project will belong fully to your brand organization.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==================== 404 NOT FOUND PAGE ==================== -->
+        <main id="page-404" class="spa-page">
+            <section class="notfound-section">
+                <div class="notfound-code">404</div>
+                <h1 class="section-title" style="margin-bottom: 16px;">Destination Broken</h1>
+                <p class="hero-desc" style="max-width: 450px;">The resource path you are attempting to locate does not exist or was moved to another directory.</p>
+                <a onclick="navigateTo('home')" class="btn-premium btn-primary">Return Home <i class="fa-solid fa-house"></i></a>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- 5. Premium Footer -->
+    <footer class="footer-brand">
+        <div class="footer-container">
+            <div class="footer-logo-desc">
+                <a class="brand-logo" onclick="navigateTo('home')">
+                    <svg viewBox="0 0 100 100">
+                        <path d="M20,20 L80,20 L20,80 L80,80" fill="none" stroke="#3B5BFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="brand-logo-text">ZYNOCTA<span>.</span></div>
+                </a>
+                <p>We design and construct high-end digital infrastructure for the world's most ambitious brands.</p>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a onclick="navigateTo('services')">Business Sites</a></li>
+                    <li><a onclick="navigateTo('services')">Landing Pages</a></li>
+                    <li><a onclick="navigateTo('services')">SEO Strategies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Company</h4>
+                <ul class="footer-links">
+                    <li><a onclick="navigateTo('about')">Our Story</a></li>
+                    <li><a onclick="navigateTo('portfolio')">Case Files</a></li>
+                    <li><a onclick="navigateTo('pricing')">Plans</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Resources</h4>
+                <ul class="footer-links">
+                    <li><a onclick="navigateTo('faq')">Support Desk</a></li>
+                    <li><a onclick="navigateTo('privacy')">Privacy Policy</a></li>
+                    <li><a onclick="navigateTo('terms')">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4 class="footer-col-title">Newsletter</h4>
+                <p>Subscribe to receive quarterly technical web and UX insights.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" class="newsletter-input" required placeholder="name@domain.com">
+                    <button type="submit" class="btn-premium btn-primary" style="padding: 10px 14px;"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                &copy; 2026 ZYNOCTA. All rights preserved. Built with premium standards.
+            </div>
+            <div class="footer-social-links">
+                <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-dribbble"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for Elegant Motion Designs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+        /* -------------------------------------------------------------
+           PREMIUM LOADING TIMER LOGIC
+           ------------------------------------------------------------- */
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('loader');
+            const loaderBar = document.getElementById('loader-bar');
+            const loaderPercent = document.getElementById('loader-percent');
+            let progress = 0;
+            
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 15) + 5;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        loader.style.opacity = '0';
+                        loader.style.visibility = 'hidden';
+                        animateHeroSection();
+                    }, 500);
+                }
+                loaderBar.style.width = `${progress}%`;
+                loaderPercent.textContent = `${progress}%`;
+            }, 80);
+        });
+
+        /* -------------------------------------------------------------
+           STICKY NAVBAR BACKGROUND CHANGE
+           ------------------------------------------------------------- */
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        /* -------------------------------------------------------------
+           MOBILE HAMBURGER MENU MECHANISM
+           ------------------------------------------------------------- */
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        /* -------------------------------------------------------------
+           SINGLE PAGE APPLICATION (SPA) CUSTOM ROUTER
+           ------------------------------------------------------------- */
+        function navigateTo(pageId) {
+            const pages = document.querySelectorAll('.spa-page');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            hamburgerBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+
+            const targetPage = document.getElementById(`page-${pageId}`);
+            if (!targetPage) {
+                navigateTo('404');
+                return;
+            }
+
+            const activePage = document.querySelector('.spa-page.active');
+            if (activePage) {
+                gsap.to(activePage, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.3,
+                    onComplete: () => {
+                        activePage.classList.remove('active');
+                        targetPage.classList.add('active');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                        gsap.fromTo(targetPage, 
+                            { opacity: 0, y: 20 }, 
+                            { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+                        );
+                    }
+                });
+            } else {
+                targetPage.classList.add('active');
+                gsap.fromTo(targetPage, 
+                    { opacity: 0, y: 20 }, 
+                    { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+                );
+            }
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-page') === pageId) {
+                    item.classList.add('active');
+                }
+            });
+
+            history.pushState(null, null, `#${pageId}`);
+        }
+
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.replace('#', '') || 'home';
+            navigateTo(hash);
+        });
+
+        const initialHash = window.location.hash.replace('#', '') || 'home';
+        navigateTo(initialHash);
+
+        /* -------------------------------------------------------------
+           GSAP MICRO-INTERACTION ANIMATIONS
+           ------------------------------------------------------------- */
+        function animateHeroSection() {
+            gsap.from('.hero-title', { opacity: 0, y: 30, duration: 1, ease: 'power3.out', delay: 0.2 });
+            gsap.from('.hero-desc', { opacity: 0, y: 20, duration: 1, ease: 'power3.out', delay: 0.4 });
+            gsap.from('.hero-ctas', { opacity: 0, y: 15, duration: 1, ease: 'power3.out', delay: 0.6 });
+        }
+
+        /* -------------------------------------------------------------
+           PORTFOLIO DYNAMIC FILTERING SYSTEM
+           ------------------------------------------------------------- */
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                portfolioCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filterValue === 'all' || category === filterValue) {
+                        gsap.to(card, { opacity: 1, scale: 1, duration: 0.4, display: 'block' });
+                    } else {
+                        gsap.to(card, { opacity: 0, scale: 0.9, duration: 0.4, display: 'none' });
+                    }
+                });
+            });
+        });
+
+        /* -------------------------------------------------------------
+           FAQ ACCORDION TRIGGERS
+           ------------------------------------------------------------- */
+        const faqTriggers = document.querySelectorAll('.faq-trigger');
+
+        faqTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const parent = trigger.parentElement;
+                const content = trigger.nextElementSibling;
+                const isActive = parent.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-content').style.maxHeight = '0';
+                });
+
+                if (!isActive) {
+                    parent.classList.add('active');
+                    content.style.maxHeight = `${content.scrollHeight}px`;
+                }
+            });
+        });
+
+        /* -------------------------------------------------------------
+           FORM SUBMISSIONS & MAILTO LINK GENERATION
+           ------------------------------------------------------------- */
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const company = document.getElementById('contact-company').value || 'Not Specified';
+            const phone = document.getElementById('contact-phone').value || 'Not Specified';
+            const projectType = document.getElementById('contact-project-type').value;
+            const message = document.getElementById('contact-message').value;
+
+            const emailSubject = encodeURIComponent(`New Project Brief from ${name}`);
+            const emailBody = encodeURIComponent(
+                `Hello ZYNOCTA Team,\n\n` +
+                `I would like to request a new project layout consultation. Here are my details:\n\n` +
+                `- Name: ${name}\n` +
+                `- Email: ${email}\n` +
+                `- Company: ${company}\n` +
+                `- Phone: ${phone}\n` +
+                `- Project Type: ${projectType}\n\n` +
+                `Project Vision/Message:\n${message}\n\n` +
+                `Looking forward to hearing from you soon!`
+            );
+
+            // Construct and trigger mailto structure
+            const mailtoUrl = `mailto:contact.zynocta@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+            window.location.href = mailtoUrl;
+
+            alert('Thank you! Opening your system email client to send the project brief to ZYNOCTA.');
+            event.target.reset();
+        }
+
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            alert('Subscription confirmed! Welcome to ZYNOCTA Tech Insights.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
