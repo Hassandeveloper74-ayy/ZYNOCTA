@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="yxUTjHt38JNfm2f92Ee0xTOF86ZhcPNrmHMMJM440vM" />
     <title>ZYNOCTA  Modern Websites. Real Results. | Premium Web Development Agency</title>
-    
+    <!-- EmailJS SDK Integration -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      // Apni Account tab se mili Public Key yahan quotes ke andar paste karein
+      emailjs.init("7a_jG6j01IMJmc0yj");
+   })();
+</script>
+
     <!-- Meta SEO Tags -->
     <meta name="description" content="ZYNOCTA is an elite international web development agency crafting modern, lightning-fast, and premium high-converting web applications for startups, SaaS, and enterprise brands.">
     <meta name="keywords" content="web development, premium agency, custom software, saas website, luxury design, enterprise development, SEO optimization, high-performance website, Next.js, React, premium digital agency">
@@ -45,7 +53,7 @@
       "image": "https://zynocta-agency.vercel.app/zynocta blue and black.png",
       "url": "https://zynocta-agency.vercel.app/",
       "telephone": "+923414595789",
-      "email": "daviddthompsondev@gmail.com",
+      "email": "contact.zynocta@gmail.com",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -76,7 +84,7 @@
     </script>
 
     <style>
-        
+
         :root {
             --bg-primary: #0A0A0A;
             --bg-secondary: #171717;
@@ -114,7 +122,7 @@
             background-color: var(--bg-primary);
         }
 
-        
+
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -129,7 +137,7 @@
             background: var(--accent-primary);
         }
 
-        
+
         .ambient-glow {
             position: fixed;
             top: 0;
@@ -196,7 +204,7 @@
             z-index: 3;
         }
 
-       
+
         .loader-screen {
             position: fixed;
             top: 0;
@@ -270,94 +278,124 @@
         }
 
         /* -------------------------------------------------------------
-           STICKY GLASSMORPHISM NAVBAR
-           ------------------------------------------------------------- */
-        .header-navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-            padding: 20px 0;
-            transition: var(--transition-smooth);
-        }
+     /* STICKY GLASSMORPHISM NAVBAR */
+.header-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    transition: var(--transition-smooth);
+}
 
-        .header-navbar.scrolled {
-            padding: 12px 0;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-        }
+.header-navbar.scrolled {
+    padding: 12px 0;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+}
 
-        .navbar-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: var(--font-display);
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: -0.5px;
-            color: var(--white);
-            text-decoration: none;
-            cursor: pointer;
-            z-index: 1001;
-        }
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1001;
+}
 
-        .brand-logo svg {
-            width: 32px;
-            height: 32px;
-        }
+.brand-logo svg {
+    width: 32px;
+    height: 32px;
+}
 
-        .brand-logo-text span {
-            color: var(--accent-primary);
-        }
+.brand-logo-text span {
+    color: var(--accent-primary);
+}
 
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-item a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition-smooth);
-            position: relative;
-            padding: 6px 0;
-        }
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+}
 
-        .nav-item a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background-color: var(--accent-primary);
-            transition: var(--transition-smooth);
-        }
+.nav-item a, 
+.nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+}
 
-        .nav-item a:hover, .nav-item.active a {
-            color: var(--white);
-        }
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--accent-primary);
+    transition: var(--transition-smooth);
+}
 
-        .nav-item a:hover::after, .nav-item.active a::after {
-            width: 100%;
-        }
+.nav-item a:hover, .nav-item.active a {
+    color: var(--white);
+}
 
-       
+.nav-item a:hover::after, .nav-item.active a::after {
+    width: 100%;
+}
+
+.nav-dropdown-toggle i {
+    font-size: 0.7rem;
+    margin-top: 1px;
+}
+
+.navbar-cta {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-cta .btn-premium {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    line-height: 1;
+}
+
         .btn-premium {
             display: inline-flex;
             align-items: center;
@@ -408,7 +446,27 @@
             transform: translateX(4px);
         }
 
-        
+
+        .nav-item-dropdown { position: relative; }
+        .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 7px; }
+        .nav-dropdown-toggle i { font-size: 0.65rem; transition: transform .25s ease; }
+        .nav-dropdown { position:absolute; top:calc(100% + 18px); left:50%; transform:translate(-50%,-8px); min-width:250px; padding:10px; list-style:none; background:rgba(12,12,14,.96); border:1px solid var(--border-color); border-radius:16px; box-shadow:0 18px 50px rgba(0,0,0,.35); backdrop-filter:blur(18px); opacity:0; visibility:hidden; pointer-events:none; transition:.25s ease; z-index:1100; }
+        .nav-item-dropdown:hover .nav-dropdown, .nav-item-dropdown:focus-within .nav-dropdown { opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,0); }
+        .nav-item-dropdown:hover .nav-dropdown-toggle i, .nav-item-dropdown:focus-within .nav-dropdown-toggle i { transform:rotate(180deg); }
+        .nav-dropdown a { display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; color:var(--text-secondary); white-space:nowrap; font-size:.82rem; }
+        .nav-dropdown a::after { display:none; } .nav-dropdown a:hover { background:rgba(255,255,255,.05); color:var(--white); }
+        .nav-status { display:inline-flex; align-items:center; gap:7px; margin-right:12px; color:var(--text-secondary); font-size:.78rem; white-space:nowrap; }
+        .nav-status-dot { width:7px; height:7px; border-radius:50%; background:#35d07f; box-shadow:0 0 10px rgba(53,208,127,.7); }
+        .tech-platforms-section { margin-top:80px; } .tech-category-row { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:28px; }
+        .tech-category { border:1px solid var(--border-color); background:rgba(255,255,255,.03); color:var(--text-secondary); border-radius:999px; padding:10px 16px; cursor:pointer; transition:var(--transition-smooth); }
+        .tech-category.active,.tech-category:hover { color:var(--white); border-color:var(--border-hover); background:rgba(255,255,255,.06); }
+        .tech-platform-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+        .tech-platform-item { padding:22px 16px; text-align:center; border:1px solid var(--border-color); border-radius:16px; background:rgba(255,255,255,.025); transition:var(--transition-smooth); }
+        .tech-platform-item:hover { transform:translateY(-3px); border-color:var(--border-hover); } .tech-platform-item i { font-size:1.45rem; margin-bottom:10px; color:var(--white); } .tech-platform-item span { display:block; color:var(--text-secondary); font-size:.86rem; }
+        .testimonial-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:35px; } .testimonial-empty { grid-column:1/-1; text-align:center; color:var(--text-secondary); padding:34px; border:1px dashed var(--border-color); border-radius:16px; } .testimonial-stars { color:#f4c95d; letter-spacing:2px; margin-bottom:18px; }
+        .portfolio-visit-note { display:inline-flex; align-items:center; padding:10px 20px; border:1px solid var(--border-color); border-radius:50px; color:var(--text-secondary); font-size:.85rem; opacity:.75; }
+        .contact-status { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid rgba(53,208,127,.25); border-radius:999px; color:#8ee9b5; font-size:.78rem; margin-bottom:18px; } .contact-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; } .trust-note { color:var(--text-secondary); font-size:.78rem; margin-top:14px; }
+
         .hamburger {
             display: none;
             cursor: pointer;
@@ -438,7 +496,7 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
-        
+
         #spa-container {
             position: relative;
             z-index: 5;
@@ -798,6 +856,15 @@
             pointer-events: none;
         }
 
+        .portfolio-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: relative;
+    z-index: 1; /* Radial gradient overlays ke upar ya niche handle karne ke liye */
+}
         .portfolio-card-mockup {
             width: 80%;
             height: 80%;
@@ -1413,6 +1480,176 @@
             margin: 0 auto 40px auto;
             line-height: 1.6;
         }
+ .pricing-section {
+    padding: 80px 20px;
+    background-color: #0b0c10;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-tag {
+    color: #3b5bff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.pricing-header h2 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+/* Category Filter Tabs */
+.pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.tab-btn {
+    background: #151821;
+    border: 1px solid #282c39;
+    color: #8f9cae;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: #3b5bff;
+    color: #fff;
+    border-color: #3b5bff;
+}
+
+/* Responsive Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Glassmorphism Pricing Card */
+.pricing-card {
+    background: rgba(21, 24, 33, 0.7);
+    border: 1px solid #242936;
+    border-radius: 16px;
+    padding: 30px 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b5bff;
+}
+
+.pricing-card.featured {
+    border: 1px solid #3b5bff;
+    box-shadow: 0 0 20px rgba(59, 91, 255, 0.15);
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(59, 91, 255, 0.2);
+    color: #3b5bff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(59, 91, 255, 0.3);
+}
+
+.plan-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.price-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.price {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.old-price {
+    font-size: 16px;
+    color: #6c788a;
+    text-decoration: line-through;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    flex-grow: 1;
+}
+
+.features-list li {
+    font-size: 14px;
+    color: #b0b8c4;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 22px;
+}
+
+.features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3b5bff;
+    font-weight: bold;
+}
+
+.btn-order {
+    display: block;
+    text-align: center;
+    background: #3b5bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: background 0.3s ease;
+}
+
+.btn-order:hover {
+    background: #2a47e0;
+}
+
+.btn-chat {
+    display: block;
+    text-align: center;
+    color: #8f9cae;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.btn-chat:hover {
+    color: #fff;
+}
 
         /* -------------------------------------------------------------
            PAGE 11/12: LEGAL / PRIVACY PAGES
@@ -1474,6 +1711,542 @@
             position: relative;
             z-index: 10;
         }
+        /* Custom Footer Styling */
+.footer-brand {
+    background-color: #060608;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 60px 24px 30px 24px;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.footer-container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-col-left {
+    max-width: 480px;
+}
+
+.footer-desc-text {
+    color: #8f9cae;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 20px 0 30px 0;
+}
+
+/* Payment Badges */
+.payment-badges-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+/* Contact Section - Zynocta Electric Blue Theme */
+.contact-hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 80px 24px;
+}
+
+.contact-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.sub-tag-line {
+    color: var(--accent-primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.revolutionary-heading {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    letter-spacing: -1.5px;
+}
+
+.online-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(59, 91, 255, 0.12);
+    border: 1px solid rgba(59, 91, 255, 0.3);
+    color: var(--accent-secondary);
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    margin-top: 18px;
+}
+
+.status-dot-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.contact-trust-right {
+    max-width: 320px;
+    text-align: right;
+}
+
+.trust-subtitle-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.trust-teams-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.avatar-group-stack {
+    display: flex;
+}
+
+.avatar-group-stack span {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-primary);
+    margin-left: -8px;
+}
+
+.avatar-group-stack span:first-child { margin-left: 0; }
+
+.trust-count-text {
+    color: var(--accent-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Glassmorphism Form Container */
+.contact-card-box {
+    background: rgba(28, 28, 28, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 40px;
+    backdrop-filter: blur(16px);
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-field-group {
+    margin-bottom: 20px;
+}
+
+.field-label-text {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.field-input-box {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px 18px;
+    color: var(--white);
+    font-size: 0.92rem;
+    transition: var(--transition-smooth);
+}
+
+.field-input-box:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(59, 91, 255, 0.15);
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.country-code-flag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.textarea-box {
+    resize: none;
+    height: calc(100% - 28px);
+}
+
+.form-bottom-bar {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 10px;
+}
+
+.ssl-note-text {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-btn-group {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-schedule-call {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-schedule-call:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+/* AI Chatbot Floating Widget CSS */
+.chat-widget-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.chat-trigger {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3B5BFF 0%, #2A47E0 100%);
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(59, 91, 255, 0.4);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.chat-trigger:hover {
+    transform: scale(1.08);
+}
+
+.chat-badge-pulse {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    background: #00ff88;
+    border: 2px solid #0a0a0a;
+    border-radius: 50%;
+}
+
+.chat-window {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 360px;
+    height: 480px;
+    background: rgba(14, 14, 18, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chat-window.hidden {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+}
+
+.chat-header {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header-info { display: flex; align-items: center; gap: 12px; }
+.bot-avatar {
+    width: 38px; height: 38px; border-radius: 10px;
+    background: rgba(59, 91, 255, 0.15); color: #3B5BFF;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.chat-header h4 { margin: 0; font-size: 0.95rem; color: #fff; }
+.chat-header p { margin: 0; font-size: 0.75rem; color: #8f9cae; }
+.online-dot { display: inline-block; width: 6px; height: 6px; background: #00ff88; border-radius: 50%; }
+
+.chat-close-btn { background: none; border: none; color: #8f9cae; font-size: 16px; cursor: pointer; }
+
+.chat-body {
+    flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px;
+}
+
+.message {
+    max-width: 82%; padding: 10px 14px; border-radius: 14px; font-size: 0.88rem; line-height: 1.4;
+}
+
+.bot-msg {
+    background: rgba(255, 255, 255, 0.05); color: #e0e0e0; border-bottom-left-radius: 2px; align-self: flex-start;
+}
+
+.user-msg {
+    background: #3B5BFF; color: #ffffff; border-bottom-right-radius: 2px; align-self: flex-end;
+}
+
+.chat-footer {
+    padding: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; gap: 8px;
+}
+
+.chat-footer input {
+    flex: 1; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 14px; border-radius: 10px; color: #fff; font-size: 0.85rem; outline: none;
+}
+
+.chat-footer button {
+    background: #3B5BFF; border: none; color: #fff; padding: 0 16px; border-radius: 10px; cursor: pointer;
+}
+.btn-send-message {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(59, 91, 255, 0.25);
+}
+
+.btn-send-message:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 91, 255, 0.45);
+}
+
+@media (max-width: 900px) {
+    .contact-header-flex, .contact-form-grid, .form-bottom-bar {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+    }
+    .contact-trust-right { text-align: left; }
+    .trust-teams-row { justify-content: flex-start; }
+}
+.pay-badge {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    min-width: 70px;
+}
+
+.pay-badge.visa {
+    color: #1a1f71;
+    font-family: sans-serif;
+    letter-spacing: -0.5px;
+}
+
+.pay-badge.mastercard {
+    font-size: 26px;
+    color: #eb001b;
+}
+
+.pay-badge.apple-pay, .pay-badge.google-pay {
+    background: #111116;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 15px;
+}
+
+.pay-badge i {
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+/* Right Column Contact Box */
+.footer-contact-title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.red-dash {
+    color: #e50914;
+    font-weight: bold;
+}
+
+.contact-box-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.contact-icon-sq {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e50914;
+    font-size: 14px;
+}
+
+.footer-social-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.social-sq-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0a0ab;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-sq-btn:hover {
+    background: #e50914;
+    color: #ffffff;
+    border-color: #e50914;
+    transform: translateY(-2px);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.82rem;
+    color: #71717a;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal-links a {
+    color: #71717a;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer-container-custom {
+        flex-direction: column;
+    }
+    .footer-bottom-custom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
         .footer-container {
             max-width: 1200px;
@@ -1512,6 +2285,8 @@
         .footer-links li {
             margin-bottom: 12px;
         }
+
+        
 
         .footer-links a {
             color: var(--text-secondary);
@@ -1561,6 +2336,135 @@
             flex-wrap: wrap;
             gap: 20px;
         }
+        /* Container & Section Styles */
+.rb-tech-section {
+    background: #0a0a0f;
+    border: 1px solid rgba(220, 38, 38, 0.15);
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.section-head h1 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.red-line {
+    width: 50px;
+    height: 3px;
+    background: #e50914;
+    margin: 0 auto 35px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #e50914;
+}
+
+/* Tabs Navigation */
+.tech-nav-rb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tech-nav-rb::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-rb {
+    background: transparent;
+    border: none;
+    color: #a0a0ab;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tab-rb:hover {
+    color: #ffffff;
+}
+
+.tab-rb.active {
+    background: rgba(229, 9, 20, 0.15);
+    color: #e50914;
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    font-weight: 600;
+}
+
+/* Grid Layout */
+.cards-grid-rb {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    transition: opacity 0.3s ease;
+}
+
+/* Individual Cards */
+.tech-card-rb {
+    background: #111118;
+    border: 1px solid #1c1c26;
+    border-radius: 12px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-card-rb:hover {
+    transform: translateY(-4px);
+    border-color: rgba(229, 9, 20, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(229, 9, 20, 0.1);
+}
+
+.logo-center-rb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo-circle-bg {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-name-rb {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .cards-grid-rb { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .cards-grid-rb { grid-template-columns: repeat(2, 1fr); }
+    .section-head h1 { font-size: 24px; }
+}
 
         .footer-copyright {
             color: var(--text-secondary);
@@ -1632,6 +2536,8 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .about-story-grid, .contact-grid { grid-template-columns: 1fr; }
             .tech-grid { grid-template-columns: repeat(3, 1fr); }
+            .tech-platform-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonial-grid { grid-template-columns: 1fr; }
             .footer-container { grid-template-columns: 1fr; }
         }
 
@@ -1639,6 +2545,7 @@
             .hero-title { font-size: 2.5rem; }
             .stats-grid { grid-template-columns: 1fr; }
             .tech-grid { grid-template-columns: repeat(2, 1fr); }
+            .tech-platform-grid { grid-template-columns: 1fr; }
             .form-row-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -1653,7 +2560,7 @@
     <div class="grid-texture"></div>
     <div class="noise-overlay"></div>
 
-    <!-- 2. Loading Screen -->
+    <!-- 2. Loading Screen
     <div class="loader-screen" id="loader">
         <div class="loader-logo">
             <div class="loader-logo-icon">
@@ -1667,7 +2574,7 @@
             <div class="loader-progress-bar" id="loader-bar"></div>
         </div>
         <div class="loader-number" id="loader-percent">0%</div>
-    </div>
+    </div>  -->
 
     <!-- 3. Sticky Glassmorphism Header -->
     <header class="header-navbar" id="navbar">
@@ -1679,17 +2586,23 @@
                 <div class="brand-logo-text">ZYNOCTA<span>.</span></div>
             </a>
             <ul class="nav-links" id="nav-menu">
-                <li class="nav-item active" data-page="home"><a onclick="navigateTo('home')">Home</a></li>
-                <li class="nav-item" data-page="services"><a onclick="navigateTo('services')">Services</a></li>
-                <li class="nav-item" data-page="portfolio"><a onclick="navigateTo('portfolio')">Work</a></li>
-                <li class="nav-item" data-page="case-studies"><a onclick="navigateTo('case-studies')">Case Studies</a></li>
-                <li class="nav-item" data-page="about"><a onclick="navigateTo('about')">About</a></li>
-                <li class="nav-item" data-page="pricing"><a onclick="navigateTo('pricing')">Pricing</a></li>
-                <li class="nav-item" data-page="faq"><a onclick="navigateTo('faq')">FAQ</a></li>
-                <li class="nav-item" data-page="contact"><a onclick="navigateTo('contact')">Contact</a></li>
+                <li class="nav-item" data-page="home"><a onclick="navigateTo('home')">Home</a></li>
+                <li class="nav-item nav-item-dropdown">
+                    <a class="nav-dropdown-toggle" href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a onclick="navigateTo('services')">Website Design &amp; Development</a></li><li><a onclick="navigateTo('services')"></a></li><li></li><li><a onclick="navigateTo('services')">Mobile App Development</a></li><li><a onclick="navigateTo('services')">Logo Design</a></li><li><a onclick="navigateTo('services')"></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-dropdown" data-page="portfolio">
+                    <a class="nav-dropdown-toggle" href="javascript:void(0)">Work <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown"><li><a onclick="navigateTo('portfolio')">Logo Portfolio</a></li><li><a onclick="navigateTo('portfolio')">Web Design Portfolio</a></li><li><a onclick="navigateTo('portfolio')">Mobile Apps Portfolio</a></li></ul>
+                </li>
+
+                <li class="nav-item" data-page="about"><a onclick="navigateTo('about')">About</a></li><li class="nav-item" data-page="pricing"><a onclick="navigateTo('pricing')">Pricing</a></li><li class="nav-item" data-page="faq"><a onclick="navigateTo('faq')">FAQ</a></li><li class="nav-item" data-page="contact"><a onclick="navigateTo('contact')">Contact</a></li>
             </ul>
-            <div class="navbar-cta">
-                <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Book a Call <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
+            <div class="navbar-cta" style="display:flex;align-items:center;gap:10px;">
+
+                <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Let's Talk <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
             </div>
             <button class="hamburger" id="hamburger-btn">
                 <span></span>
@@ -1707,23 +2620,15 @@
             <!-- Hero -->
             <section class="hero-section">
                 <div class="section-badge">Next-Generation Engineering</div>
-                <h1 class="hero-title">Modern Websites.<br><span>Real Results.</span></h1>
-                <p class="hero-desc">We merge elite backend engineering with mesmerizing, luxury digital design. Your business deserves more than a standard template.</p>
+                <h1 class="hero-title">Your Partner <br><span>for Digital Growth</span></h1>
+                <p class="hero-desc">At ZYNOCTA, we build modern websites and digital experiences that help businesses stand out, build trust, and grow online. From web development and e-commerce to branding and SEO, we combine clean design, smart technology, and business-focused strategy to deliver digital solutions that create real impact.</p>
                 <div class="hero-ctas">
                     <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Book a Free Consultation <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
                     <a onclick="navigateTo('portfolio')" class="btn-premium btn-secondary">View Portfolio</a>
                 </div>
 
                 <!-- Trusted By -->
-                <div class="trusted-by">
-                    <p class="trusted-title">Trusted by engineering-first brands worldwide</p>
-                    <div class="trusted-logos">
-                        <div class="client-logo-placeholder"><i class="fa-brands fa-stripe"></i> STRIPE</div>
-                        <div class="client-logo-placeholder"><i class="fa-brands fa-aws"></i> AWS</div>
-                        <div class="client-logo-placeholder"><i class="fa-brands fa-figma"></i> FIGMA</div>
-                        <div class="client-logo-placeholder"><i class="fa-brands fa-github"></i> GITHUB</div>
-                    </div>
-                </div>
+               
             </section>
 
             <!-- Benefits / Why Choose Us -->
@@ -1756,7 +2661,7 @@
             <section class="stats-section">
                 <div class="stats-grid">
                     <div>
-                        <div class="stat-number">120+</div>
+                        <div class="stat-number">45+</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div>
@@ -1764,7 +2669,7 @@
                         <div class="stat-label">Client Retention</div>
                     </div>
                     <div>
-                        <div class="stat-number">14+</div>
+                        <div class="stat-number">9+</div>
                         <div class="stat-label">Countries Served</div>
                     </div>
                     <div>
@@ -1774,6 +2679,31 @@
                 </div>
             </section>
 
+            <!-- Technologies & Platforms -->
+      <section class="rb-tech-section">
+  <div class="section-head">
+    <h1>Technologies & Platforms We Use</h1>
+    <div class="red-line"></div>
+  </div>
+
+  <!-- Navigation Buttons with Direct onclick Handlers -->
+  <div class="tech-nav-rb" id="rbNavContainer">
+    <button class="tab-rb active" onclick="switchCategory('frontend', this)">Frontend</button>
+    <button class="tab-rb" onclick="switchCategory('backend', this)">Backend</button>
+    <button class="tab-rb" onclick="switchCategory('database', this)">Database</button>
+    <button class="tab-rb" onclick="switchCategory('frameworks', this)">Frameworks</button>
+    <button class="tab-rb" onclick="switchCategory('cloud', this)">Cloud</button>
+    <button class="tab-rb" onclick="switchCategory('devops', this)">DevOps</button>
+    <button class="tab-rb" onclick="switchCategory('ecommerce', this)">Ecommerce</button>
+    <button class="tab-rb" onclick="switchCategory('cms', this)">CMS</button>
+  </div>
+
+  <!-- Cards Grid Container -->
+  <div id="rbCardsGrid" class="cards-grid-rb">
+    <!-- Cards JavaScript se dynamically change honge -->
+  </div>
+</section>
+            
             <!-- CTA Banner -->
             <section>
                 <div class="cta-banner">
@@ -1784,50 +2714,101 @@
             </section>
         </main>
 
-        <!-- ==================== SERVICES PAGE ==================== -->
+       <!-- ==================== SERVICES PAGE ==================== -->
         <main id="page-services" class="spa-page">
             <section>
                 <div class="section-header">
                     <div class="section-badge">Our Services</div>
-                    <h1 class="section-title">What We Deliver</h1>
-                    <p class="section-subtitle">We design, build, and optimize high-end websites, tailored precisely to meet your business needs.</p>
+                    <h1 class="section-title">End-to-End Digital Solutions</h1>
+                    <p class="section-subtitle">We design, engineer, and scale high-performance digital products tailored precisely for modern businesses.</p>
                 </div>
+
                 <div class="services-grid">
-                    <!-- Service 1 -->
+                    <!-- Service 1: Web Development -->
                     <div class="luxury-card service-card">
                         <div>
                             <div class="benefit-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                            <h3 class="benefit-card-title">Business Websites</h3>
-                            <p class="benefit-card-text">Modern, premium websites built to drive authority and capture high-value enterprise clients.</p>
+                            <h3 class="benefit-card-title">Web Design & Development</h3>
+                            <p class="benefit-card-text">Custom, high-converting websites and Web Apps engineered with modern stacks for lightning speed and elite UI/UX.</p>
                             <ul class="service-features-list">
-                                <li><i class="fa-solid fa-check"></i> High-conversion copy structures</li>
-                                <li><i class="fa-solid fa-check"></i> Interactive pricing components</li>
+                                <li><i class="fa-solid fa-check"></i> SPA & Custom Architecture</li>
+                                <li><i class="fa-solid fa-check"></i> 99+ Lighthouse Performance</li>
+                                <li><i class="fa-solid fa-check"></i> Responsive & Glassmorphic UI</li>
                             </ul>
                         </div>
                         <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <!-- Service 2 -->
+
+                    <!-- Service 2: Mobile App Development -->
                     <div class="luxury-card service-card">
                         <div>
-                            <div class="benefit-card-icon"><i class="fa-solid fa-rocket"></i></div>
-                            <h3 class="benefit-card-title">High-Converting Landing Pages</h3>
-                            <p class="benefit-card-text">Focused single-page flows structured to maximize paid acquisition ROI.</p>
+                            <div class="benefit-card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <h3 class="benefit-card-title">Mobile App Development</h3>
+                            <p class="benefit-card-text">Cross-platform iOS and Android mobile applications built using Flutter & React Native for flawless performance.</p>
                             <ul class="service-features-list">
-                                <li><i class="fa-solid fa-check"></i> Seamless interactive sections</li>
-                                <li><i class="fa-solid fa-check"></i> Tailored database capture forms</li>
+                                <li><i class="fa-solid fa-check"></i> iOS & Android Cross-Platform</li>
+                                <li><i class="fa-solid fa-check"></i> Interactive Figma Prototypes</li>
+                                <li><i class="fa-solid fa-check"></i> Scalable Backend API Integration</li>
                             </ul>
                         </div>
                         <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <!-- Service 3 -->
+
+                    <!-- Service 3: Logo & Brand Identity -->
+                    <div class="luxury-card service-card">
+                        <div>
+                            <div class="benefit-card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                            <h3 class="benefit-card-title">Logo & Brand Identity</h3>
+                            <p class="benefit-card-text">Distinctive, vector-crafted brand systems, vector icon sets, typography, and complete brand guidelines.</p>
+                            <ul class="service-features-list">
+                                <li><i class="fa-solid fa-check"></i> 3D, Mascot & Modern Concepts</li>
+                                <li><i class="fa-solid fa-check"></i> Complete Brand Guideline Books</li>
+                                <li><i class="fa-solid fa-check"></i> Full Vector Source Files</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 4: Motion Graphics & 3D -->
+                    <div class="luxury-card service-card">
+                        <div>
+                            <div class="benefit-card-icon"><i class="fa-solid fa-film"></i></div>
+                            <h3 class="benefit-card-title">Motion Graphics & Animation</h3>
+                            <p class="benefit-card-text">High-end 2D/3D video animations, dynamic logo reveals, and cinematic explainer videos for modern marketing.</p>
+                            <ul class="service-features-list">
+                                <li><i class="fa-solid fa-check"></i> 2D/3D Logo Animations</li>
+                                <li><i class="fa-solid fa-check"></i> Product Explainers & VFX</li>
+                                <li><i class="fa-solid fa-check"></i> Commercial Licensing Included</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 5: Social Media Marketing (SMM) -->
+                    <div class="luxury-card service-card">
+                        <div>
+                            <div class="benefit-card-icon"><i class="fa-solid fa-hashtag"></i></div>
+                            <h3 class="benefit-card-title">Social Media Marketing</h3>
+                            <p class="benefit-card-text">Strategic content creation, reels production, and targeted ad campaigns to scale your digital reach across platforms.</p>
+                            <ul class="service-features-list">
+                                <li><i class="fa-solid fa-check"></i> Custom Post & Reel Production</li>
+                                <li><i class="fa-solid fa-check"></i> Meta & LinkedIn Ad Setup</li>
+                                <li><i class="fa-solid fa-check"></i> Growth Analytics Reporting</li>
+                            </ul>
+                        </div>
+                        <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 6: Digital Marketing & SEO -->
                     <div class="luxury-card service-card">
                         <div>
                             <div class="benefit-card-icon"><i class="fa-solid fa-chart-line"></i></div>
-                            <h3 class="benefit-card-title">Premium SEO Strategy</h3>
-                            <p class="benefit-card-text">Targeted optimization to organically scale traffic and bring customers directly to you.</p>
+                            <h3 class="benefit-card-title">Digital Marketing & SEO</h3>
+                            <p class="benefit-card-text">Advanced technical SEO audits, Google PPC campaigns, and conversion rate optimization to organic lead flow.</p>
                             <ul class="service-features-list">
-                                <li><i class="fa-solid fa-check"></i> Advanced technical schema audit</li>
-                                <li><i class="fa-solid fa-check"></i> Clean layout-content maps</li>
+                                <li><i class="fa-solid fa-check"></i> On-Page & Technical Schema SEO</li>
+                                <li><i class="fa-solid fa-check"></i> Google PPC Campaign Setup</li>
+                                <li><i class="fa-solid fa-check"></i> Keyword Research & Rank Tracking</li>
                             </ul>
                         </div>
                         <a onclick="navigateTo('contact')" class="service-cta-text">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
@@ -1840,42 +2821,170 @@
         <main id="page-portfolio" class="spa-page">
             <section>
                 <div class="section-header">
-                    <div class="section-badge">Case Files</div>
+
                     <h1 class="section-title">Selected Works</h1>
                     <p class="section-subtitle">Explore a handpicked selection of custom web applications designed and developed to drive business results.</p>
                 </div>
 
                 <div class="portfolio-filters">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="saas">SaaS / Web Apps</button>
-                    <button class="filter-btn" data-filter="ecomm">E-Commerce</button>
-                    <button class="filter-btn" data-filter="corp">Corporate</button>
+                    <button class="filter-btn" data-filter="logo">Logo</button>
+                    <button class="filter-btn" data-filter="web">Websites</button>
+
                 </div>
 
+
                 <div class="portfolio-grid">
-                    <!-- Project 1 -->
-                    <div class="portfolio-card" data-category="saas">
+
+
+                     <div class="portfolio-card" data-category="web">
                         <div class="portfolio-img-container">
-                            <div class="portfolio-card-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-dot"></div>
-                                    <div class="mockup-dot"></div>
-                                    <div class="mockup-dot"></div>
-                                </div>
-                                <div class="mockup-content">APEX PLATFORM</div>
-                            </div>
+                        <img style="width: 539px; height: 264px;" src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/837194394_122137572171200852_8260571186985149193_n.jpg?stp=dst-jpg_tt6&cstp=mx1895x882&ctp=s900x900&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=C3YpGZAd6VgQ7kNvwELXS_T&_nc_oc=AdqrSqkp4rTzIUJJ1kLTvaOZuuRiS8fLZsNy1Gd0ui256UtNxs0nzNMZIk4T60UL3tg&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=N6vemXBGMeGkyiABncT3_g&_nc_ss=7b2a8&oh=00_AQO8ZcDRwLor2QKGakN4h14IPkQUEvvKvS2PmG11_t0aDw&oe=6ACC7C93" alt="">
+
                         </div>
                         <div class="portfolio-details">
                             <div class="portfolio-tags">
+                                <span class="portfolio-tag">HTML5</span>
+                                <span class="portfolio-tag">Tailwind CSS</span>
+                                <span class="portfolio-tag">GSAP</span>
+                                <span class="portfolio-tag">Vue.js</span>
+                                <span class="portfolio-tag">Bootstrap</span>
+                                <span class="portfolio-tag">Firebase</span>
+                            </div>
+                            <h3 class="portfolio-card-title">Caradoc Contracting  Agricultural & Forestry Services</h3>
+                            <p class="portfolio-card-desc">A high-performance responsive web layout for agricultural and forestry contracting, featuring specialist machinery showcases, dynamic quote request forms, and interactive service breakdowns.</p>
+                            <div class="portfolio-action-links">
+                               <a href="https://caradoc-contracting-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-secondary" style="padding: 10px 20px;">Visit Site →</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                   <div class="portfolio-card" data-category="web">
+                        <div class="portfolio-img-container">
+                        <img style="width: 539px; height: 264px;" src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/838271707_122137570221200852_3376362204298172205_n.jpg?stp=dst-jpg_tt6&cstp=mx1902x860&ctp=s900x900&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VJCkxxUIMK0Q7kNvwG0eIkQ&_nc_oc=AdpV_-PVaCF6MXkrQ1jrl4daP1rryZXZmmuKqTPRhBxO7LFIewir8wWt8XfGeZx0mjs&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=nZjiuvTvKhl29ihkTNpSUA&_nc_ss=7b2a8&oh=00_AQPBv0_AyTUtmtGw8DPVXQQ67j2ZsdgOG2h_BRUdm76nDQ&oe=6ACC7D7C" alt="">
+
+                        </div>
+                        <div class="portfolio-details">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">HTML5</span>
+                                <span class="portfolio-tag">Tailwind CSS</span>
+                                <span class="portfolio-tag">GSAP</span>
+                                <span class="portfolio-tag">JavaScript</span>
+                                <span class="portfolio-tag">React.js</span>
+                                <span class="portfolio-tag">Vite</span>
+                            </div>
+                            <h3 class="portfolio-card-title">BNCE — International Technology & Humanitarian Mission</h3>
+                            <p class="portfolio-card-desc">A luxury dark-themed spatial web experience featuring interactive 3D elements, smooth scroll animations, and minimal design tailored for an international tech initiative.</p>
+                            <div class="portfolio-action-links">
+                               <a href="https://bnce-bashardoost-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-secondary" style="padding: 10px 20px;">Visit Site →</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" data-category="web">
+                        <div class="portfolio-img-container">
+                        <img  style="width: 539px; height: 264px;" src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/838515128_122137571199200852_1984951054042340624_n.jpg?stp=dst-jpg_tt6&cstp=mx1908x892&ctp=s900x900&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nf-Vt6EUA4AQ7kNvwELrRbP&_nc_oc=AdoYM655VB2ZXJ0oiDUHdr808ZPKYBoptUW49yWZ_0UGQoXZIv1MeTmia8VrGJ3G3Pw&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=pdBWLBbXFDmpSPuh_cusug&_nc_ss=7b2a8&oh=00_AQMLouEQty-HtDdcNvjckqMuFSTN1NjYVMsaYfJGCJo_PQ&oe=6ACC5A7E" alt="">
+
+                        </div>
+                        <div class="portfolio-details">
+                            <div class="portfolio-tags">
+                               <span class="portfolio-tag">HTML5</span>
+                                <span class="portfolio-tag">Tailwind CSS</span>
+                                <span class="portfolio-tag">React.js</span>
+                                <span class="portfolio-tag">JavaScript</span>
+                                <span class="portfolio-tag">Express.js</span>
+                                <span class="portfolio-tag">Vite</span>
+                            </div>
+                            <h3 class="portfolio-card-title">Vanguard Legal Group Corporate & Defense Law</h3>
+                            <p class="portfolio-card-desc">A modern, authoritative legal platform featuring interactive practice area showcases, attorney directories, case result counters, and secure consultation scheduling.</p>
+                            <div class="portfolio-action-links">
+                               <a href="https://lawsample.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-secondary" style="padding: 10px 20px;">Visit Site →</a>
+
+                            </div>
+                        </div>
+                    </div>
+  <div class="portfolio-card" data-category="web">
+                        <div class="portfolio-img-container">
+                        <img style="width: 539px; height: 264px;" src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/839225956_122137571595200852_2392943383673165675_n.jpg?stp=dst-jpg_tt6&cstp=mx1901x872&ctp=s900x900&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=x8I9KKbuYT8Q7kNvwFiH2el&_nc_oc=Ado50Ib2wGZH152HGO0S9rQV8n0dsJDwSohHJv6uVhFn8GV17Ma6TF8WhXTXr1LAgaI&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=4RL80g9H45skmyk6EApmyQ&_nc_ss=7b2a8&oh=00_AQM38ay_zEtA30KF6PJKOKvT2wuT8dhCTblmmQxmGsgJwQ&oe=6ACC87A8" alt="">
+
+                        </div>
+                        <div class="portfolio-details">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">HTML5</span>
+                                <span class="portfolio-tag">CSS3</span>
+                                <span class="portfolio-tag">JAVA SCRIPT</span>
+                            </div>
+                            <h3 class="portfolio-card-title">Bar Doña Ana Premium Pool & Lounge</h3>
+                            <p class="portfolio-card-desc">A luxury dark-themed hospitality web application featuring an interactive venue tour, online table reservation system, and dynamic menu showcases.</p>
+                            <div class="portfolio-action-links">
+                               <a href="https://bar-dona-anademo.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-secondary" style="padding: 10px 20px;">Visit Site →</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="portfolio-card" data-category="logo">
+                        <div class="portfolio-img-container">
+                        <img src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/838579084_122137567839200852_6791753392090508851_n.jpg?stp=dst-jpg_tt6&cstp=mx2000x2000&ctp=s900x900&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=em3B4-M6WN8Q7kNvwEf35zP&_nc_oc=AdpIZ6fOcuH1G9Csw6RCF8LluJpNFnrdFaQFqd23RPQu72B8DLqTKuj0sm5jJ6KzBoM&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=XXkyl6O8LqcbjDDeQHTUNQ&_nc_ss=7b2a8&oh=00_AQMEFanhGoPo4Dzy9jSIFxVR2OZV0SHtT2TotcnddZtWYQ&oe=6ACC6ABF" alt="">
+
+                        </div>
+                        <div class="portfolio-details">
+                            <!-- <div class="portfolio-tags">
                                 <span class="portfolio-tag">Next.js</span>
                                 <span class="portfolio-tag">Tailwind</span>
                                 <span class="portfolio-tag">Framer Motion</span>
-                            </div>
-                            <h3 class="portfolio-card-title">Apex SaaS Dashboard</h3>
-                            <p class="portfolio-card-desc">An interactive metrics management interface designed to visualize high-frequency trading analytics.</p>
-                            <div class="portfolio-action-links">
-                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a>
-                            </div>
+                            </div> -->
+                            <h3 class="portfolio-card-title">FEAL Properties London Luxury Real Estate</h3>
+                            <p class="portfolio-card-desc">A bespoke luxury property platform featuring dynamic booking flows, yield/ROI calculators, and interactive high-end real estate showcases built for premium rentals.</p>
+                            <!-- <div class="portfolio-action-links">
+                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a><span class="portfolio-visit-note">Visit Site →</span>
+                            </div> -->
+                        </div>
+                    </div>
+
+
+                    <div class="portfolio-card" data-category="logo">
+                        <div class="portfolio-img-container">
+                        <img src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/837011752_122137567611200852_1282283070846478091_n.jpg?stp=dst-jpg_tt6&cstp=mx1408x768&ctp=s900x900&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NHdBZ9UAWaEQ7kNvwE20RB6&_nc_oc=AdqfrNV5wFh9TmpOAQqVnDNveRsqohe9leSFPbbs_yvEQEUyLj0IDQrub45_OawyhkI&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=UjZLN-SYjfrNHO7F3e7fGg&_nc_ss=7b2a8&oh=00_AQNVBIsqBmlMSp51eGuy2i_pZV1j15xBDXwD5z8AxvIMrw&oe=6ACC5797" alt="">
+
+                        </div>
+                        <div class="portfolio-details">
+                            <!-- <div class="portfolio-tags">
+                                <span class="portfolio-tag">Next.js</span>
+                                <span class="portfolio-tag">Tailwind</span>
+                                <span class="portfolio-tag">Framer Motion</span>
+                            </div> -->
+                            <h3 class="portfolio-card-title">Prestige Luxury Motors</h3>
+                            <p class="portfolio-card-desc">An ultra-sleek digital showroom for luxury automotive client acquisition, featuring interactive vehicle specs, smooth animations, and direct consultation booking.</p>
+                            <!-- <div class="portfolio-action-links">
+                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a><span class="portfolio-visit-note">Visit Site →</span>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- Project 1 -->
+                    <div class="portfolio-card" data-category="logo">
+                        <div class="portfolio-img-container">
+                        <img src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/825271557_122137566753200852_2985998230219367033_n.jpg?stp=dst-jpg_tt6&cstp=mx1408x768&ctp=s704x704&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HDitaoPNNjoQ7kNvwFkzWzy&_nc_oc=Adqd_ZPNPJ9-N3upTH_KmBOidiCW-__ts-QeuHyQJLqYhN_3RW69oG2sqBVe17jnqj4&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=42VpfVii2fkYr88etrwdjA&_nc_ss=7b2a8&oh=00_AQMkQHiFoROKXdTOS36BkGke1szhYpOzMKf03L_LwnRmGA&oe=6ACC65D1" alt="">
+
+                        </div>
+                        <div class="portfolio-details">
+                            <!-- <div class="portfolio-tags">
+                                <span class="portfolio-tag">Next.js</span>
+                                <span class="portfolio-tag">Tailwind</span>
+                                <span class="portfolio-tag">Framer Motion</span>
+                            </div> -->
+                            <h3 class="portfolio-card-title">Harvest Crop</h3>
+                            <p class="portfolio-card-desc">An eco-conscious web platform designed for organic seed supply and agricultural produce, featuring smooth product catalogs, bulk ordering inquiries, and clear brand storytelling.</p>
+                            <!-- <div class="portfolio-action-links">
+                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a><span class="portfolio-visit-note">Visit Site →</span>
+                            </div> -->
                         </div>
                     </div>
                     <!-- Project 2 -->
@@ -1899,7 +3008,7 @@
                             <h3 class="portfolio-card-title">Lumina Premium Optics</h3>
                             <p class="portfolio-card-desc">An immersive e-commerce shopping experience for high-end luxury eyewear brands.</p>
                             <div class="portfolio-action-links">
-                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a>
+                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a><span class="portfolio-visit-note">Visit Site →</span>
                             </div>
                         </div>
                     </div>
@@ -1907,7 +3016,7 @@
             </section>
         </main>
 
-        <!-- ==================== CASE STUDIES ==================== -->
+        <!-- ==================== CASE STUDIES ====================
         <main id="page-case-studies" class="spa-page">
             <section>
                 <div class="section-header">
@@ -1917,13 +3026,13 @@
                 </div>
 
                 <div class="case-studies-container">
-                    <!-- Case Study 1 -->
+                     Case Study 1
                     <div class="case-study-hero luxury-card">
                         <div>
                             <div class="section-badge">SaaS Optimization</div>
                             <h2 class="section-title" style="font-size: 2.2rem; margin-top: 10px;">Apex Analytics Platform</h2>
                             <p class="section-subtitle" style="font-size: 1rem;">Apex needed a dashboard to resolve customer onboarding friction, simplify complex visual trends, and reduce client churn.</p>
-                            
+
                             <div class="cs-stats">
                                 <div>
                                     <div class="cs-stat-num">+320%</div>
@@ -1947,7 +3056,7 @@
                     </div>
                 </div>
             </section>
-        </main>
+        </main> -->
 
         <!-- ==================== ABOUT PAGE ==================== -->
         <main id="page-about" class="spa-page">
@@ -1963,10 +3072,10 @@
                     <div>
                         <h2 class="section-title" style="font-size: 2.2rem; text-align: left;">We refuse to compromise.</h2>
                         <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
-                            ZYNOCTA was founded with a singular focus: to build custom web applications that combine luxurious design aesthetic with reliable engineering.
+ZYNOCTA is a modern web development and digital solutions studio focused on crafting high-end, interactive digital experiences
                         </p>
                         <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
-                            We recognize that high-performing companies require robust digital infrastructure. Our solutions are custom-developed from the ground up to ensure high security, smooth interactivity, and reliable organic reach.
+                           We combine luxury design aesthetics with robust web technologies to help forward-thinking brands stand out, engage audiences, and scale efficiently in a fast-moving digital ecosystem.
                         </p>
                         <ul class="service-features-list">
                             <li><i class="fa-solid fa-shield-halved"></i> Security-first development methodologies</li>
@@ -1975,7 +3084,7 @@
                     </div>
                 </div>
 
-                <!-- Tech Stack Section -->
+                <!-- Tech Stack Section
                 <div class="tech-stack-section">
                     <div class="section-header" style="margin-bottom: 40px;">
                         <h3 class="section-title" style="font-size: 1.8rem;">Our Technology Stack</h3>
@@ -1989,374 +3098,177 @@
                         <div class="tech-box"><i class="fa-brands fa-git-alt"></i><div class="tech-name">Git</div></div>
                         <div class="tech-box"><i class="fa-brands fa-figma"></i><div class="tech-name">Figma</div></div>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
 
-        <!-- ==================== PRICING PAGE (REPLACED WITH NEW PRICING) ==================== -->
+    <!-- ==================== PRICING PAGE ==================== -->
         <main id="page-pricing" class="spa-page">
-            <section>
-                <div class="section-header">
-                    <div class="section-badge">Investment Plans</div>
-                    <h1 class="section-title">Transparent Project Pricing</h1>
-                    <p class="section-subtitle">Select the ideal tier for your growth. All plans include standard high-end luxury engineering quality.</p>
+            <section class="pricing-section">
+                <div class="pricing-header">
+                    <span class="section-tag">CHOOSE YOUR PLAN</span>
+                    <h2>Flexible Pricing Built For Scaling</h2>
                 </div>
 
-                <div class="pricing-grid-4">
-                    <!-- Starter -->
-                    <div class="luxury-card pricing-card">
-                        <div>
-                            <h3 class="tier-name">🟢 Starter</h3>
-                            <p class="tier-desc">Perfect for startups and local businesses looking to establish design authority.</p>
-                            <div class="tier-price-box">
-                                <span class="tier-price">$149</span>
-                            </div>
-                            <div class="tier-features-title">Includes:</div>
-                            <ul class="tier-features-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Up to 3 Pages</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Premium Design</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Mobile Responsive</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Contact Form</li>
-                                <li><i class="fa-solid fa-circle-check"></i> WhatsApp Integration</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Basic SEO</li>
-                                <li><i class="fa-solid fa-circle-check"></i> 7 Days Support</li>
-                            </ul>
-                        </div>
-                        <a onclick="navigateTo('contact')" class="btn-premium btn-secondary" style="width:100%; text-align:center; justify-content:center;">Book Onboarding</a>
-                    </div>
-
-                    <!-- Business -->
-                    <div class="luxury-card pricing-card premium-tier">
-                        <span class="tier-badge">⭐ Most Popular</span>
-                        <div>
-                            <h3 class="tier-name">🔵 Business</h3>
-                            <p class="tier-desc">Tailored for fast-growing companies demanding highly custom structural designs.</p>
-                            <div class="tier-price-box">
-                                <span class="tier-price">$299</span>
-                            </div>
-                            <div class="tier-features-title">Includes:</div>
-                            <ul class="tier-features-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Up to 7 Pages</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Custom Design</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Premium Animations</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Google Maps</li>
-                                <li><i class="fa-solid fa-circle-check"></i> WhatsApp & Contact Forms</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Basic SEO</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Speed Optimization</li>
-                                <li><i class="fa-solid fa-circle-check"></i> 30 Days Support</li>
-                            </ul>
-                        </div>
-                        <a onclick="navigateTo('contact')" class="btn-premium btn-primary" style="width:100%; text-align:center; justify-content:center;">Book Onboarding</a>
-                    </div>
-
-                    <!-- Premium -->
-                    <div class="luxury-card pricing-card">
-                        <div>
-                            <h3 class="tier-name">🟣 Premium</h3>
-                            <p class="tier-desc">Advanced systems and integrations for complex transactional businesses.</p>
-                            <div class="tier-price-box">
-                                <span class="tier-price">$599</span>
-                            </div>
-                            <div class="tier-features-title">Includes:</div>
-                            <ul class="tier-features-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Up to 15 Pages</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Advanced Animations</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Integrated CMS & Blog</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Booking System</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Full SEO Strategy</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Advanced Analytics</li>
-                                <li><i class="fa-solid fa-circle-check"></i> 60 Days Support</li>
-                            </ul>
-                        </div>
-                        <a onclick="navigateTo('contact')" class="btn-premium btn-secondary" style="width:100%; text-align:center; justify-content:center;">Book Onboarding</a>
-                    </div>
-
-                    <!-- Enterprise -->
-                    <div class="luxury-card pricing-card">
-                        <div>
-                            <h3 class="tier-name">⚫ Enterprise</h3>
-                            <p class="tier-desc">Custom blueprints, advanced architectures, and full priority scaling support.</p>
-                            <div class="tier-price-box">
-                                <span class="tier-price">Custom</span>
-                            </div>
-                            <div class="tier-features-title">Includes:</div>
-                            <ul class="tier-features-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Unlimited Pages</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Custom Dashboard</li>
-                                <li><i class="fa-solid fa-circle-check"></i> API & CRM Integration</li>
-                                <li><i class="fa-solid fa-circle-check"></i> AI Built-In Features</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Priority SLA Support</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Dedicated Manager</li>
-                            </ul>
-                        </div>
-                        <a onclick="navigateTo('contact')" class="btn-premium btn-secondary" style="width:100%; text-align:center; justify-content:center;">Contact Enterprise</a>
-                    </div>
+                <!-- Category Tabs -->
+                <div class="pricing-tabs">
+                    <button class="tab-btn active" onclick="filterPricing('logo', this)">Logo</button>
+                    <button class="tab-btn" onclick="filterPricing('website', this)">Website</button>
+                    <button class="tab-btn" onclick="filterPricing('motion', this)">Motion Graphics</button>
+                    <button class="tab-btn" onclick="filterPricing('branding', this)">Branding</button>
+                    <button class="tab-btn" onclick="filterPricing('app', this)">App Development</button>
+                    <button class="tab-btn" onclick="filterPricing('smm', this)">SMM</button>
+                   
+                    <button class="tab-btn" onclick="filterPricing('writing', this)">Content Writing</button>
                 </div>
 
-                <!-- Extra Services -->
-                <div class="extra-services-section">
-                    <div class="section-header" style="margin-bottom: 40px;">
-                        <h3 class="section-title" style="font-size: 2rem;">Extra Services & Add-ons</h3>
-                        <p class="section-subtitle">Scale your chosen tier instantly with our modular premium upgrades.</p>
-                    </div>
-                    <div class="extra-services-grid">
-                        <div class="extra-service-card">
-                            <div class="extra-service-info">
-                                <h4>Extra Page</h4>
-                                <p>Additional optimized design page</p>
-                            </div>
-                            <div class="extra-service-price">$30</div>
-                        </div>
-                        <div class="extra-service-card">
-                            <div class="extra-service-info">
-                                <h4>Booking System</h4>
-                                <p>Calendly or custom visual setup</p>
-                            </div>
-                            <div class="extra-service-price">$80</div>
-                        </div>
-                        <div class="extra-service-card">
-                            <div class="extra-service-info">
-                                <h4>Blog Integration</h4>
-                                <p>CMS configuration & dynamic feeds</p>
-                            </div>
-                            <div class="extra-service-price">$80</div>
-                        </div>
-                        <div class="extra-service-card">
-                            <div class="extra-service-info">
-                                <h4>Speed Optimization</h4>
-                                <p>Load optimization for 95+ score</p>
-                            </div>
-                            <div class="extra-service-price">$80</div>
-                        </div>
-                        <div class="extra-service-card">
-                            <div class="extra-service-info">
-                                <h4>SEO Optimization</h4>
-                                <p>Advanced keyword & technical map</p>
-                            </div>
-                            <div class="extra-service-price">$100</div>
-                        </div>
-                        <div class="extra-service-card">
-                            <div class="extra-service-info">
-                                <h4>Website Redesign</h4>
-                                <p>Convert outdated layouts to luxury standards</p>
-                            </div>
-                            <div class="extra-service-price">From $199</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Comparison Table -->
-                <div class="comparison-section">
-                    <div class="section-header">
-                        <h3 class="section-title" style="font-size: 2rem;">Feature Breakdown</h3>
-                    </div>
-                    <div class="comparison-table-wrapper">
-                        <table class="comparison-table">
-                            <thead>
-                                <tr>
-                                    <th>Feature</th>
-                                    <th>Starter</th>
-                                    <th>Business</th>
-                                    <th>Premium</th>
-                                    <th>Enterprise</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Pages</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>15</td>
-                                    <td>Unlimited</td>
-                                </tr>
-                                <tr>
-                                    <td>Responsive</td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>WhatsApp</td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Contact Forms</td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Google Maps</td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Animations</td>
-                                    <td>Basic</td>
-                                    <td>Premium</td>
-                                    <td>Advanced</td>
-                                    <td>Custom</td>
-                                </tr>
-                                <tr>
-                                    <td>CMS</td>
-                                    <td><i class="fa-solid fa-xmark cross-icon"></i></td>
-                                    <td>Optional</td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>SEO</td>
-                                    <td>Basic</td>
-                                    <td>Standard</td>
-                                    <td>Advanced</td>
-                                    <td>Complete</td>
-                                </tr>
-                                <tr>
-                                    <td>Blog</td>
-                                    <td><i class="fa-solid fa-xmark cross-icon"></i></td>
-                                    <td>Optional</td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                    <td><i class="fa-solid fa-check check-icon"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Support</td>
-                                    <td>7 Days</td>
-                                    <td>30 Days</td>
-                                    <td>60 Days</td>
-                                    <td>Priority</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <!-- Pricing Grid Container -->
+                <div class="pricing-grid" id="pricingCardsGrid">
+                    <!-- Cards JavaScript se dynamically update honge -->
                 </div>
             </section>
         </main>
 
-        <!-- ==================== FAQ PAGE ==================== -->
-        <main id="page-faq" class="spa-page">
+       <!-- ==================== FAQ PAGE ==================== -->
+        <main id="page-faq" class="spa-page" style="padding-top: 60px;">
             <section>
                 <div class="section-header">
                     <div class="section-badge">Support Desk</div>
                     <h1 class="section-title">Frequently Asked Questions</h1>
-                    <p class="section-subtitle">Find answers to key technical, logistical, and design workflow queries.</p>
+                    <p class="section-subtitle">Find answers to key technical, logistical, pricing, and project workflow queries.</p>
                 </div>
 
                 <div class="faq-accordion-container">
                     <div class="faq-item">
                         <button class="faq-trigger">What is your typical project timeline? <i class="fa-solid fa-plus faq-icon"></i></button>
                         <div class="faq-content">
-                            <p>For custom landing pages and startup suites, the timeline averages 3 to 4 weeks. Larger SaaS applications and complex enterprise platforms typically require 8 to 12 weeks of continuous strategic planning, design, and engineering.</p>
+                            <p>For custom landing pages and logo suites, turnaround time is typically 24–48 hours or 1–2 weeks depending on package scope. Complex Web Applications and enterprise portals take between 3 to 6 weeks.</p>
                         </div>
                     </div>
+
                     <div class="faq-item">
-                        <button class="faq-trigger">Do you build using templates or themes? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <button class="faq-trigger">Do you build using templates or custom code? <i class="fa-solid fa-plus faq-icon"></i></button>
                         <div class="faq-content">
-                            <p>We do not use cookie-cutter themes or generic Bootstrap templates. Every component we construct is engineered in-house to secure maximum security, flexibility, and performance metrics.</p>
+                            <p>We build everything fully bespoke from scratch without bloatware or slow third-party pre-built templates, ensuring maximum security, customizability, and 99+ Lighthouse performance scores.</p>
                         </div>
                     </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger">How do revisions and source file handoffs work? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <div class="faq-content">
+                            <p>Most of our packages include unlimited or multi-round revisions until complete satisfaction. Upon project sign-off, full source file ownership (Figma, AI, PSD, GitHub repo access) is transferred directly to you.</p>
+                        </div>
+                    </div>
+
                     <div class="faq-item">
                         <button class="faq-trigger">Which framework technologies do you utilize? <i class="fa-solid fa-plus faq-icon"></i></button>
                         <div class="faq-content">
-                            <p>We primarily utilize modern production frameworks like React, Next.js, and static site generation techniques combined with Tailwind CSS and advanced custom GSAP animations for motion design.</p>
+                            <p>We primarily construct using modern production standards including HTML5, Tailwind CSS, JavaScript, React, Next.js, Node.js, Express, Python, and Flutter for cross-platform app ecosystems.</p>
                         </div>
                     </div>
+
                     <div class="faq-item">
-                        <button class="faq-trigger">Will my website be easily editable? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <button class="faq-trigger">Will my website be easily editable by non-technical teams? <i class="fa-solid fa-plus faq-icon"></i></button>
                         <div class="faq-content">
-                            <p>Yes. We integrate customizable CMS models (such as Sanity, Contentful, or custom WordPress configurations) so your marketing team can manage layout components, post blogs, and update copy without touching any raw code.</p>
+                            <p>Yes. We integrate customizable CMS solutions (Sanity, Strapi, WordPress, or custom admin dashboards) so your marketing team can update content, upload blogs, and change images with zero coding experience required.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger">What payment methods do you accept? <i class="fa-solid fa-plus faq-icon"></i></button>
+                        <div class="faq-content">
+                            <p>We accept all major payment avenues including Visa, Mastercard, Apple Pay, Google Pay, and direct bank wire transfers depending on your invoicing preference.</p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- ==================== CONTACT PAGE (REMOVED BUDGET OPTIONS, CONNECTED TO MAIL) ==================== -->
-        <main id="page-contact" class="spa-page">
-            <section>
-                <div class="section-header">
-                    <div class="section-badge">Collaboration</div>
-                    <h1 class="section-title">Kickstart Your Digital Upgrade</h1>
-                    <p class="section-subtitle">Ready to establish absolute design authority in your niche? Fill out the brief below to connect with us directly.</p>
+  <!-- ==================== CONTACT PAGE ==================== -->
+        <main id="page-contact" class="spa-page" style="padding-top: 60px;">
+            <section class="contact-hero-section">
+                <!-- Top Header & Trust Badge -->
+                <div class="contact-header-flex">
+                    <div class="contact-title-left">
+                        <span class="sub-tag-line">— LET'S BUILD TOGETHER</span>
+                        <h1 class="revolutionary-heading">Do you have a <br>revolutionary idea?</h1>
+                        <div class="online-status-pill">
+                            <span class="status-dot-pulse"></span> Online · Available now
+                        </div>
+                    </div>
+
+                    <div class="contact-trust-right">
+                        <p class="trust-subtitle-text">Consult with us to learn how we can deliver exceptional value to your organization.</p>
+                        <div class="trust-teams-row">
+                            <div class="avatar-group-stack">
+                                <span>A</span><span>K</span><span>Z</span><span>M</span>
+                            </div>
+                            <span class="trust-count-text">240+ teams trust us</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="contact-grid">
-                    <div>
-                        <form class="contact-form" id="main-contact-form" onsubmit="handleFormSubmit(event)">
-                            <div class="form-row-grid">
-                                <div class="form-group">
-                                    <label class="form-label">Your Name *</label>
-                                    <input type="text" id="contact-name" class="form-control" required placeholder="John Doe">
+                <!-- Dark Glassmorphism Contact Form Card -->
+                <div class="contact-card-box">
+                    <form class="contact-form-grid" id="main-contact-form" onsubmit="handleFormSubmit(event)">
+                        <!-- Inputs Column -->
+                        <div class="form-left-col">
+                            <div class="form-row-2col">
+                                <div class="form-field-group">
+                                    <label class="field-label-text">— FIRST NAME</label>
+                                    <input type="text" id="contact-name" class="field-input-box" required placeholder="John">
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">Email Address *</label>
-                                    <input type="email" id="contact-email" class="form-control" required placeholder="john@company.com">
-                                </div>
-                            </div>
-                            <div class="form-row-grid">
-                                <div class="form-group">
-                                    <label class="form-label">Company Name</label>
-                                    <input type="text" id="contact-company" class="form-control" placeholder="Company Inc.">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Phone Number</label>
-                                    <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (555) 000-0000">
+                                <div class="form-field-group">
+                                    <label class="field-label-text">— LAST NAME</label>
+                                    <input type="text" id="contact-lastname" class="field-input-box" placeholder="Doe">
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Project Type *</label>
-                                <input type="text" id="contact-project-type" class="form-control" required placeholder="e.g. Premium Business Redesign, E-Commerce, Custom Dashboard">
+                            <div class="form-field-group">
+                                <label class="field-label-text">— EMAIL ADDRESS</label>
+                                <input type="email" id="contact-email" class="field-input-box" required placeholder="john@company.com">
                             </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Describe Your Vision *</label>
-                                <textarea id="contact-message" class="form-control" rows="5" required placeholder="Outline key challenges, must-have features, and target metrics you're aiming for..."></textarea>
+                            <div class="form-field-group">
+                                <label class="field-label-text">— PHONE NUMBER</label>
+                                <div class="phone-input-wrapper">
+                                    <span class="country-code-flag">US</span>
+                                    <input type="tel" id="contact-phone" class="field-input-box" placeholder="+1 300 000 0000">
+                                </div>
                             </div>
-<button
-    type="button"
-    class="btn-premium btn-primary"
-    style="justify-content:center;"
-    onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=daviddthompsondev@gmail.com&su=Website%20Project%20Brief&body=Hello%20ZyNocta,%0A%0AI%20would%20like%20to%20discuss%20my%20project.%0A%0AName:%0ABusiness:%0ARequirements:%0A', '_blank');">
-    Send Email Brief <i class="fa-solid fa-paper-plane"></i>
-</button>
-                            </form>
-                    </div>
 
-                    <div class="contact-info-column">
-                        <div class="luxury-card">
-                            <h3 class="benefit-card-title" style="margin-bottom: 8px;">Direct Touchpoints</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px;">Connect with our managing consultants directly for rapid response.</p>
-                            
-                            <ul class="contact-details-list">
-                                <li class="contact-detail-item">
-                                    <div class="contact-detail-icon"><i class="fa-regular fa-envelope"></i></div>
-                                    <div class="contact-detail-text">
-                                        <h4>Email Support</h4>
-                                        <p>daviddthompsondev@gmail.com
-</p>
-                                    </div>
-                                </li>
-                                
-                            </ul>
+                            <div class="form-field-group">
+                                <label class="field-label-text">— PROJECT TYPE</label>
+                                <input type="text" id="contact-project-type" class="field-input-box" required placeholder="Web Development, App, Branding">
+                            </div>
                         </div>
 
-                        <div class="map-placeholder">
-                            <i class="fa-solid fa-map-pin" style="font-size: 2rem; color: var(--accent-primary);"></i>
-                            <p style="font-weight: 600; color: var(--white);">Warsaw,   Poland</p>
-                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Serving Elite Global Enterprise Partners</span>
+                        <!-- Message Column -->
+                        <div class="form-right-col">
+                            <div class="form-field-group full-height-field">
+                                <label class="field-label-text">— YOUR MESSAGE</label>
+                                <textarea id="contact-message" class="field-input-box textarea-box" rows="7" required placeholder="Describe your project, idea, or query in detail..."></textarea>
+                            </div>
                         </div>
-                    </div>
+
+                        <!-- Form Bottom Actions Bar -->
+                        <div class="form-bottom-bar">
+                            <div class="ssl-note-text">
+                                <i class="fa-solid fa-lock"></i> SSL encrypted · Your data is safe
+                            </div>
+                            <div class="action-btn-group">
+                                <a onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=contact.zynocta@gmail.com&su=Consultation%20Call%20Booking&body=Hello%20ZYNOCTA%20Team,%0A%0AI%20would%20like%20to%20schedule%20a%20consultation%20call%20regarding%20my%20project.%0A%0AName:%0ACompany:%0APreferred%20Date%2FTime:%0AProject%20Overview:%0A', '_blank');" class="btn-schedule-call" style="cursor: pointer;">
+                                    <i class="fa-regular fa-calendar-check"></i> Schedule a Call via Mail
+                                </a>
+                                <button type="submit" class="btn-send-message">
+                                    Send Message <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
-
         <!-- ==================== LEGAL PAGES (PRIVACY / TERMS) ==================== -->
         <main id="page-privacy" class="spa-page">
             <section>
@@ -2407,58 +3319,68 @@
     </div>
 
     <!-- 5. Premium Footer -->
-    <footer class="footer-brand">
-        <div class="footer-container">
-            <div class="footer-logo-desc">
-                <a class="brand-logo" onclick="navigateTo('home')">
-                    <svg viewBox="0 0 100 100">
-                        <path d="M20,20 L80,20 L20,80 L80,80" fill="none" stroke="#3B5BFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <div class="brand-logo-text">ZYNOCTA<span>.</span></div>
-                </a>
-                <p>We design and construct high-end digital infrastructure for the world's most ambitious brands.</p>
-            </div>
-            <div>
-                <h4 class="footer-col-title">Services</h4>
-                <ul class="footer-links">
-                    <li><a onclick="navigateTo('services')">Business Sites</a></li>
-                    <li><a onclick="navigateTo('services')">Landing Pages</a></li>
-                    <li><a onclick="navigateTo('services')">SEO Strategies</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-col-title">Company</h4>
-                <ul class="footer-links">
-                    <li><a onclick="navigateTo('about')">Our Story</a></li>
-                    <li><a onclick="navigateTo('portfolio')">Case Files</a></li>
-                    <li><a onclick="navigateTo('pricing')">Plans</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-col-title">Resources</h4>
-                <ul class="footer-links">
-                    <li><a onclick="navigateTo('faq')">Support Desk</a></li>
-                    <li><a onclick="navigateTo('privacy')">Privacy Policy</a></li>
-                    <li><a onclick="navigateTo('terms')">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h4 class="footer-col-title">Newsletter</h4>
-                <p>Subscribe to receive quarterly technical web and UX insights.</p>
-                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
-                    <input type="email" class="newsletter-input" required placeholder="name@domain.com">
-                    <button type="submit" class="btn-premium btn-primary" style="padding: 10px 14px;"><i class="fa-solid fa-paper-plane"></i></button>
-                </form>
+   <!-- Modern Footer with Payment Cards -->
+<footer class="footer-brand">
+    <div class="footer-container-custom">
+        <!-- Left Column: Logo, Description & Payment Cards -->
+        <div class="footer-col-left">
+            <a class="brand-logo" onclick="navigateTo('home')">
+                <svg viewBox="0 0 100 100">
+                    <path d="M20,20 L80,20 L20,80 L80,80" fill="none" stroke="#3B5BFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="brand-logo-text">ZYNOCTA<span>.</span></div>
+            </a>
+            
+            <p class="footer-desc-text">
+                ZYNOCTA is a full-service digital agency concentrating on web design, e-commerce solutions, application development, and brand identity. We help businesses and people to shine online.
+            </p>
+
+            <!-- Accepted Payment Cards -->
+            <div class="payment-badges-row">
+                <div class="pay-badge visa"><i class="fa-brands fa-cc-visa"></i> VISA</div>
+                <div class="pay-badge mastercard"><i class="fa-brands fa-cc-mastercard"></i></div>
+                <div class="pay-badge apple-pay"><i class="fa-brands fa-apple-pay"></i> Pay</div>
+                <div class="pay-badge google-pay"><i class="fa-brands fa-google-pay"></i> Pay</div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="footer-copyright">
-                &copy; 2026 ZYNOCTA. All rights preserved. Built with premium standards.
+        <!-- Right Column: Contact Details & Social Links -->
+        <div class="footer-col-right">
+            <div class="footer-contact-title">
+                <span class="red-dash">—</span> Contact
             </div>
-           
+
+            <div class="contact-box-item">
+                <div class="contact-icon-sq"><i class="fa-solid fa-phone"></i></div>
+                <span>+92 341 4595789</span>
+            </div>
+
+            <div class="contact-box-item">
+                <div class="contact-icon-sq"><i class="fa-solid fa-envelope"></i></div>
+                <span>contact.zynocta@gmail.com</span>
+            </div>
+
+            <div class="footer-social-row">
+                <a href="#" class="social-sq-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/zynocta/" class="social-sq-btn"><i class="fa-brands fa-instagram"></i></a>
+                
+            </div>
         </div>
-    </footer>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-custom">
+        <div class="footer-copy-text">
+            &copy; 2026 ZYNOCTA. All rights reserved. . Est. 2009.
+        </div>
+        <div class="footer-legal-links">
+            <a onclick="navigateTo('privacy')">Privacy Policy</a>
+            <a onclick="navigateTo('terms')">Terms of Service</a>
+            <a onclick="navigateTo('privacy')">Cookie Policy</a>
+            
+        </div>
+    </div>
+</footer>
 
     <!-- GSAP for Elegant Motion Designs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -2472,7 +3394,7 @@
             const loaderBar = document.getElementById('loader-bar');
             const loaderPercent = document.getElementById('loader-percent');
             let progress = 0;
-            
+
             const interval = setInterval(() => {
                 progress += Math.floor(Math.random() * 15) + 5;
                 if (progress >= 100) {
@@ -2518,7 +3440,7 @@
         function navigateTo(pageId) {
             const pages = document.querySelectorAll('.spa-page');
             const navItems = document.querySelectorAll('.nav-item');
-            
+
             hamburgerBtn.classList.remove('active');
             navMenu.classList.remove('active');
 
@@ -2539,16 +3461,16 @@
                         targetPage.classList.add('active');
                         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                        gsap.fromTo(targetPage, 
-                            { opacity: 0, y: 20 }, 
+                        gsap.fromTo(targetPage,
+                            { opacity: 0, y: 20 },
                             { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
                         );
                     }
                 });
             } else {
                 targetPage.classList.add('active');
-                gsap.fromTo(targetPage, 
-                    { opacity: 0, y: 20 }, 
+                gsap.fromTo(targetPage,
+                    { opacity: 0, y: 20 },
                     { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
                 );
             }
@@ -2605,6 +3527,13 @@
         });
 
         /* -------------------------------------------------------------
+           TECHNOLOGY CATEGORY FILTERING
+           ------------------------------------------------------------- */
+        const techButtons = document.querySelectorAll('.tech-category');
+        const techItems = document.querySelectorAll('.tech-platform-item');
+        techButtons.forEach(button => { button.addEventListener('click', () => { techButtons.forEach(btn => btn.classList.remove('active')); button.classList.add('active'); const filter = button.dataset.techFilter; techItems.forEach(item => { const show = filter === 'all' || item.dataset.tech === filter; gsap.to(item, {opacity:show?1:0, scale:show?1:.94, duration:.25, display:show?'block':'none'}); }); }); });
+
+        /* -------------------------------------------------------------
            FAQ ACCORDION TRIGGERS
            ------------------------------------------------------------- */
         const faqTriggers = document.querySelectorAll('.faq-trigger');
@@ -2632,7 +3561,7 @@
            ------------------------------------------------------------- */
         function handleFormSubmit(event) {
             event.preventDefault();
-            
+
             const name = document.getElementById('contact-name').value;
             const email = document.getElementById('contact-email').value;
             const company = document.getElementById('contact-company').value || 'Not Specified';
@@ -2654,7 +3583,7 @@
             );
 
             // Construct and trigger mailto structure
-            const mailtoUrl = `mailto:daviddthompsondev@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+            const mailtoUrl = `mailto:contact.zynocta@gmail.com?subject=${emailSubject}&body=${emailBody}`;
             window.location.href = mailtoUrl;
 
             alert('Thank you! Opening your system email client to send the project brief to ZYNOCTA.');
@@ -2666,6 +3595,413 @@
             alert('Subscription confirmed! Welcome to ZYNOCTA Tech Insights.');
             event.target.reset();
         }
+
+
+        const techData = {
+  frontend: [
+    { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+    { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "Angular", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
+    { name: "Vue.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+    { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", filter: true }
+  ],
+  backend: [
+    { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+    { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", filter: true },
+    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+    { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+    { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" }
+  ],
+  database: [
+    { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+    { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+    { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
+  ],
+  frameworks: [
+    { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
+    { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
+    { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" }
+  ],
+  cloud: [
+    { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+    { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
+    { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg", filter: true }
+  ],
+  devops: [
+    { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", filter: true }
+  ],
+  ecommerce: [
+    { name: "Shopify", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg" },
+    { name: "WooCommerce", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg" }
+  ],
+  cms: [
+    { name: "WordPress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
+    { name: "Strapi", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/strapi/strapi-original.svg" }
+  ]
+};
+
+// Render Cards Function
+function renderCategoryCards(categoryKey) {
+  const cardsGrid = document.getElementById("rbCardsGrid");
+  if (!cardsGrid) return;
+
+  cardsGrid.innerHTML = "";
+  const items = techData[categoryKey] || [];
+
+  items.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "tech-card-rb";
+
+    const filterStyle = item.filter ? "filter: brightness(0) invert(1);" : "";
+
+    card.innerHTML = `
+      <div class="logo-center-rb">
+        <div class="logo-circle-bg">
+          <img src="${item.icon}" alt="${item.name} logo" style="width: 52px; height: 52px; object-fit: contain; ${filterStyle}">
+        </div>
+      </div>
+      <div class="tech-name-rb">${item.name}</div>
+    `;
+    cardsGrid.appendChild(card);
+  });
+}
+
+// Category Switcher Function
+function switchCategory(categoryKey, btnElement) {
+  // Active class ko sabhi buttons se remove karke click hue button par lagana
+  const tabs = document.querySelectorAll(".tab-rb");
+  tabs.forEach((tab) => tab.classList.remove("active"));
+  btnElement.classList.add("active");
+
+  // Cards update karna
+  renderCategoryCards(categoryKey);
+}
+
+// Page Load par Frontend items dikhane ke liye
+document.addEventListener("DOMContentLoaded", () => {
+  renderCategoryCards("frontend");
+});
+
+// Complete Updated Pricing Data Matrix
+const pricingData = {
+    logo: [
+        { title: "Logo Special", price: "$59.00", oldPrice: "$196.7", discount: "80% OFF", features: ["4 Original Logo Concepts", "2 Dedicated Logo Designers", "4 Revisions", "With Grey Scale Format", "Free Icon Design", "Formats: JPEG Only", "24–48 Hours Turnaround Time"] },
+        { title: "Logo Plus", price: "$199.00", oldPrice: "$663.3", discount: "80% OFF", featured: true, features: ["12 Original Logo Concepts", "4 Dedicated Logo Designers (Industry Specific)", "Unlimited Revisions", "Stationery Design (Business Card, Letterhead, Envelope)", "Email Signature Design", "With Grey Scale Format", "Free Icon Design", "Formats: JPEG, PSD, EPS, AI, PNG, TIFF, SVG", "24–48 Hours Turnaround Time"] },
+        { title: "Logo Express", price: "$89.00", oldPrice: "$299", discount: "70% OFF", features: ["3D/Mascot/Animated Logo", "Unlimited Original Logo Concepts", "8 Dedicated Logo Designers", "Unlimited Revisions", "Stationery Design (Business Card, Letterhead, Envelope)", "500 Business Cards", "Email Signature Design", "With Grey Scale Format", "Free Icon Design", "Formats: JPEG, PSD, EPS, AI, PNG, TIFF, SVG", "24–48 Hours Turnaround Time"] },
+        { title: "Startup Logo Pack", price: "$149.00", oldPrice: "$449", discount: "67% OFF", features: ["12 Dedicated Logo Designers (Industry Specific)", "Unlimited Revisions", "7 Page Informative Website", "Stationery Design (Business Card, Letterhead, Envelope)", "Brand Book", "500 Business Cards", "Email Signature Design", "Social Media Designs (Facebook, Twitter, Instagram)", "2 Sided Flyer OR Bi-Fold Brochure Design", "With Grey Scale Format", "Free Icon Design", "Formats: JPEG, PSD, EPS, AI, PNG, TIFF, SVG", "24–48 Hours Turnaround Time"] },
+        { title: "3D Logo Master", price: "$279.00", oldPrice: "$750", discount: "63% OFF", features: ["3 Unique 3D Logo Concepts", "Light Effects and VFX", "Fully Rendered", "Multiple 3D Angles", "3 Dedicated Designers", "72 hours Turn Around Time", "UNLIMITED Revisions"] },
+        { title: "Logo Platinum", price: "$399.00", oldPrice: "$3330", discount: "80% OFF", features: ["Unlimited Original Logo Concepts", "8 Dedicated Logo Designers (Industry Specific)", "Unlimited Revisions", "Stationery Design (Business Card, Letterhead, Envelope)", "500 Business Cards", "Email Signature Design", "Social Media Designs (Facebook, Twitter, Instagram)", "With Grey Scale Format", "Free Icon Design", "Formats: JPEG, PSD, EPS, AI, PNG, TIFF, SVG", "24–48 Hours Turnaround Time"] },
+        { title: "Premium Identity", price: "$549.00", oldPrice: "$1299", discount: "58% OFF", features: ["2 Mascot Logo Concepts", "Unlimited Revisions", "Hand drawn Sketch", "Presentation on mockup", "24 - 48 Hours Turn Around Time", "File Formats: Ai, EPS, PNG, JPEG, PDF"] },
+        { title: "Logo Infinite", price: "$999.00", oldPrice: "$1330", discount: "80% OFF", features: ["Unlimited Original Logo Concepts", "12 Dedicated Logo Designers (Industry Specific)", "Unlimited Revisions", "5 Page Informative Website", "Stationery Design (Business Card, Letterhead, Envelope)", "Brand Book", "500 Business Cards", "500 Letterheads", "Email Signature Design", "Social Media Designs (Facebook, Twitter, Instagram)", "2 Sided Flyer OR Bi-Fold Brochure Design", "With Grey Scale Format", "Free Icon Design", "Formats: JPEG, PSD, EPS, AI, PNG, TIFF, SVG", "24–48 Hours Turnaround Time"] }
+    ],
+    website: [
+        { title: "BASIC WEB", price: "$225", oldPrice: "$450", discount: "50% OFF", features: ["1 Unique Pages Design", "1 Basic Contact / Inquiry Form", "Complete W3C Certified", "FREE 3 Stock Photos", "FREE Google Friendly Sitemap", "FREE 3 Email Accounts", "100% Satisfaction Guarantee"] },
+        { title: "STARTUP WEB", price: "$425", oldPrice: "$850", discount: "50% OFF", features: ["6 Unique Pages Design", "1 Basic Contact / Inquiry Form", "Complete W3C Certified", "FREE 5 Stock Photos", "FREE Google Friendly Sitemap", "FREE 5 Email Accounts", "100% Satisfaction"] },
+        { title: "PROFESSIONAL WEB", price: "$825", oldPrice: "$1650", discount: "50% OFF", featured: true, features: ["10 Unique Pages Design", "1 Basic Contact / Inquiry Form", "Custom Design - Exclusive Rights", "Complete W3C Certified", "10 Stock Photos", "Google Friendly Sitemap", "10 Email Accounts"] },
+        { title: "IDENTITY WEB", price: "$1425", oldPrice: "$2850", discount: "50% OFF", features: ["Unlimited Logo Concepts", "Free Animated Logo", "Free Email Signature", "Free Icon", "PRINT MATERIAL: Stationery (Business Card, Letterhead, Envelope)", "8 Page Executive Brochure"] },
+        { title: "ELITE WEB", price: "$1825", oldPrice: "$3650", discount: "50% OFF", features: ["Advanced Interactivity", "Blog System", "Security Hardening", "Multilingual", "Analytics Integration", "SEO optimization", "Speed optimization"] },
+        { title: "CORPORATE WEB", price: "$3425", oldPrice: "$6850", discount: "50% OFF", features: ["HubSpot Integration", "Lead Capture", "Analytics Dashboard", "Email Automation", "Forms Designer", "CRM Setup", "Advanced Support"] },
+        { title: "CUSTOMIZED WEB PORTAL", price: "$5855", oldPrice: "$11710", discount: "50% OFF", features: ["Wireframing", "Prototyping", "User Testing", "Handoff Files", "Design System", "Full Stack Dev", "API Readiness"] },
+        { title: "GOLDEN CUSTOMIZED WEB", price: "$14852", oldPrice: "$29705", discount: "50% OFF", features: ["Custom Backend", "Database Design", "Auth System", "Deployment", "API Integration", "AI Chatbot", "Scalable Architecture"] }
+    ],
+    motion: [
+        { title: "2D Motion Graphic", price: "$199.00", oldPrice: "$398", discount: "50% OFF", features: ["30 Sec Duration", "Custom Character Design", "Storyboarding", "Voiceover Included", "HD 1080p Output"] },
+        { title: "3D Motion Design", price: "$499.00", oldPrice: "$998", discount: "50% OFF", featured: true, features: ["Complex 3D Rendering", "Realistic Visual FX", "Sound Design", "4K Resolution", "Commercial Usage Rights"] }
+    ],
+    branding: [
+        { title: "Brand Identity", price: "$399.00", oldPrice: "$999", discount: "60% OFF", features: ["Logo Design", "6 Unique Logo Concepts", "FREE Icon", "FREE Grayscale Copy", "Unlimited Revisions", "100% Ownership Right", "AI, PSD, EPS, GIF, BMP, JPEG, PNG Formats"] },
+        { title: "Complete Brand Book", price: "$799.00", oldPrice: "$1699", discount: "53% OFF", featured: true, features: ["Logo Design", "12 Unique Logo Concepts", "FREE Icon", "FREE Grayscale Copy", "Unlimited Revisions", "100% Ownership Right", "AI, PSD, EPS, GIF, BMP, JPEG, PNG Formats"] }
+    ],
+    app: [
+        { title: "Business Card Set", price: "$39.00", oldPrice: "$129", discount: "70% OFF", features: ["Double Sided", "500 Cards", "Glossy/Matt", "Free Mockup", "Print Ready File"] },
+        { title: "Flyer Design", price: "$59.00", oldPrice: "$179", discount: "67% OFF", features: ["Custom Flyer", "3 Revisions", "Print Ready PDF", "2 Sizes", "High Resolution"] },
+        { title: "Brochure Tri-Fold", price: "$129.00", oldPrice: "$299", discount: "57% OFF", features: ["Layered Source", "High Resolution", "Unlimited Revisions", "Bleed Setup", "Professional Layout"] },
+        { title: "Poster Design", price: "$89.00", oldPrice: "$249", discount: "64% OFF", featured: true, features: ["18x24 inches", "3 Concepts", "Editable File", "CMYK Ready", "3 Days"] },
+        { title: "Booklet/Catalog", price: "$299.00", oldPrice: "$699", discount: "57% OFF", features: ["Up to 20 Pages", "Professional Layout", "Print Consultation", "Source InDesign", "Fast Turnaround"] },
+        { title: "Letterhead + Envelope", price: "$49.00", oldPrice: "$149", discount: "67% OFF", features: ["Branded Stationery", "Digital Files", "2 Revisions", "Matching Set", "Vector Formats"] },
+        { title: "Billboard Design", price: "$199.00", oldPrice: "$499", discount: "60% OFF", features: ["Large Format", "Final Artwork", "CMYK Output", "Scale up to 20ft", "Outdoor Ready"] },
+        { title: "Magazine Ad Spread", price: "$149.00", oldPrice: "$379", discount: "61% OFF", features: ["Full Page Design", "Retina Quality", "Fast Delivery", "Multiple Layouts", "Print Standards"] }
+    ],
+    smm: [
+        { title: "Social Media Starter", price: "$199.00/mo", oldPrice: "$399", discount: "50% OFF", features: ["12 Custom Posts", "2 Platforms Managed", "Hashtag Research", "Content Calendar"] },
+        { title: "Social Media Pro", price: "$399.00/mo", oldPrice: "$799", discount: "50% OFF", featured: true, features: ["24 Custom Posts + 6 Reels", "4 Platforms Managed", "Ad Campaign Setup", "Monthly Analytics Report"] }
+    ],
+    marketing: [
+        { title: "Growth Marketing", price: "$499.00/mo", oldPrice: "$999", discount: "50% OFF", features: ["Google & Meta Ads", "Conversion Rate Optimization", "A/B Testing", "Dedicated Growth Strategist"] }
+    ],
+    writing: [
+        { title: "Blog Writing", price: "$149.00", oldPrice: "$399", discount: "62% OFF", features: ["4 Blog Posts (800+ words)", "SEO Optimized", "Keyword Research", "Plagiarism Free", "Grammarly Proofed", "Stock Images Included", "Meta Descriptions"] },
+        { title: "Website Copywriting", price: "$299.00", oldPrice: "$699", discount: "57% OFF", features: ["5 Pages Copy (Home, About, Service, Contact, Blog)", "Persuasive Tone", "CTA Optimization", "SEO Headers", "User Journey Focus", "2 Revisions", "Industry Research"] },
+        { title: "Product Descriptions", price: "$89.00", oldPrice: "$249", discount: "64% OFF", features: ["10 Product Descriptions", "Benefits-Led Copy", "Keyword Rich", "Unique Selling Points", "Quick Turnaround (48h)", "Consistent Tone", "Bulk Discount Option"] },
+        { title: "Press Release", price: "$179.00", oldPrice: "$449", discount: "60% OFF", features: ["Professional Press Release", "Distribution Ready", "Quote Integration", "Media Inclusions", "Fact Checked", "Boilerplate Development", "2 Rounds Edits"] },
+        { title: "Email Copy Series", price: "$249.00", oldPrice: "$599", discount: "58% OFF", features: ["5 Email Sequence (Welcome, Nurture, Promo, Abandon Cart, Re-engage)", "Subject Line A/B options", "Personalization Tokens", "High Open Rate Focus", "Unsubscribe Mgmt", "Call-To-Action writing", "Automation Ready"] },
+        { title: "SEO Article Pack", price: "$399.00", oldPrice: "$899", discount: "55% OFF", featured: true, features: ["10 Long-Form Articles (1500+ words each)", "Keyword Clusters", "Internal Linking Strategy", "Featured Snippet Ready", "Original Research", "Authority Content", "Meta Tags Included"] },
+        { title: "Social Media Copy", price: "$129.00", oldPrice: "$329", discount: "61% OFF", features: ["30 Social Posts (Caption + Hashtags)", "Planned for FB, IG, LinkedIn, X", "Engaging Hooks", "Brand Voice Guide", "Visual Suggestion notes", "Monthly Content Calendar", "2 Rounds Revision"] },
+        { title: "White Paper / Ebook", price: "$799.00", oldPrice: "$1999", discount: "60% OFF", features: ["10-15 Pages Ebook", "Professional Layout", "Original Research/Stats", "Cited Sources", "Lead Magnet Ready", "3 Revisions", "Cover Page Design"] }
+    ]
+};
+// Function to Render Cards
+function renderPricingCards(categoryKey) {
+    const grid = document.getElementById("pricingCardsGrid");
+    if (!grid) return;
+
+    grid.innerHTML = "";
+    const items = pricingData[categoryKey] || [];
+
+    if (items.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: #8f9cae; padding: 40px 0;">No packages available for this category yet.</div>`;
+        return;
+    }
+
+    items.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = `pricing-card ${item.featured ? "featured" : ""}`;
+
+        const featuresHTML = item.features.map(f => `<li>${f}</li>`).join("");
+
+        card.innerHTML = `
+            <span class="badge">${item.discount}</span>
+            <h3 class="plan-title">${item.title}</h3>
+            <div class="price-wrap">
+                <span class="price">${item.price}</span>
+                <span class="old-price">${item.oldPrice}</span>
+            </div>
+            <ul class="features-list">
+                ${featuresHTML}
+            </ul>
+            <a href="#contact" class="btn-order" onclick="navigateTo('contact')">ORDER NOW →</a>
+            <a href="https://wa.me/" target="_blank" class="btn-chat">💬 Click here to Live Chat</a>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+// Function Triggered on Tab Click
+function filterPricing(categoryKey, btnElement) {
+    // Tab Highlighting Switch
+    const tabs = document.querySelectorAll(".pricing-tabs .tab-btn");
+    tabs.forEach(tab => tab.classList.remove("active"));
+    btnElement.classList.add("active");
+
+    // Re-render Cards
+    renderPricingCards(categoryKey);
+}
+
+// Initial Load
+document.addEventListener("DOMContentLoaded", () => {
+    renderPricingCards("logo");
+});
+
+// ==================== CHATBOT TOGGLE & STATE LOGIC ====================
+
+const chatState = {
+    step: 'INTRO', // INTRO -> SERVICE_DETAILS -> TIMELINE -> BUDGET -> CONTACT -> COMPLETED
+    data: {
+        service: 'General Web/Digital Solution',
+        details: '',
+        timeline: '',
+        budget: '',
+        contact: ''
+    }
+};
+
+function toggleChatbot() {
+    const windowEl = document.getElementById('chat-box-window');
+    if (windowEl) {
+        windowEl.classList.toggle('hidden');
+    }
+}
+
+function handleChatKeyPress(e) {
+    if (e.key === 'Enter') {
+        sendChatMessage();
+    }
+}
+
+function addMessage(text, isUser = false) {
+    const msgContainer = document.getElementById('chat-messages-container');
+    if (!msgContainer) return;
+
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `message ${isUser ? 'user-msg' : 'bot-msg'}`;
+    msgDiv.innerText = text;
+    msgContainer.appendChild(msgDiv);
+    msgContainer.scrollTop = msgContainer.scrollHeight;
+}
+
+function sendChatMessage() {
+    const inputEl = document.getElementById('chat-user-input');
+    if (!inputEl) return;
+    
+    const text = inputEl.value.trim();
+    if (!text) return;
+
+    // Show User Input
+    addMessage(text, true);
+    inputEl.value = '';
+
+    // Show Typing Indicator
+    const msgContainer = document.getElementById('chat-messages-container');
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'message bot-msg';
+    typingDiv.id = 'bot-typing-indicator';
+    typingDiv.innerText = 'Typing...';
+    msgContainer.appendChild(typingDiv);
+    msgContainer.scrollTop = msgContainer.scrollHeight;
+
+    // Simulate AI Response Delay
+    setTimeout(() => {
+        const indicator = document.getElementById('bot-typing-indicator');
+        if (indicator) indicator.remove();
+        processAiResponse(text);
+    }, 500);
+}
+// ==================== BACKGROUND EMAIL DISPATCHER ====================
+function sendBackgroundEmailAlert(subjectText, messageBody) {
+    const templateParams = {
+        to_email: "contact.zynocta@gmail.com",
+        subject: subjectText,
+        message: messageBody,
+        timestamp: new Date().toLocaleString()
+    };
+
+    if (typeof emailjs !== 'undefined') {
+        emailjs.send("service_tcxj0d3", "template_ylsii9e", templateParams)
+            .then(function(response) {
+                console.log('SUCCESS! Email alert sent.', response.status, response.text);
+            }, function(error) {
+                console.error('FAILED to send email alert...', error);
+            });
+    }
+}
+
+// ==================== CHATBOT RESPONSE ENGINE ====================
+function processAiResponse(userText) {
+    const lower = userText.toLowerCase();
+    let reply = "";
+
+    // 1. Silent Email Notification on every message
+    sendBackgroundEmailAlert(
+        `💬 ZYNOCTA Chat Activity: ${chatState.data.service || 'Inquiry'}`,
+        `User Message: "${userText}"\nCurrent Step: ${chatState.step}`
+    );
+
+    // 2. Global Services & FAQ Inquiries
+    if (lower.includes('which type of service') || lower.includes('what service') || lower.includes('your service') || lower.includes('services you provide') || lower.includes('service list') || lower.includes('all services')) {
+        reply = "We offer 6 core specialized agency services:\n\n1. Web Design & Development (SPA, Next.js, E-Commerce)\n2. Mobile App Development (Flutter, iOS & Android)\n3. Logo & Brand Identity (3D Logos, Vector Asset Kits)\n4. Motion Graphics & 3D Web Visuals\n5. Social Media Marketing (SMM)\n6. SEO & Digital Growth Strategy\n\nYou can also explore our detailed Services section on the site! Which of these fits your project vision?";
+        addMessage(reply);
+        return;
+    }
+
+    if (chatState.step === 'INTRO' && (lower.includes('how much') || lower.includes('cost') || lower.includes('charge') || lower.includes('price')) && !lower.includes('need') && !lower.includes('want') && !lower.includes('page') && !lower.includes('build')) {
+        if (lower.includes('web') || lower.includes('site') || lower.includes('landing')) {
+            reply = "Our custom web builds start at \$225 for single-page applications and scale up for multi-page portals. You can check our Pricing section for category plans!\n\nCould you share what key features or pages you need so I can estimate an exact quote for you?";
+            chatState.data.service = "Web Development";
+        } else if (lower.includes('app') || lower.includes('mobile')) {
+            reply = "Mobile app components & cross-platform builds start at \$199. Detailed tier breakdowns are in our Pricing section!\n\nWhat core features or platforms (iOS/Android) are you looking to build?";
+            chatState.data.service = "Mobile App Development";
+        } else if (lower.includes('logo') || lower.includes('brand')) {
+            reply = "Our logo & brand identity suites start at \$59. You can view all deliverables in our Pricing section!\n\nDo you have a specific logo style or mascot concept in mind?";
+            chatState.data.service = "Logo & Branding";
+        } else {
+            reply = "Our agency plans start at \$59 for branding, \$199 for app components, and \$225 for custom websites. You can review all tier details in our Pricing section!\n\nWhich service are you looking to get a quote for?";
+        }
+        chatState.step = 'SERVICE_DETAILS';
+        addMessage(reply);
+        return;
+    }
+
+    // 3. Dynamic Lead Qualification Steps
+    if (chatState.step === 'INTRO' || chatState.step === 'SERVICE_DETAILS') {
+        chatState.data.details = userText;
+        chatState.step = 'TIMELINE';
+
+        if (lower.includes('web') || lower.includes('site') || lower.includes('page') || lower.includes('farm') || lower.includes('admin')) {
+            chatState.data.service = "Web Development";
+            reply = "That's a very clear requirement brief! For a custom web platform with these features, agency builds typically range between \$350–\$850 depending on complexity. You can also explore our Pricing section for base packages.\n\nWhat target timeline or deadline are you aiming for to launch this?";
+        } else if (lower.includes('app') || lower.includes('flutter') || lower.includes('mobile')) {
+            chatState.data.service = "Mobile App Development";
+            reply = "Got it! For a custom cross-platform mobile app with these features, quotes typically range around \$400–\$1,200+. Feel free to check our Services section for component breakdowns.\n\nWhat target timeline do you have in mind for this app?";
+        } else {
+            chatState.data.service = "Custom Digital Solution";
+            reply = "Understood! I've logged your project scope.\n\nWhat target timeline or deadline are you aiming for to launch this project?";
+        }
+    } 
+    else if (chatState.step === 'TIMELINE') {
+        chatState.data.timeline = userText;
+        chatState.step = 'BUDGET';
+        reply = "Got it! What estimated budget range do you have allocated for this build? (e.g., \$300–\$600, \$1k–\$2k, or Custom)";
+    } 
+    else if (chatState.step === 'BUDGET') {
+        chatState.data.budget = userText;
+        chatState.step = 'CONTACT';
+        reply = "Perfect! Please share your Email or Phone Number so our lead architect can send over a formal proposal and technical spec sheet.";
+    } 
+    else if (chatState.step === 'CONTACT') {
+        chatState.data.contact = userText;
+        chatState.step = 'COMPLETED';
+
+        reply = `Awesome! I've logged your complete project brief:\n\n📋 **Project Overview:**\n• Service: ${chatState.data.service}\n• Scope/Features: ${chatState.data.details}\n• Timeline: ${chatState.data.timeline}\n• Budget: ${chatState.data.budget}\n• Contact: ${chatState.data.contact}\n\nOur core team has been notified and will reach out to you shortly!`;
+
+        // COMPLETED LEAD SUMMARY EMAIL ALERT
+        const fullLeadBody = 
+            `🔥 NEW QUALIFIED LEAD CAPTURED:\n\n` +
+            `• Service Needed: ${chatState.data.service}\n` +
+            `• Scope/Requirements: ${chatState.data.details}\n` +
+            `• Target Timeline: ${chatState.data.timeline}\n` +
+            `• Allocated Budget: ${chatState.data.budget}\n` +
+            `• Client Contact Info: ${chatState.data.contact}\n`;
+
+        sendBackgroundEmailAlert(`🚨 NEW QUALIFIED LEAD: ${chatState.data.service}`, fullLeadBody);
+    } 
+    else if (chatState.step === 'COMPLETED') {
+        reply = "I've already dispatched your project brief to our lead architects! Let me know if you have any other questions.";
+    }
+
+    addMessage(reply);
+}
     </script>
+
+<!-- AI Chatbot Floating Widget -->
+<div id="ai-chat-widget" class="chat-widget-container">
+    <!-- Trigger Button -->
+    <button id="chat-trigger-btn" class="chat-trigger" onclick="toggleChatbot()">
+        <i class="fa-solid fa-robot"></i>
+        <span class="chat-badge-pulse"></span>
+    </button>
+
+    <!-- Chat Box Container -->
+    <div id="chat-box-window" class="chat-window hidden">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="bot-avatar"><i class="fa-solid fa-brain"></i></div>
+                <div>
+                    <h4>ZYNOCTA AI Assistant</h4>
+                    <p><span class="online-dot"></span> Online | Instant Response</p>
+                </div>
+            </div>
+            <button class="chat-close-btn" onclick="toggleChatbot()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="chat-body" id="chat-messages-container">
+            <div class="message bot-msg">
+                Hello! Welcome to ZYNOCTA. I'm your AI consultant. What project or service can I help you build today?
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" id="chat-user-input" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+            <button onclick="sendChatMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
