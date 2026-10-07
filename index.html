@@ -4003,5 +4003,32 @@ function processAiResponse(userText) {
         </div>
     </div>
 </div>
+<!-- DevTools & Inspection Protection -->
+<script type="text/javascript">
+    // 1. Block Right Click Context Menu
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+    // 2. Block Inspect Shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C)
+    document.addEventListener('keydown', function (e) {
+        if (
+            e.keyCode === 123 || // F12
+            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) || // Ctrl+Shift+I / J / C
+            (e.ctrlKey && e.keyCode === 85) || // Ctrl+U (View Source)
+            (e.ctrlKey && e.keyCode === 83) // Ctrl+S (Save Page)
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // 3. Debugger Loop (Auto-pause script if DevTools is opened)
+    setInterval(function () {
+        (function() {
+            return false;
+        })["constructor"]("debugger")();
+    }, 100);
+</script>
 </body>
 </html>
