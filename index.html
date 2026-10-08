@@ -82,7 +82,22 @@
       ]
     }
     </script>
+</script>
 
+<!-- Additional Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "End-to-End Digital Solutions",
+  "description": "End-to-end digital solutions including custom website design and development, web applications, cross-platform mobile app development for iOS and Android, logo design and brand identity, motion graphics and 2D/3D animation, social media marketing, digital marketing, technical SEO, Google PPC campaign management, and conversion rate optimization for modern businesses.",
+  "provider": {
+    "@type": "Organization",
+    "name": "ZYNOCTA",
+    "url": "https://zynocta-agency.vercel.app/"
+  }
+}
+</script>
     <style>
 
         :root {
@@ -116,13 +131,46 @@
             font-family: var(--font-body);
         }
 
-        body {
-            overflow-x: hidden;
-            position: relative;
-            background-color: var(--bg-primary);
-        }
+html {
+    min-height: 100%;
+    background: #030712;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #030712;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #030712;
+    position: relative;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Website content image ke upar rahega */
+body > * {
+    position: relative;
+    z-index: 1;
+}
 
 
+
+@media (min-width: 1200px) {
+    body {
+        background-size: 65% auto; /* High-res screens par clean layout */
+        background-position: right -5% center;
+    }
+}
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -136,7 +184,11 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent-primary);
         }
-
+.ambient-glow,
+.grid-texture,
+.noise-overlay {
+    display: none !important; /* Image ko dim karne wale saare overlays off */
+}
 
         .ambient-glow {
             position: fixed;
@@ -286,15 +338,16 @@
     width: 100%;
     z-index: 999;
     padding: 20px 0;
+    background: transparent;
     transition: var(--transition-smooth);
 }
 
 .header-navbar.scrolled {
     padding: 12px 0;
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-color);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
 }
 
 .navbar-container {
@@ -348,7 +401,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--text-secondary);
+    color: white;
     text-decoration: none;
     font-size: 0.92rem;
     font-weight: 500;
@@ -584,56 +637,86 @@
         /* -------------------------------------------------------------
            PAGE 1: HOME PAGE SECTIONS
            ------------------------------------------------------------- */
-        .hero-section {
-            min-height: calc(100vh - 80px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding-top: 40px;
-            padding-bottom: 60px;
-        }
 
-        .hero-title {
-            font-family: var(--font-display);
-            font-weight: 800;
-            font-size: 5rem;
-            line-height: 1.1;
-            letter-spacing: -2px;
-            color: var(--white);
-            max-width: 1000px;
-            margin: 0 auto 24px auto;
-        }
+.hero-section {
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px max(7%, 32px);
 
-        .hero-title span {
-            background: linear-gradient(135deg, #FFFFFF 30%, var(--accent-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
 
-        .hero-desc {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            max-width: 650px;
-            line-height: 1.6;
-            margin: 0 auto 40px auto;
-        }
+    background-image: url('assets/Neon Network Earth in Deep Space.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
-        .hero-ctas {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            margin-bottom: 60px;
-        }
+    position: relative;
+    overflow: hidden;
+}
 
-        /* Trusted By Sub-section */
-        .trusted-by {
-            width: 100%;
-            max-width: 1100px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 40px;
-        }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 48%;
+    max-width: 720px;
+    flex: none;
+}
+
+.hero-title {
+    font-size: clamp(2.8rem, 4vw, 4.8rem);
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 24px !important;
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 40px !important;
+}
+
+.hero-image-wrapper {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        min-height: calc(100svh - 70px);
+        padding: 100px 24px 60px;
+        background-position: 58% center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.4rem, 8vw, 3.5rem);
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+
+    .hero-ctas {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+/* Trusted By Sub-section */
+.trusted-by {
+    width: 100%;
+    max-width: 1100px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+}
 
         .trusted-title {
             font-size: 0.8rem;
@@ -1646,7 +1729,18 @@
     font-size: 13px;
     transition: color 0.3s ease;
 }
-
+.btn-chat {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+}
 .btn-chat:hover {
     color: #fff;
 }
@@ -2153,9 +2247,103 @@
     gap: 8px;
 }
 
+/* Contact Header Dash Color (Blue) */
 .red-dash {
-    color: #e50914;
+    color: #3B5BFF;
     font-weight: bold;
+}
+
+/* Base Styles & Smooth Transitions */
+.contact-box-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.contact-icon-sq {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3B5BFF;
+    font-size: 14px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Ultra Smooth Transition */
+}
+
+.contact-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Ultra Smooth Transition */
+}
+
+/* Phone & Email Smooth Hover Effect */
+.contact-box-item:hover .contact-link {
+    color: #3B5BFF;
+    transform: translateX(6px);
+}
+
+.contact-box-item:hover .contact-icon-sq {
+    background: #3B5BFF;
+    color: #ffffff;
+    border-color: #3B5BFF;
+    box-shadow: 0 0 15px rgba(59, 91, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Social Icon Buttons Smooth Hover */
+.social-sq-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0a0ab;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-sq-btn:hover {
+    background: #3B5BFF;
+    color: #ffffff;
+    border-color: #3B5BFF;
+    box-shadow: 0 4px 15px rgba(59, 91, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Logo Smooth Hover Effect */
+.brand-logo {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-logo-text {
+    transition: color 0.4s ease;
+}
+
+.brand-logo svg path {
+    transition: stroke 0.4s ease, filter 0.4s ease;
+}
+
+.brand-logo:hover {
+    transform: translateY(-1px);
+}
+
+.brand-logo:hover .brand-logo-text {
+    color: #3B5BFF;
+}
+
+.brand-logo:hover svg path {
+    stroke: #4E6FFF;
+    filter: drop-shadow(0 0 8px rgba(59, 91, 255, 0.8));
 }
 
 .contact-box-item {
@@ -2176,7 +2364,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #e50914;
+    color: ;
     font-size: 14px;
 }
 
@@ -2201,11 +2389,11 @@
 }
 
 .social-sq-btn:hover {
-    background: #e50914;
+    background:#3B5BFF;
     color: #ffffff;
-    border-color: #e50914;
+    border-color: #3B5BFF;
     transform: translateY(-2px);
-}
+}    
 
 /* Footer Bottom Bar */
 .footer-bottom-custom {
@@ -2309,6 +2497,15 @@
             display: flex;
             gap: 10px;
         }
+        .legal-link {
+    color: #3B5BFF;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+    color: #FFFFFF;
+}
 
         .newsletter-input {
             background: rgba(255, 255, 255, 0.03);
@@ -2339,14 +2536,14 @@
         /* Container & Section Styles */
 .rb-tech-section {
     background: #0a0a0f;
-    border: 1px solid rgba(220, 38, 38, 0.15);
+    border: 1px solid #3B5BFF;
     border-radius: 20px;
     padding: 40px 30px;
     max-width: 1000px;
     margin: 0 auto;
     color: #ffffff;
     font-family: 'Inter', system-ui, sans-serif;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px #3B5BFF;
 }
 
 .section-head h1 {
@@ -2360,10 +2557,10 @@
 .red-line {
     width: 50px;
     height: 3px;
-    background: #e50914;
+    background:#3B5BFF;
     margin: 0 auto 35px auto;
     border-radius: 2px;
-    box-shadow: 0 0 10px #e50914;
+    box-shadow: 0 0 10px #3B5BFF;
 }
 
 /* Tabs Navigation */
@@ -2400,9 +2597,9 @@
 }
 
 .tab-rb.active {
-    background: rgba(229, 9, 20, 0.15);
-    color: #e50914;
-    border: 1px solid rgba(229, 9, 20, 0.3);
+    background: #3B5BFF;
+    color: white;
+    border: 1px solid #3B5BFF;
     font-weight: 600;
 }
 
@@ -2430,7 +2627,7 @@
 
 .tech-card-rb:hover {
     transform: translateY(-4px);
-    border-color: rgba(229, 9, 20, 0.4);
+    border-color: #3B5BFF;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(229, 9, 20, 0.1);
 }
 
@@ -2548,6 +2745,93 @@
             .tech-platform-grid { grid-template-columns: 1fr; }
             .form-row-grid { grid-template-columns: 1fr; }
         }
+
+        button.btn-chat {
+    background: transparent !important;
+    border: none !important;
+    color: #94A3B8 !important;
+    font-size: 0.85rem !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    margin-top: 10px !important;
+    width: 100% !important;
+    transition: color 0.3s ease !important;
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+button.btn-chat:hover {
+    color: #3B5BFF !important; /* Brand Blue Hover */
+}
+.payment-badges-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pay-badge {
+    background: #ffffff !important; /* Pure white card background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    min-width: 65px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pay-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Kisi bhi image ya icon par filter nahi lagega taake original colors show hon */
+.pay-badge img,
+.pay-badge svg,
+.pay-badge i {
+    filter: none !important;
+}
+        /* ================================
+   TRANSPARENT NAVBAR OVER HERO
+   ================================ */
+
+.header-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    z-index: 9999 !important;
+}
+
+.header-navbar.scrolled {
+    background: rgba(10, 10, 10, 0.6) !important; /* Light transparent background */
+    backdrop-filter: blur(12px) !important; /* Glass effect blur */
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    padding: 12px 0 !important;
+}
+/* Hero image must start from the very top */
+#spa-container {
+    padding-top: 0 !important;
+}
+
+.hero-section {
+    min-height: 100vh !important;
+    margin-top: 0 !important;
+}
     </style>
 </head>
 <body>
@@ -2590,7 +2874,7 @@
                 <li class="nav-item nav-item-dropdown">
                     <a class="nav-dropdown-toggle" href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="nav-dropdown">
-                        <li><a onclick="navigateTo('services')">Website Design &amp; Development</a></li><li><a onclick="navigateTo('services')"></a></li><li></li><li><a onclick="navigateTo('services')">Mobile App Development</a></li><li><a onclick="navigateTo('services')">Logo Design</a></li><li><a onclick="navigateTo('services')"></a></li>
+                        <li><a onclick="navigateTo('services')">Website Design &amp; Development</a></li><li></li><li><a onclick="navigateTo('services')">Mobile App Development</a></li><li><a onclick="navigateTo('services')">Logo Design</a></li><li><a onclick="navigateTo('services')"></a></li>
                     </ul>
                 </li>
                 <li class="nav-item nav-item-dropdown" data-page="portfolio">
@@ -2618,18 +2902,23 @@
         <!-- ==================== HOME PAGE ==================== -->
         <main id="page-home" class="spa-page active">
             <!-- Hero -->
-            <section class="hero-section">
-                <div class="section-badge">Next-Generation Engineering</div>
-                <h1 class="hero-title">Your Partner <br><span>for Digital Growth</span></h1>
-                <p class="hero-desc">At ZYNOCTA, we build modern websites and digital experiences that help businesses stand out, build trust, and grow online. From web development and e-commerce to branding and SEO, we combine clean design, smart technology, and business-focused strategy to deliver digital solutions that create real impact.</p>
-                <div class="hero-ctas">
-                    <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Book a Free Consultation <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
-                    <a onclick="navigateTo('portfolio')" class="btn-premium btn-secondary">View Portfolio</a>
-                </div>
+         <section class="hero-section">
+    <!-- Left Side Content -->
+    <div class="hero-content">
+        <div class="section-badge">Next-Generation Engineering</div>
+        <h1 class="hero-title">Your Partner <br><span>for Digital Growth</span></h1>
+        <p class="hero-desc">At ZYNOCTA, we build modern websites and digital experiences that help businesses stand out, build trust, and grow online. From web development and e-commerce to branding and SEO, we combine clean design, smart technology, and business-focused strategy to deliver digital solutions that create real impact.</p>
+        <div class="hero-ctas">
+            <a onclick="navigateTo('contact')" class="btn-premium btn-primary">Book a Free Consultation <i class="fa-solid fa-arrow-right btn-arrow"></i></a>
+            <a onclick="navigateTo('portfolio')" class="btn-premium btn-secondary">View Portfolio</a>
+        </div>
+    </div>
 
-                <!-- Trusted By -->
-               
-            </section>
+    <!-- Right Side Globe Image Tag -->
+    <div class="hero-image-wrapper">
+        <img src="assets/Neon Network Earth in Deep Space.png" alt="ZYNOCTA Network Globe" class="hero-globe-img">
+    </div>
+</section>
 
             <!-- Benefits / Why Choose Us -->
             <section>
@@ -2988,30 +3277,7 @@
                         </div>
                     </div>
                     <!-- Project 2 -->
-                    <div class="portfolio-card" data-category="ecomm">
-                        <div class="portfolio-img-container">
-                            <div class="portfolio-card-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-dot"></div>
-                                    <div class="mockup-dot"></div>
-                                    <div class="mockup-dot"></div>
-                                </div>
-                                <div class="mockup-content">LUMINA BRAND</div>
-                            </div>
-                        </div>
-                        <div class="portfolio-details">
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Three.js</span>
-                                <span class="portfolio-tag">E-Commerce</span>
-                                <span class="portfolio-tag">GSAP</span>
-                            </div>
-                            <h3 class="portfolio-card-title">Lumina Premium Optics</h3>
-                            <p class="portfolio-card-desc">An immersive e-commerce shopping experience for high-end luxury eyewear brands.</p>
-                            <div class="portfolio-action-links">
-                                <a onclick="navigateTo('case-studies')" class="btn-premium btn-secondary" style="padding: 10px 20px;">Case Study</a><span class="portfolio-visit-note">Visit Site →</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
         </main>
@@ -3232,7 +3498,7 @@ ZYNOCTA is a modern web development and digital solutions studio focused on craf
                             <div class="form-field-group">
                                 <label class="field-label-text">— PHONE NUMBER</label>
                                 <div class="phone-input-wrapper">
-                                    <span class="country-code-flag">US</span>
+                                  
                                     <input type="tel" id="contact-phone" class="field-input-box" placeholder="+1 300 000 0000">
                                 </div>
                             </div>
@@ -3260,9 +3526,9 @@ ZYNOCTA is a modern web development and digital solutions studio focused on craf
                                 <a onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=contact.zynocta@gmail.com&su=Consultation%20Call%20Booking&body=Hello%20ZYNOCTA%20Team,%0A%0AI%20would%20like%20to%20schedule%20a%20consultation%20call%20regarding%20my%20project.%0A%0AName:%0ACompany:%0APreferred%20Date%2FTime:%0AProject%20Overview:%0A', '_blank');" class="btn-schedule-call" style="cursor: pointer;">
                                     <i class="fa-regular fa-calendar-check"></i> Schedule a Call via Mail
                                 </a>
-                                <button type="submit" class="btn-send-message">
-                                    Send Message <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
+                       <a onclick="sendToGmailWeb(event)" class="btn-send-message" style="cursor: pointer; text-decoration: none;">
+    Send Message <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
                             </div>
                         </div>
                     </form>
@@ -3274,7 +3540,7 @@ ZYNOCTA is a modern web development and digital solutions studio focused on craf
             <section>
                 <div class="section-header">
                     <h1 class="section-title">Privacy Policy</h1>
-                    <p class="section-subtitle">Last updated: October 24, 2024</p>
+                    <p class="section-subtitle">Last updated: September 21, 2026</p>
                 </div>
                 <div class="legal-container luxury-card">
                     <div class="legal-content">
@@ -3283,28 +3549,71 @@ ZYNOCTA is a modern web development and digital solutions studio focused on craf
                         <p>We process the details you voluntarily submit through our contact structures, including names, organization names, email addresses, and specific project briefs.</p>
                         <h2>2. Data Usage</h2>
                         <p>We utilize the collected information strictly to coordinate technical consultations, refine agency services, and process specific design inquiries.</p>
+                        <h2>3. Data Security & Storage</h2>
+                        <p>We implement industry-standard SSL encryption, restricted access controls, and secure data storage protocols to ensure your information remains safe against unauthorized access, disclosure, or modification.</p>
+                        <h2>4. Third-Party Integrations</h2>
+                        <p>We do not sell or monetize your personal data. Data may only be processed through trusted third-party service providers (such as hosting infrastructure, email services, or payment processors) strictly necessary to deliver agency solutions.</p>
+                        <h2>5. Contact & Data Rights</h2>
+                        <p>You reserve the right to request access to, correction of, or deletion of your personal data stored within our systems. For privacy inquiries or data requests, reach out directly at <a href="mailto:contact.zynocta@gmail.com" class="contact-link">contact.zynocta@gmail.com</a>.</p>
                     </div>
                 </div>
             </section>
         </main>
 
-        <main id="page-terms" class="spa-page">
-            <section>
-                <div class="section-header">
-                    <h1 class="section-title">Terms & Conditions</h1>
-                    <p class="section-subtitle">Last updated: October 24, 2024</p>
+        <main id="page-privacy" class="spa-page">
+        <section class="privacy-section">
+            <div class="section-header">
+                <h1 class="section-title">Privacy Policy</h1>
+                <p class="section-subtitle">Last updated: October 2026</p>
+            </div>
+            <div class="legal-container luxury-card">
+                <div class="legal-content">
+                    <p class="legal-intro">At ZYNOCTA, we hold your digital privacy in the highest regard. This document details how we collect, process, and protect your information when you engage with our agency platforms and digital services.</p>
+                    
+                    <h2>1. Information We Collect</h2>
+                    <p>We process details you voluntarily submit through our contact forms, including names, organization names, email addresses, phone numbers, and specific project briefs.</p>
+
+                    <h2>2. How We Use Your Data</h2>
+                    <p>We utilize collected information strictly to coordinate technical consultations, refine agency services, process project agreements, and manage client onboarding.</p>
+
+                    <h2>3. Data Security & Storage</h2>
+                    <p>We implement industry standard SSL encryption, restricted access controls, and secure data storage protocols to ensure your information remains safe against unauthorized access, disclosure, or modification.</p>
+
+                    <h2>4. Third-Party Integrations</h2>
+                    <p>We do not sell or monetize your personal data. Data may only be processed through trusted third-party service providers (such as hosting infrastructure or payment processors) necessary to deliver agency solutions.</p>
+
+                    <h2>5. Contact & Data Rights</h2>
+                    <p>You reserve the right to request access to, correction of, or deletion of your personal data stored within our systems. For privacy inquiries or data requests, reach out directly to our support team.</p>
                 </div>
-                <div class="legal-container luxury-card">
-                    <div class="legal-content">
-                        <p>Welcome to ZYNOCTA. By interacting with this platform and procuring our digital services, you agree to comply with the legal conditions listed below.</p>
-                        <h2>1. Engagement & Terms</h2>
-                        <p>All specific agency agreements, project timelines, deliverables, and payment structures will be explicitly stated within your primary Statement of Work (SOW).</p>
-                        <h2>2. Proprietary Intellectual Property</h2>
-                        <p>Following final budget settlement, the intellectual rights and custom web layouts created for your specific project will belong fully to your brand organization.</p>
-                    </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-terms" class="spa-page">
+        <section class="terms-section">
+            <div class="section-header">
+                <h1 class="section-title">Terms & Conditions</h1>
+                <p class="section-subtitle">Last updated: October 2026</p>
+            </div>
+            <div class="legal-container luxury-card">
+                <div class="legal-content">
+                    <p class="legal-intro">Welcome to ZYNOCTA. By interacting with this platform and procuring our digital services, you agree to comply with the legal conditions listed below.</p>
+
+                    <h2>1. Engagement & Terms</h2>
+                    <p>All specific agency agreements, project timelines, deliverables, and payment structures will be explicitly stated within your primary Statement of Work (SOW).</p>
+
+                    <h2>2. Proprietary Intellectual Property</h2>
+                    <p>Following final budget settlement, the intellectual rights and custom web layouts created for your specific project will belong fully to your brand organization.</p>
+
+                    <h2>3. Payment Terms & Milestone Releases</h2>
+                    <p>Services are rendered under structured milestone agreements. Work progresses in line with milestone approvals, and final deliverables or deployment keys are released upon invoice settlement.</p>
+
+                    <h2>4. Limitation of Liability</h2>
+                    <p>ZYNOCTA ensures high-standard, secure code delivery, but shall not be held liable for third-party hosting outages, external API changes, or unauthorized post-handover site modifications.</p>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
         <!-- ==================== 404 NOT FOUND PAGE ==================== -->
         <main id="page-404" class="spa-page">
@@ -3335,13 +3644,51 @@ ZYNOCTA is a modern web development and digital solutions studio focused on craf
                 ZYNOCTA is a full-service digital agency concentrating on web design, e-commerce solutions, application development, and brand identity. We help businesses and people to shine online.
             </p>
 
+           
             <!-- Accepted Payment Cards -->
-            <div class="payment-badges-row">
-                <div class="pay-badge visa"><i class="fa-brands fa-cc-visa"></i> VISA</div>
-                <div class="pay-badge mastercard"><i class="fa-brands fa-cc-mastercard"></i></div>
-                <div class="pay-badge apple-pay"><i class="fa-brands fa-apple-pay"></i> Pay</div>
-                <div class="pay-badge google-pay"><i class="fa-brands fa-google-pay"></i> Pay</div>
-            </div>
+<div class="payment-badges-row">
+    <!-- Visa Original Color -->
+    <div class="pay-badge">
+        <svg width="40" height="15" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38.1 0.5L25 31.5H16.8L10.3 6.8C9.9 5.2 9.5 4.6 8.2 3.9C6.1 2.8 2.8 1.8 0 1.2L0.2 0.5H13.9C15.6 0.5 17.1 1.7 17.5 3.6L20.8 21.6L29.8 0.5H38.1ZM71.2 21.7C71.3 13.4 59.8 12.9 60 9.2C60.1 8.1 61.2 6.9 63.6 6.6C64.8 6.5 68.1 6.3 71.3 7.8L72.7 1.3C70.8 0.6 68.3 0 65.1 0C57.2 0 51.6 4.2 51.5 10.2C51.3 14.6 55.4 17.1 58.4 18.6C61.4 20.1 62.5 21 62.4 22.3C62.3 24.3 59.9 25.2 57.6 25.3C53.6 25.4 51.3 24.2 49.5 23.4L48 30.3C49.9 31.2 53.4 31.9 57.1 32C65.5 32 71.1 27.8 71.2 21.7ZM92.2 0.5H85.7C83.7 0.5 82.2 1.1 81.4 3L69.6 31.5H78L79.7 26.9H90.1L91.1 31.5H98.5L92.2 0.5ZM82 20.6L86.2 9.1L88.6 20.6H82ZM48.4 0.5L41.9 31.5H33.9L40.4 0.5H48.4Z" fill="#1434CB"/>
+        </svg>
+    </div>
+
+    <!-- Mastercard Original Color -->
+    <div class="pay-badge">
+        <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="11" r="10" fill="#EB001B"/>
+            <circle cx="24" cy="11" r="10" fill="#F79E1B"/>
+            <path d="M18 3.12C16.03 5.09 14.8 7.83 14.8 10.87C14.8 13.91 16.03 16.65 18 18.62C19.97 16.65 21.2 13.91 21.2 10.87C21.2 7.83 19.97 5.09 18 3.12Z" fill="#FF5F00"/>
+        </svg>
+    </div>
+
+    <!-- Apple Pay Original Color -->
+    <div class="pay-badge">
+        <i class="fa-brands fa-apple-pay" style="color: #000000; font-size: 26px;"></i>
+    </div>
+
+    <!-- Google Pay Original Color -->
+    <div class="pay-badge">
+        <i class="fa-brands fa-google-pay" style="color: #4285F4; font-size: 28px;"></i>
+    </div>
+
+    <!-- Payoneer Original Multi-color Rainbow Logo -->
+    <div class="pay-badge">
+        <svg width="55" height="18" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="16" r="11" stroke="url(#payoneer-grad)" stroke-width="4.5"/>
+            <defs>
+                <linearGradient id="payoneer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FF4800" />
+                    <stop offset="33%" stop-color="#FF007A" />
+                    <stop offset="66%" stop-color="#9E00FF" />
+                    <stop offset="100%" stop-color="#00D1FF" />
+                </linearGradient>
+            </defs>
+            <text x="28" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#000000" letter-spacing="-0.5px">payoneer</text>
+        </svg>
+    </div>
+</div>
         </div>
 
         <!-- Right Column: Contact Details & Social Links -->
@@ -3350,16 +3697,15 @@ ZYNOCTA is a modern web development and digital solutions studio focused on craf
                 <span class="red-dash">—</span> Contact
             </div>
 
-            <div class="contact-box-item">
-                <div class="contact-icon-sq"><i class="fa-solid fa-phone"></i></div>
-                <span>+92 341 4595789</span>
-            </div>
+           <div class="contact-box-item">
+    <div class="contact-icon-sq"><i class="fa-solid fa-phone"></i></div>
+    <a href="tel:+923414595789" class="contact-link">+92 341 4595789</a>
+</div>
 
-            <div class="contact-box-item">
-                <div class="contact-icon-sq"><i class="fa-solid fa-envelope"></i></div>
-                <span>contact.zynocta@gmail.com</span>
-            </div>
-
+<div class="contact-box-item">
+    <div class="contact-icon-sq"><i class="fa-solid fa-envelope"></i></div>
+    <a href="mailto:contact.zynocta@gmail.com" class="contact-link">contact.zynocta@gmail.com</a>
+</div>
             <div class="footer-social-row">
                 <a href="https://www.facebook.com/profile.php?id=61594924873963" class="social-sq-btn"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/zynocta/" class="social-sq-btn"><i class="fa-brands fa-instagram"></i></a>
@@ -3371,12 +3717,12 @@ ZYNOCTA is a modern web development and digital solutions studio focused on craf
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom-custom">
         <div class="footer-copy-text">
-            &copy; 2026 ZYNOCTA. All rights reserved. . Est. 2009.
+            &copy; 2026 <span style="color: white;">ZYNOCTA</span>. All rights reserved. . Est. 2009.
         </div>
         <div class="footer-legal-links">
             <a onclick="navigateTo('privacy')">Privacy Policy</a>
             <a onclick="navigateTo('terms')">Terms of Service</a>
-            <a onclick="navigateTo('privacy')">Cookie Policy</a>
+            
             
         </div>
     </div>
@@ -3778,7 +4124,7 @@ function renderPricingCards(categoryKey) {
                 ${featuresHTML}
             </ul>
             <a href="#contact" class="btn-order" onclick="navigateTo('contact')">ORDER NOW →</a>
-            <a href="https://wa.me/" target="_blank" class="btn-chat">💬 Click here to Live Chat</a>
+      <button type="button" onclick="toggleChatbot(event)" class="btn-chat">💬 Click here to Live Chat</button>
         `;
         grid.appendChild(card);
     });
@@ -3967,6 +4313,79 @@ function processAiResponse(userText) {
     }
 
     addMessage(reply);
+}
+
+function sendToGmailWeb(event) {
+    if (event) event.preventDefault();
+
+    // Inputs se values get karna
+    const name = document.getElementById('contact-name').value;
+    const lastName = document.getElementById('contact-lastname').value || '';
+    const email = document.getElementById('contact-email').value;
+    const phone = document.getElementById('contact-phone').value || 'N/A';
+    const projectType = document.getElementById('contact-project-type').value;
+    const message = document.getElementById('contact-message').value;
+
+    // Basic Validation Check
+    if (!name || !email || !projectType || !message) {
+        alert('Please fill out First Name, Email, Project Type, and Message fields first.');
+        return;
+    }
+
+    const fullName = `${name} ${lastName}`.trim();
+
+    // Subject aur Body Encoding
+    const subject = encodeURIComponent(`New Inquiry: ${projectType} - ${fullName}`);
+    const body = encodeURIComponent(
+        `Hello ZYNOCTA Team,\n\n` +
+        `Here are my project details:\n\n` +
+        `• Name: ${fullName}\n` +
+        `• Email: ${email}\n` +
+        `• Phone: ${phone}\n` +
+        `• Project Type: ${projectType}\n\n` +
+        `Message / Project Overview:\n` +
+        `${message}\n\n` +
+        `Looking forward to hearing from you!`
+    );
+
+    // Direct Web Gmail Compose URL create aur open karna
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=contact.zynocta@gmail.com&su=${subject}&body=${body}`;
+    
+    window.open(gmailUrl, '_blank');
+}
+
+function openChatWidgetNow(event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    const widget = document.getElementById('ai-chat-widget') || document.querySelector('.chat-widget-container');
+
+    if (!widget) {
+        alert('Chatbot widget container HTML me nahi mila!');
+        return;
+    }
+
+    // Outer Container Visibility
+    widget.style.setProperty('display', 'flex', 'important');
+    widget.style.setProperty('visibility', 'visible', 'important');
+    widget.style.setProperty('opacity', '1', 'important');
+    widget.classList.add('active', 'open', 'show');
+
+    // Inner Chat Box Window Open
+    const innerBox = widget.querySelector('.chat-box, .chat-window, .ai-chat-box, .chat-panel');
+    if (innerBox) {
+        innerBox.style.setProperty('display', 'flex', 'important');
+        innerBox.style.setProperty('visibility', 'visible', 'important');
+        innerBox.classList.add('active', 'open', 'show');
+    }
+
+    // Auto Focus Input Field
+    setTimeout(() => {
+        const inputField = widget.querySelector('input, textarea');
+        if (inputField) inputField.focus();
+    }, 100);
 }
     </script>
 
