@@ -29,4 +29,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://zynocta.com/sitemap.xml
+Sitemap: https://zynocta-agency.vercel.app/sitemap.xml
