@@ -1,0 +1,37 @@
+# ZYNOCTA
+
+> ZYNOCTA is a web development and software agency building modern websites, web applications and digital solutions for businesses worldwide. Fast, SEO-friendly and built to deliver real results.
+
+ZYNOCTA offers end-to-end digital services under one roof, from design and development to marketing and growth. The agency works with clients internationally, including startups, SaaS companies and established businesses.
+
+## Services
+
+- Custom website design and development
+- Web applications
+- Cross-platform mobile app development (iOS and Android)
+- Logo design and brand identity
+- Motion graphics and 2D/3D animation
+- Social media marketing
+- Digital marketing
+- Technical SEO
+- Google PPC campaign management
+- Conversion rate optimization (CRO)
+
+## Key Pages
+
+- [Home](https://zynocta-agency.vercel.app/): Overview of ZYNOCTA and its services
+- [Services](https://zynocta-agency.vercel.app/#services): Full list of services offered
+- [Portfolio](https://zynocta-agency.vercel.app/#portfolio): Selected projects and work samples
+- [Pricing](https://zynocta-agency.vercel.app/#pricing): Packages and pricing plans
+- [About](https://zynocta-agency.vercel.app/#about): About the agency and its tech stack
+- [Contact](https://zynocta-agency.vercel.app/#contact): Get a quote or start a project
+
+## Contact
+
+- Email: contact.zynocta@gmail.com
+- Phone / WhatsApp: +92 341 4595789
+- Website: https://zynocta-agency.vercel.app/
+
+## Optional
+
+- Technology: HTML, CSS, JavaScript, React, Next.js and other modern web technologies
