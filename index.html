@@ -77,11 +77,7 @@
         "opens": "09:00",
         "closes": "18:00"
       },
-      "sameAs": [
-        "https://linkedin.com/company/zynocta",
-        "https://twitter.com/zynocta",
-        "https://dribbble.com/zynocta"
-      ]
+      "sameAs": 
     }
     </script>
 
@@ -730,7 +726,7 @@ html {
     <header class="header-navbar" id="navbar">
         <div class="navbar-container">
             <a class="brand-logo" href="#home" onclick="navigateTo('home'); return false;" aria-label="ZYNOCTA Home">
-                <img src="zynocta-logo.png" alt="ZYNOCTA logo" width="160" height="48" decoding="async">
+                <img src="zynocta-logo.webp" alt="ZYNOCTA logo" width="160" height="48" decoding="async">
             </a>
             <div class="nav-shortcuts" aria-label="Featured navigation">
                 <div class="nav-shortcut-wrap">
@@ -985,8 +981,8 @@ html {
             <!-- Testimonial Section (Nexvion Style) -->
     <section class="testimonial-section" style="padding: 60px 24px; max-width: 1200px; margin: 0 auto;">
         <div class="section-head" style="text-align: center; margin-bottom: 40px;">
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 12px; font-family: var(--font-display);">People love building brands with ZYNOCTA[cite: 12]</h2>
-            <p style="color: #a0a0ab; font-size: 1rem;">See what they have to say[cite: 12]</p>
+            <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 12px; font-family: var(--font-display);">People love building brands with ZYNOCTA</h2>
+            <p style="color: #a0a0ab; font-size: 1rem;">See what they have to </p>
             <div class="red-line" style="width: 50px; height: 3px; background: #3B5BFF; margin: 15px auto 0 auto; border-radius: 2px;"></div>
         </div>
 
@@ -2017,59 +2013,58 @@ Our mission is to empower businesses and individuals with innovative, practical,
     <div class="footer-container-custom">
         <!-- Left Column: Logo, Description & Payment Cards -->
         <div class="footer-col-left">
-            <a class="footer-logo-link" href="#home" onclick="navigateTo('home'); return false;" aria-label="The Zynocta Co Home">
-    <img src="https://zynocta-agency.vercel.app/zynocta-logo.png" alt="The Zynocta Co" class="footer-logo-img" width="160" height="48" decoding="async">
-</a>
+            <a class="footer-logo-link" href="#home" onclick="event.preventDefault(); navigateTo('home');" aria-label="The Zynocta Co Home">
+                <img src="zynocta-logo.webp" alt="The Zynocta Co" class="footer-logo-img" width="160" height="48" decoding="async">
+            </a>
             
             <p class="footer-desc-text" style="color: white;">
             The Zynocta Co is a full-service digital company concentrating on web design, e-commerce solutions, application development, and brand identity. We help businesses and people to shine online by making custom websites, logos, and online experiences that are made to precise your values and vision.
             </p>
 
-           
             <!-- Accepted Payment Cards -->
-<div class="payment-badges-row">
-    <!-- Visa Original Color -->
-    <div class="pay-badge">
-        <svg width="40" height="15" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M38.1 0.5L25 31.5H16.8L10.3 6.8C9.9 5.2 9.5 4.6 8.2 3.9C6.1 2.8 2.8 1.8 0 1.2L0.2 0.5H13.9C15.6 0.5 17.1 1.7 17.5 3.6L20.8 21.6L29.8 0.5H38.1ZM71.2 21.7C71.3 13.4 59.8 12.9 60 9.2C60.1 8.1 61.2 6.9 63.6 6.6C64.8 6.5 68.1 6.3 71.3 7.8L72.7 1.3C70.8 0.6 68.3 0 65.1 0C57.2 0 51.6 4.2 51.5 10.2C51.3 14.6 55.4 17.1 58.4 18.6C61.4 20.1 62.5 21 62.4 22.3C62.3 24.3 59.9 25.2 57.6 25.3C53.6 25.4 51.3 24.2 49.5 23.4L48 30.3C49.9 31.2 53.4 31.9 57.1 32C65.5 32 71.1 27.8 71.2 21.7ZM92.2 0.5H85.7C83.7 0.5 82.2 1.1 81.4 3L69.6 31.5H78L79.7 26.9H90.1L91.1 31.5H98.5L92.2 0.5ZM82 20.6L86.2 9.1L88.6 20.6H82ZM48.4 0.5L41.9 31.5H33.9L40.4 0.5H48.4Z" fill="#1434CB"/>
-        </svg>
-    </div>
+            <div class="payment-badges-row">
+                <!-- Visa Original Color -->
+                <div class="pay-badge">
+                    <svg width="40" height="15" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M38.1 0.5L25 31.5H16.8L10.3 6.8C9.9 5.2 9.5 4.6 8.2 3.9C6.1 2.8 2.8 1.8 0 1.2L0.2 0.5H13.9C15.6 0.5 17.1 1.7 17.5 3.6L20.8 21.6L29.8 0.5H38.1ZM71.2 21.7C71.3 13.4 59.8 12.9 60 9.2C60.1 8.1 61.2 6.9 63.6 6.6C64.8 6.5 68.1 6.3 71.3 7.8L72.7 1.3C70.8 0.6 68.3 0 65.1 0C57.2 0 51.6 4.2 51.5 10.2C51.3 14.6 55.4 17.1 58.4 18.6C61.4 20.1 62.5 21 62.4 22.3C62.3 24.3 59.9 25.2 57.6 25.3C53.6 25.4 51.3 24.2 49.5 23.4L48 30.3C49.9 31.2 53.4 31.9 57.1 32C65.5 32 71.1 27.8 71.2 21.7ZM92.2 0.5H85.7C83.7 0.5 82.2 1.1 81.4 3L69.6 31.5H78L79.7 26.9H90.1L91.1 31.5H98.5L92.2 0.5ZM82 20.6L86.2 9.1L88.6 20.6H82ZM48.4 0.5L41.9 31.5H33.9L40.4 0.5H48.4Z" fill="#1434CB"/>
+                    </svg>
+                </div>
 
-    <!-- Mastercard Original Color -->
-    <div class="pay-badge">
-        <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="11" r="10" fill="#EB001B"/>
-            <circle cx="24" cy="11" r="10" fill="#F79E1B"/>
-            <path d="M18 3.12C16.03 5.09 14.8 7.83 14.8 10.87C14.8 13.91 16.03 16.65 18 18.62C19.97 16.65 21.2 13.91 21.2 10.87C21.2 7.83 19.97 5.09 18 3.12Z" fill="#FF5F00"/>
-        </svg>
-    </div>
+                <!-- Mastercard Original Color -->
+                <div class="pay-badge">
+                    <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="11" r="10" fill="#EB001B"/>
+                        <circle cx="24" cy="11" r="10" fill="#F79E1B"/>
+                        <path d="M18 3.12C16.03 5.09 14.8 7.83 14.8 10.87C14.8 13.91 16.03 16.65 18 18.62C19.97 16.65 21.2 13.91 21.2 10.87C21.2 7.83 19.97 5.09 18 3.12Z" fill="#FF5F00"/>
+                    </svg>
+                </div>
 
-    <!-- Apple Pay Original Color -->
-    <div class="pay-badge">
-        <i class="fa-brands fa-apple-pay" style="color: #000000; font-size: 26px;"></i>
-    </div>
+                <!-- Apple Pay Original Color -->
+                <div class="pay-badge">
+                    <i class="fa-brands fa-apple-pay" style="color: #000000; font-size: 26px;"></i>
+                </div>
 
-    <!-- Google Pay Original Color -->
-    <div class="pay-badge">
-        <i class="fa-brands fa-google-pay" style="color: #4285F4; font-size: 28px;"></i>
-    </div>
+                <!-- Google Pay Original Color -->
+                <div class="pay-badge">
+                    <i class="fa-brands fa-google-pay" style="color: #4285F4; font-size: 28px;"></i>
+                </div>
 
-    <!-- Payoneer Original Multi-color Rainbow Logo -->
-    <div class="pay-badge">
-        <svg width="55" height="18" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="16" r="11" stroke="url(#payoneer-grad)" stroke-width="4.5"/>
-            <defs>
-                <linearGradient id="payoneer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FF4800" />
-                    <stop offset="33%" stop-color="#FF007A" />
-                    <stop offset="66%" stop-color="#9E00FF" />
-                    <stop offset="100%" stop-color="#00D1FF" />
-                </linearGradient>
-            </defs>
-            <text x="28" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#000000" letter-spacing="-0.5px">payoneer</text>
-        </svg>
-    </div>
-</div>
+                <!-- Payoneer Original Multi-color Rainbow Logo -->
+                <div class="pay-badge">
+                    <svg width="55" height="18" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="16" r="11" stroke="url(#payoneer-grad)" stroke-width="4.5"/>
+                        <defs>
+                            <linearGradient id="payoneer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FF4800" />
+                                <stop offset="33%" stop-color="#FF007A" />
+                                <stop offset="66%" stop-color="#9E00FF" />
+                                <stop offset="100%" stop-color="#00D1FF" />
+                            </linearGradient>
+                        </defs>
+                        <text x="28" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#000000" letter-spacing="-0.5px">payoneer</text>
+                    </svg>
+                </div>
+            </div>
         </div>
 
         <!-- Right Column: Contact Details & Social Links -->
@@ -2078,22 +2073,20 @@ Our mission is to empower businesses and individuals with innovative, practical,
                 <span class="red-dash">—</span> Contact
             </div>
 
-          
-
-<div class="contact-box-item">
-    <div class="contact-icon-sq"><i class="fa-solid fa-envelope"></i></div>
-    <a href="mailto:contact.zynocta@gmail.com" class="contact-link">contact.zynocta@gmail.com</a>
-</div>
-<div class="contact-box-item">
-    <div class="contact-icon-sq"><i class="fa-solid fa-envelope"></i></div>
-    <a href="tel:+92341459789" style="display: inline-flex; align-items: center; gap: 10px; color: #ffffff; text-decoration: none;">+1 (646) 781-4029</a>
-</div>
+            <div class="contact-box-item">
+                <div class="contact-icon-sq"><i class="fa-solid fa-envelope"></i></div>
+                <a href="mailto:contact.zynocta@gmail.com" class="contact-link">contact.zynocta@gmail.com</a>
+            </div>
+            <div class="contact-box-item">
+                <div class="contact-icon-sq"><i class="fa-solid fa-envelope"></i></div>
+                <a href="tel:+16467814029" style="display: inline-flex; align-items: center; gap: 10px; color: #ffffff; text-decoration: none;">+1 (646) 781-4029</a>
+            </div>
+            
             <div class="footer-social-row">
-                <a href="https://www.facebook.com/profile.php?id=61594924873963" class="social-sq-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/zynocta/" class="social-sq-btn"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-sq-btn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="social-sq-btn"><i class="fa-brands fa-twitter"></i></a>
-                
+                <a href="https://www.facebook.com/profile.php?id=61594924873963" class="social-sq-btn" aria-label="Facebook Profile"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/zynocta/" class="social-sq-btn" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com" class="social-sq-btn" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com" class="social-sq-btn" aria-label="Twitter Profile"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
     </div>
@@ -2104,10 +2097,8 @@ Our mission is to empower businesses and individuals with innovative, practical,
             &copy; 2026 <span style="color: white;">ZYNOCTA</span>. All rights reserved. . Est. 2024.
         </div>
         <div class="footer-legal-links">
-            <a onclick="navigateTo('privacy')">Privacy Policy</a>
-            <a onclick="navigateTo('terms')">Terms of Service</a>
-            
-            
+            <a href="/privacy" onclick="event.preventDefault(); navigateTo('privacy');">Privacy Policy</a>
+            <a href="/terms" onclick="event.preventDefault(); navigateTo('terms');">Terms of Service</a>
         </div>
     </div>
 </footer>
