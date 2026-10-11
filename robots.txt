@@ -1,10 +1,11 @@
-# robots.txt for ZYNOCTA
-# https://zynocta.com/robots.txt
+
+# robots.txt for The Zynocta Co.
+# https://thezynoctaco.vercel.app/robots.txt
 
 User-agent: *
 Allow: /
 
-# AI / LLM crawlers (allowed so ZYNOCTA can appear in AI answers)
+# AI / LLM crawlers
 User-agent: GPTBot
 Allow: /
 
@@ -29,4 +30,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://zynocta-agency.vercel.app/sitemap.xml
+Sitemap: https://thezynoctaco.vercel.app/sitemap.xml
