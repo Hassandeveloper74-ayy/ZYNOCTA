@@ -3510,14 +3510,18 @@ function processAiResponse(userText) {
         return;
     }
 
-    // 2b. Care Plans / Maintenance Inquiries
-    if (
-        (chatState.step === 'INTRO' || chatState.step === 'COMPLETED') &&
-        (lower.includes('maintenance') || lower.includes('care plan') ||
-         lower.includes('support plan') || lower.includes('monthly plan') ||
-         lower.includes('maintain my'))
-    ) {
-        reply = "We offer monthly Care Plans to keep your website secure, backed up and updated:\n\n• Starter Care: \$15/month\n• Growth Care: \$35/month\n• Pro Care: \$79/month\n• Enterprise Care: \$199/month\n\nAnnual billing gets 2 months free. You can compare all plans in our Pricing section.\n\nWould you like help choosing the right plan, or a quote for a new website?";
+      // 2b. Care Plans / Maintenance Inquiries (works at any step)
+    const careKeywords = ['maintain', 'care plan', 'care package', 'support plan', 'monthly plan', 'monthly package'];
+    if (careKeywords.some(k => lower.includes(k))) {
+        const resumePrompt = {
+            SERVICE_DETAILS: "\n\nNow, back to your project: which key features or pages do you need?",
+            TIMELINE: "\n\nNow, back to your project: what target timeline are you aiming for?",
+            BUDGET: "\n\nNow, back to your project: what estimated budget range do you have in mind?",
+            CONTACT: "\n\nNow, back to your project: please share your Email or Phone Number so we can send a proposal.",
+            INTRO: "\n\nWould you like help choosing the right plan, or a quote for a new website?",
+            COMPLETED: "\n\nWould you like help choosing the right plan?"
+        };
+        reply = "We offer monthly Care Plans to keep your website secure, backed up and updated:\n\n• Starter Care: \$15/month\n• Growth Care: \$35/month\n• Pro Care: \$79/month\n• Enterprise Care: \$199/month\n\nAnnual billing gets 2 months free. You can compare all plans in our Pricing section." + (resumePrompt[chatState.step] || "");
         addMessage(reply);
         return;
     }
