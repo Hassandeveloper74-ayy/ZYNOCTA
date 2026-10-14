@@ -8,7 +8,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
    document.addEventListener("DOMContentLoaded", function(){
-      emailjs.init("7a_jG6j01IMJmc0yj");
+      emailjs.init("7a_jG6j01IMJmc0yj");f
    });
 </script>
 
@@ -1775,6 +1775,132 @@ Our mission is to empower businesses and individuals with innovative, practical,
                 <div class="pricing-grid" id="pricingCardsGrid">
                     <!-- Cards JavaScript se dynamically update honge -->
                 </div>
+
+                <!-- ===== CARE PLANS START (yahan se copy karo) ===== -->
+                <style>
+                  .zc-care { width: 100%; max-width: 1100px; margin: 64px auto 0; padding: 0 20px; box-sizing: border-box; }
+                  .zc-care *, .zc-care *::before, .zc-care *::after { box-sizing: border-box; }
+
+                  .zc-care-head { text-align: center; margin-bottom: 32px; }
+                  .zc-care-head h2 { font-size: clamp(24px, 4vw, 36px); line-height: 1.2; margin: 0 0 10px; color: #fff; }
+                  .zc-care-head p  { font-size: clamp(15px, 2vw, 17px); line-height: 1.6; margin: 0 auto; max-width: 560px; color: #aab0c4; }
+
+                  .zc-care-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
+
+                  .zc-card { position: relative; display: flex; flex-direction: column; background: #12141f; border: 1px solid rgba(255,255,255,.09); border-radius: 16px; padding: 24px 20px; }
+                  .zc-card.zc-popular { border-color: #4a5cf5; box-shadow: 0 0 0 1px #4a5cf5; }
+                  .zc-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #4a5cf5; color: #fff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
+                  .zc-card h3 { font-size: 20px; margin: 0 0 4px; color: #fff; }
+                  .zc-for { font-size: 14px; line-height: 1.5; color: #8d94ad; margin: 0 0 16px; min-height: 42px; }
+                  .zc-price { font-size: 38px; font-weight: 700; color: #fff; line-height: 1; margin: 0 0 4px; }
+                  .zc-price span { font-size: 15px; font-weight: 400; color: #8d94ad; }
+                  .zc-year { font-size: 14px; color: #8d94ad; margin: 0 0 20px; }
+
+                  .zc-card ul { list-style: none; margin: 0 0 24px; padding: 0; flex: 1; }
+                  .zc-card li { font-size: 15px; line-height: 1.5; color: #d9dcea; padding: 8px 0 8px 24px; position: relative; border-bottom: 1px solid rgba(255,255,255,.06); }
+                  .zc-card li:last-child { border-bottom: 0; }
+                  .zc-card li::before { content: "\2713"; position: absolute; left: 0; color: #4a5cf5; font-weight: 700; }
+
+                  .zc-btn { display: block; text-align: center; text-decoration: none; background: #4a5cf5; color: #fff; font-size: 15px; font-weight: 600; padding: 12px 16px; border-radius: 10px; margin-top: auto; }
+                  .zc-btn:hover { background: #5b6bff; }
+                  .zc-note { text-align: center; font-size: 14px; color: #8d94ad; margin: 20px 0 0; }
+                  .zc-swipe { display: none; text-align: center; font-size: 13px; color: #8d94ad; margin: 4px 0 0; }
+
+                  @media (max-width: 1024px) { .zc-care-grid { grid-template-columns: repeat(2, 1fr); } }
+
+                  @media (max-width: 640px) {
+                    .zc-care { padding: 0; }
+                    .zc-care-head { padding: 0 20px; }
+                    .zc-care-grid { display: flex; gap: 14px; overflow-x: auto; padding: 18px 16px 12px; scroll-padding-left: 16px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+                    .zc-care-grid::-webkit-scrollbar { display: none; }
+                    .zc-card { flex: 0 0 86%; scroll-snap-align: start; }
+                    .zc-swipe { display: block; }
+                  }
+                </style>
+
+                <div class="zc-care" id="care-plans">
+                  <div class="zc-care-head">
+                    <h2>Care Plans: Keep Your Website Fast, Secure &amp; Updated</h2>
+                    <p>Monthly support so you never worry about updates, backups or downtime. Cancel anytime.</p>
+                  </div>
+
+                  <div class="zc-care-grid">
+
+                    <div class="zc-card">
+                      <h3>Starter Care</h3>
+                      <p class="zc-for">For Basic Web and Startup Web</p>
+                      <p class="zc-price">$15<span> /month</span></p>
+                      <p class="zc-year">or $150/year (2 months free)</p>
+                      <ul>
+                        <li>Uptime monitoring</li>
+                        <li>Monthly backup</li>
+                        <li>1 small content update</li>
+                        <li>Bug fixes</li>
+                        <li>48 hour response</li>
+                      </ul>
+                      <a class="zc-btn" href="https://wa.me/923453013944?text=Hi%20The%20Zynocta%20Co%2C%20I%27m%20interested%20in%20the%20Starter%20Care%20plan." target="_blank" rel="noopener">Get This Plan</a>
+                    </div>
+
+                    <div class="zc-card zc-popular">
+                      <span class="zc-badge">Most Popular</span>
+                      <h3>Growth Care</h3>
+                      <p class="zc-for">For Professional Web and Identity Web</p>
+                      <p class="zc-price">$35<span> /month</span></p>
+                      <p class="zc-year">or $350/year (2 months free)</p>
+                      <ul>
+                        <li>Uptime monitoring</li>
+                        <li>Weekly backup</li>
+                        <li>3 content updates</li>
+                        <li>Monthly security check</li>
+                        <li>Bug fixes</li>
+                        <li>24 hour response</li>
+                      </ul>
+                      <a class="zc-btn" href="https://wa.me/923453013944?text=Hi%20The%20Zynocta%20Co%2C%20I%27m%20interested%20in%20the%20Growth%20Care%20plan." target="_blank" rel="noopener">Get This Plan</a>
+                    </div>
+
+                    <div class="zc-card">
+                      <h3>Pro Care</h3>
+                      <p class="zc-for">For Elite Web and Corporate Web</p>
+                      <p class="zc-price">$79<span> /month</span></p>
+                      <p class="zc-year">or $790/year (2 months free)</p>
+                      <ul>
+                        <li>Uptime monitoring</li>
+                        <li>Daily backup</li>
+                        <li>8 content updates</li>
+                        <li>Weekly security check</li>
+                        <li>Monthly SEO and speed report</li>
+                        <li>Analytics report</li>
+                        <li>Priority bug fixes</li>
+                        <li>12 hour response</li>
+                      </ul>
+                      <a class="zc-btn" href="https://wa.me/923453013944?text=Hi%20The%20Zynocta%20Co%2C%20I%27m%20interested%20in%20the%20Pro%20Care%20plan." target="_blank" rel="noopener">Get This Plan</a>
+                    </div>
+
+                    <div class="zc-card">
+                      <h3>Enterprise Care</h3>
+                      <p class="zc-for">For Web Portal and Golden Custom Web</p>
+                      <p class="zc-price">$199<span> /month</span></p>
+                      <p class="zc-year">or $1,990/year (2 months free)</p>
+                      <ul>
+                        <li>Uptime monitoring</li>
+                        <li>Daily backup with restore support</li>
+                        <li>Unlimited updates (fair use)</li>
+                        <li>Weekly security check and hardening</li>
+                        <li>Monthly SEO and speed fixes</li>
+                        <li>Analytics report</li>
+                        <li>Priority bug fixes</li>
+                        <li>Same day response</li>
+                      </ul>
+                      <a class="zc-btn" href="https://wa.me/923453013944?text=Hi%20The%20Zynocta%20Co%2C%20I%27m%20interested%20in%20the%20Enterprise%20Care%20plan." target="_blank" rel="noopener">Get This Plan</a>
+                    </div>
+
+                  </div>
+
+                  <p class="zc-swipe">Swipe to see all plans</p>
+                  <p class="zc-note">Work outside your plan is billed hourly. We will always confirm the cost with you first.</p>
+                </div>
+                <!-- ===== CARE PLANS END (yahan tak copy karo) ===== -->
+
             </section>
         </main>
 
