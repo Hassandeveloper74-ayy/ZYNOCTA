@@ -1,13 +1,14 @@
 {
-  "redirects": [
+ "redirects": [
     {
       "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "zynocta-psi.vercel.app"
-        }
-      ],
+      "has": [{ "type": "host", "value": "zynocta-agency.vercel.app" }],
+      "destination": "https://thezynoctaco.vercel.app/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "zynocta-psi.vercel.app" }],
       "destination": "https://thezynoctaco.vercel.app/$1",
       "permanent": true
     }
