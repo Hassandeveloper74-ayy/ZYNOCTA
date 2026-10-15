@@ -1795,6 +1795,7 @@ Our mission is to empower businesses and individuals with innovative, practical,
                     <button class="tab-btn" onclick="filterPricing('smm', this)">SMM</button>
                     <button class="tab-btn" onclick="filterPricing('marketing', this)">Digital Marketing</button>
                     <button class="tab-btn" onclick="filterPricing('writing', this)">Content Writing</button>
+                    <button class="tab-btn" onclick="filterPricing('print', this)">Print Design</button>
                 </div>
 
                 <!-- Pricing Grid Container -->
@@ -3355,7 +3356,47 @@ const pricingData = {
   "Facebook Fanpage Splash"
 ] }
     ],
-    app: [
+   app: [
+        { title: "Starter App (MVP)", price: "$799.00", oldPrice: "$1800", discount: "56% OFF", features: [
+            "Cross-Platform iOS & Android (Flutter / React Native)",
+            "Up to 5 Screens",
+            "Figma UI Design & Prototype",
+            "Basic Backend & API Integration",
+            "Store Submission Support",
+            "30 Days Free Support"
+        ] },
+        { title: "Business App", price: "$1499.00", oldPrice: "$3400", discount: "56% OFF", features: [
+            "Cross-Platform iOS & Android",
+            "Up to 12 Screens",
+            "User Login & Profiles",
+            "Push Notifications",
+            "Admin Panel",
+            "Scalable Backend API Integration",
+            "Store Submission Support",
+            "60 Days Free Support"
+        ] },
+        { title: "Pro App", price: "$2999.00", oldPrice: "$6800", discount: "56% OFF", featured: true, features: [
+            "Cross-Platform iOS & Android",
+            "Up to 25 Screens",
+            "Payment Gateway Integration",
+            "Real-Time Features (Chat, Tracking)",
+            "Custom Backend & Database",
+            "Analytics Integration",
+            "Store Submission Support",
+            "90 Days Free Support"
+        ] },
+        { title: "Custom Enterprise App", price: "$6999.00", oldPrice: "$15900", discount: "56% OFF", features: [
+            "Custom Architecture & Unlimited Screens",
+            "AI Features & Third-Party Integrations",
+            "Admin Dashboard",
+            "Cloud Deployment",
+            "Security Hardening",
+            "Dedicated Project Manager",
+            "Store Submission Support",
+            "6 Months Free Support"
+        ] }
+    ],
+     print: [
         { title: "Business Card Set", price: "$35.00", oldPrice: "$129", discount: "73% OFF", features: ["Double Sided", "500 Cards", "Glossy/Matt", "Free Mockup", "Print Ready File"] },
         { title: "Flyer Design", price: "$49.00", oldPrice: "$179", discount: "73% OFF", features: ["Custom Flyer", "3 Revisions", "Print Ready PDF", "2 Sizes", "High Resolution"] },
         { title: "Brochure Tri-Fold", price: "$109.00", oldPrice: "$299", discount: "64% OFF", features: ["Layered Source", "High Resolution", "Unlimited Revisions", "Bleed Setup", "Professional Layout"] },
@@ -3364,7 +3405,7 @@ const pricingData = {
         { title: "Letterhead + Envelope", price: "$45.00", oldPrice: "$149", discount: "70% OFF", features: ["Branded Stationery", "Digital Files", "2 Revisions", "Matching Set", "Vector Formats"] },
         { title: "Billboard Design", price: "$169.00", oldPrice: "$499", discount: "66% OFF", features: ["Large Format", "Final Artwork", "CMYK Output", "Scale up to 20ft", "Outdoor Ready"] },
         { title: "Magazine Ad Spread", price: "$129.00", oldPrice: "$379", discount: "66% OFF", features: ["Full Page Design", "Retina Quality", "Fast Delivery", "Multiple Layouts", "Print Standards"] }
-    ],
+     ],
     smm: [
         { title: "Social Media Starter", price: "$169.00/mo", oldPrice: "$399", discount: "58% OFF", features: ["12 Custom Posts", "2 Platforms Managed", "Hashtag Research", "Content Calendar"] },
         { title: "Social Media Pro", price: "$349.00/mo", oldPrice: "$799", discount: "56% OFF", featured: true, features: ["24 Custom Posts + 6 Reels", "4 Platforms Managed", "Ad Campaign Setup", "Monthly Analytics Report"] }
@@ -3554,7 +3595,64 @@ function sendBackgroundEmailAlert(subjectText, messageBody) {
             });
     }
 }
+// ==================== PRICING HELPERS (prices pricingData se aate hain) ====================
+function chatPriceList(key) {
+    const items = (typeof pricingData !== 'undefined' && pricingData[key]) || [];
+    return items.map(i => {
+        const name = i.title === i.title.toUpperCase()
+            ? i.title.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())
+            : i.title;
+        return "• " + name + ": " + i.price.replace(".00", "");
+    }).join("\n");
+}
 
+function chatResumePrompt(step) {
+    const map = {
+        SERVICE_DETAILS: "\n\nNow, back to your project: which key features or pages do you need?",
+        TIMELINE: "\n\nNow, back to your project: what target timeline are you aiming for?",
+        BUDGET: "\n\nNow, back to your project: what estimated budget range do you have in mind?",
+        CONTACT: "\n\nNow, back to your project: please share your Email or Phone Number so we can send a proposal.",
+        COMPLETED: "\n\nWould you like help choosing the right package?"
+    };
+    return map[step] || "";
+}
+
+const chatPriceTopics = [
+    { service: "AI Automation", key: "ai", title: "AI Automation packages",
+      test: /\bai\b|automation|chatbot|chat bot|workflow|n8n|zapier/,
+      note: "Custom integrations may need extra scoping.",
+      ask: "What would you like to automate in your business?" },
+    { service: "Mobile App Development", key: "app", title: "Mobile App packages (iOS + Android)",
+      test: /\bapps?\b|mobile|ios|android|flutter/,
+      note: "Store developer account fees are paid by the client.",
+      ask: "What core features or platforms (iOS/Android) do you need?" },
+    { service: "Print Design", key: "print", title: "Print Design",
+      test: /business card|flyer|brochure|poster|billboard|letterhead|booklet|catalog|print/,
+      ask: "Which print item do you need?" },
+    { service: "Logo & Branding", key: "logo", title: "Logo packages",
+      test: /logo/,
+      ask: "Do you have a specific logo style or mascot concept in mind?" },
+    { service: "Logo & Branding", key: "branding", title: "Branding packages",
+      test: /brand/,
+      ask: "What kind of business is the brand for?" },
+    { service: "Motion Graphics", key: "motion", title: "Motion Graphics",
+      test: /motion|animation|animated|explainer/,
+      ask: "What type of video or animation do you need?" },
+    { service: "Social Media Marketing", key: "smm", title: "Social Media Marketing (monthly)",
+      test: /social media|smm|instagram|facebook|reels/,
+      ask: "Which platforms do you want us to manage?" },
+    { service: "Digital Marketing & SEO", key: "marketing", title: "Digital Marketing (monthly)",
+      test: /marketing|\bseo\b|google ads|meta ads|ppc/,
+      note: "Ad spend is billed separately.",
+      ask: "What is your main goal: leads, sales or brand awareness?" },
+    { service: "Content Writing", key: "writing", title: "Content Writing packages",
+      test: /writing|copywriting|blog|article|press release|ebook|white paper/,
+      ask: "What type of content do you need?" },
+    { service: "Web Development", key: "website", title: "Website packages",
+      test: /web|site|landing|ecommerce|e-commerce|shop/,
+      note: "Monthly Care Plans start at $12/month to keep your site updated and secure.",
+      ask: "Could you share what key features or pages you need?" }
+];
 // ==================== CHATBOT RESPONSE ENGINE ====================
 function processAiResponse(userText) {
     const lower = userText.toLowerCase();
@@ -3568,7 +3666,7 @@ function processAiResponse(userText) {
 
     // 2. Global Services & FAQ Inquiries
     if (lower.includes('which type of service') || lower.includes('what service') || lower.includes('your service') || lower.includes('services you provide') || lower.includes('service list') || lower.includes('all services')) {
-        reply = "We offer 6 core specialized agency services:\n\n1. Web Design & Development (SPA, Next.js, E-Commerce)\n2. Mobile App Development (Flutter, iOS & Android)\n3. Logo & Brand Identity (3D Logos, Vector Asset Kits)\n4. Motion Graphics & 3D Web Visuals\n5. Social Media Marketing (SMM)\n6. SEO & Digital Growth Strategy\n\nYou can also explore our detailed Services section on the site! Which of these fits your project vision?";
+       reply = "We offer 7 core specialized agency services:\n\n1. Web Design & Development (SPA, Next.js, E-Commerce)\n2. Mobile App Development (Flutter, iOS & Android)\n3. AI Automation (Chatbots, Workflows, AI Agents)\n4. Logo & Brand Identity (3D Logos, Vector Asset Kits)\n5. Motion Graphics & 3D Web Visuals\n6. Social Media Marketing (SMM)\n7. SEO & Digital Marketing\n\nWe also offer Content Writing and Print Design. Which of these fits your project vision?";
         addMessage(reply);
         return;
     }
@@ -3584,25 +3682,33 @@ function processAiResponse(userText) {
             INTRO: "\n\nWould you like help choosing the right plan, or a quote for a new website?",
             COMPLETED: "\n\nWould you like help choosing the right plan?"
         };
-        reply = "We offer monthly Care Plans to keep your website secure, backed up and updated:\n\n• Starter Care: \$15/month\n• Growth Care: \$35/month\n• Pro Care: \$79/month\n• Enterprise Care: \$199/month\n\nAnnual billing gets 2 months free. You can compare all plans in our Pricing section." + (resumePrompt[chatState.step] || "");
+        reply = "We offer monthly Care Plans to keep your website secure, backed up and updated:\n\n• Starter Care: $12/month\n• Growth Care: $29/month\n• Pro Care: $69/month\n• Enterprise Care: $179/month\n\nAnnual billing gets 2 months free. You can compare all plans in our Pricing section." + (resumePrompt[chatState.step] || "");
         addMessage(reply);
         return;
     }
 
-    if (chatState.step === 'INTRO' && (lower.includes('how much') || lower.includes('cost') || lower.includes('charge') || lower.includes('price')) && !lower.includes('need') && !lower.includes('want') && !lower.includes('page') && !lower.includes('build')) {
-        if (lower.includes('web') || lower.includes('site') || lower.includes('landing')) {
-            reply = "Our custom web builds start at \$225 for single-page applications and scale up for multi-page portals. You can check our Pricing section for category plans!\n\nWe also offer monthly Care Plans from \$15/month to keep your site updated and secure.\n\nCould you share what key features or pages you need so I can estimate an exact quote for you?";
-            chatState.data.service = "Web Development";
-        } else if (lower.includes('app') || lower.includes('mobile')) {
-            reply = "Mobile app components & cross-platform builds start at \$199. Detailed tier breakdowns are in our Pricing section!\n\nWhat core features or platforms (iOS/Android) are you looking to build?";
-            chatState.data.service = "Mobile App Development";
-        } else if (lower.includes('logo') || lower.includes('brand')) {
-            reply = "Our logo & brand identity suites start at \$59. You can view all deliverables in our Pricing section!\n\nDo you have a specific logo style or mascot concept in mind?";
-            chatState.data.service = "Logo & Branding";
+      // 2c. Pricing Inquiries (works at any step)
+    const priceIntent = /how much|price|pricing|cost|charge|rates?\b|packages?|quote|starting at|starts at/.test(lower);
+    const looksLikeBrief = (chatState.step === 'INTRO' || chatState.step === 'SERVICE_DETAILS') && /need|want|page|build|looking to/.test(lower);
+    const priceTopic = chatPriceTopics.find(t => t.test.test(lower));
+    const canAnswerPrice = priceTopic || ['INTRO', 'SERVICE_DETAILS', 'COMPLETED'].includes(chatState.step);
+
+    if (priceIntent && !looksLikeBrief && canAnswerPrice) {
+        if (priceTopic) {
+            reply = priceTopic.title + ":\n\n" + chatPriceList(priceTopic.key) +
+                    (priceTopic.note ? "\n\n" + priceTopic.note : "") +
+                    "\n\nYou can compare all details in our Pricing section.";
+            if (chatState.step === 'INTRO') {
+                chatState.data.service = priceTopic.service;
+                chatState.step = 'SERVICE_DETAILS';
+                reply += "\n\n" + priceTopic.ask;
+            } else {
+                reply += chatResumePrompt(chatState.step);
+            }
         } else {
-            reply = "Our agency plans start at \$59 for branding, \$199 for app components, and \$225 for custom websites. You can review all tier details in our Pricing section!\n\nWhich service are you looking to get a quote for?";
+            reply = "We offer packages for Websites, Mobile Apps, AI Automation, Logos & Branding, Motion Graphics, Social Media, Digital Marketing, Content Writing and Print Design.\n\nPrices start at $35 for print, $49 for logos, $199 for websites and $299 for AI automation.\n\nWhich service would you like prices for?";
+            if (chatState.step === 'INTRO') chatState.step = 'SERVICE_DETAILS';
         }
-        chatState.step = 'SERVICE_DETAILS';
         addMessage(reply);
         return;
     }
@@ -3611,17 +3717,20 @@ function processAiResponse(userText) {
         chatState.data.details = userText;
         chatState.step = 'TIMELINE';
 
-        if (lower.includes('web') || lower.includes('site') || lower.includes('page') || lower.includes('farm') || lower.includes('admin')) {
+               if (/\bai\b|automation|chatbot|chat bot|workflow/.test(lower)) {
+            chatState.data.service = "AI Automation";
+            reply = "Great choice! Our AI automation packages start at $299 for chatbots and go up to $2,499 for a fully custom AI agent, depending on scope.\n\nWhat target timeline or deadline are you aiming for?";
+        } else if (lower.includes('web') || lower.includes('site') || lower.includes('page') || lower.includes('farm') || lower.includes('admin')) {
             chatState.data.service = "Web Development";
-            reply = "That's a very clear requirement brief! For a custom web platform with these features, agency builds typically range between \$350–\$850 depending on complexity. You can also explore our Pricing section for base packages.\n\nWhat target timeline or deadline are you aiming for to launch this?";
-        } else if (lower.includes('app') || lower.includes('flutter') || lower.includes('mobile')) {
+            reply = "That's a very clear requirement brief! Most business websites fall between $199 and $729, and larger portals cost more depending on complexity. You can also explore our Pricing section for base packages.\n\nWhat target timeline or deadline are you aiming for to launch this?";
+        } else if (/\bapps?\b|flutter|mobile|ios|android/.test(lower)) {
             chatState.data.service = "Mobile App Development";
-            reply = "Got it! For a custom cross-platform mobile app with these features, quotes typically range around \$400–\$1,200+. Feel free to check our Services section for component breakdowns.\n\nWhat target timeline do you have in mind for this app?";
+            reply = "Got it! Our cross-platform mobile app packages range from $799 to $6,999 depending on screens and features. Check our Pricing section for the full breakdown.\n\nWhat target timeline do you have in mind for this app?";
         } else {
             chatState.data.service = "Custom Digital Solution";
             reply = "Understood! I've logged your project scope.\n\nWhat target timeline or deadline are you aiming for to launch this project?";
         }
-    } 
+    }
     else if (chatState.step === 'TIMELINE') {
         chatState.data.timeline = userText;
         chatState.step = 'BUDGET';
