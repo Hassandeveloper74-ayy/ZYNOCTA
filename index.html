@@ -1788,6 +1788,7 @@ Our mission is to empower businesses and individuals with innovative, practical,
                 <div class="pricing-tabs">
                     <button class="tab-btn active" onclick="filterPricing('logo', this)">Logo</button>
                     <button class="tab-btn" onclick="filterPricing('website', this)">Website</button>
+                    <button class="tab-btn" onclick="filterPricing('ai', this)">AI Automation</button>
                     <button class="tab-btn" onclick="filterPricing('motion', this)">Motion Graphics</button>
                     <button class="tab-btn" onclick="filterPricing('branding', this)">Branding</button>
                     <button class="tab-btn" onclick="filterPricing('app', this)">App Development</button>
@@ -3380,6 +3381,43 @@ const pricingData = {
         { title: "SEO Article Pack", price: "$349.00", oldPrice: "$899", discount: "61% OFF", featured: true, features: ["10 Long-Form Articles (1500+ words each)", "Keyword Clusters", "Internal Linking Strategy", "Featured Snippet Ready", "Original Research", "Authority Content", "Meta Tags Included"] },
         { title: "Social Media Copy", price: "$109.00", oldPrice: "$329", discount: "67% OFF", features: ["30 Social Posts (Caption + Hashtags)", "Planned for FB, IG, LinkedIn, X", "Engaging Hooks", "Brand Voice Guide", "Visual Suggestion notes", "Monthly Content Calendar", "2 Rounds Revision"] },
         { title: "White Paper / Ebook", price: "$699.00", oldPrice: "$1999", discount: "65% OFF", features: ["10-15 Pages Ebook", "Professional Layout", "Original Research/Stats", "Cited Sources", "Lead Magnet Ready", "3 Revisions", "Cover Page Design"] }
+    ]
+
+       ai: [
+        { title: "AI Chatbot Starter", price: "$299.00", oldPrice: "$598", discount: "50% OFF", features: [
+            "Custom AI Chatbot (Trained on Your FAQs)",
+            "1 Platform (Website or WhatsApp)",
+            "Lead Capture Form",
+            "2 Revisions",
+            "7 Days Delivery"
+        ] },
+        { title: "Workflow Automation", price: "$499.00", oldPrice: "$998", discount: "50% OFF", features: [
+            "3 Custom Automations (Make / Zapier / n8n)",
+            "Lead Capture to Google Sheets or CRM",
+            "Email & WhatsApp Notifications",
+            "14 Days Support"
+        ] },
+        { title: "Business Automation Pro", price: "$999.00", oldPrice: "$1998", discount: "50% OFF", featured: true, features: [
+            "8 Custom Workflows",
+            "CRM Integration",
+            "AI Assistant",
+            "Custom API Connections",
+            "Reporting Dashboard",
+            "30 Days Support"
+        ] },
+        { title: "Custom AI Agent", price: "$2499.00", oldPrice: "$4998", discount: "50% OFF", features: [
+            "Custom AI Agent (Sales or Support)",
+            "Multi-Step Workflows",
+            "WhatsApp or Voice Integration",
+            "Scalable Architecture",
+            "60 Days Support"
+        ] },
+        { title: "AI Automation Care", price: "$199.00/mo", oldPrice: "$399", discount: "50% OFF", features: [
+            "Monitoring & Bug Fixes",
+            "2 New Automations Every Month",
+            "Monthly Performance Report",
+            "Same Day Response"
+        ] }
     ]
 };
 // Function to Render Cards
